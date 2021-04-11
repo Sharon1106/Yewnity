@@ -11,7 +11,7 @@
 <h2 align ="center">Table of Contents</h2>
 
 
-### [Description](#description)
+<h2 align ="center">[Description](#description)</h2>
 
 ### [Screenshots](#screenshots)
 
