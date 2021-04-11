@@ -4,9 +4,9 @@
 
 <h3 align ="center">Mission Statement:</h3
 <center align ="center">a non-profit organization set on ending its user's growing environmental and social affairs. By enabling its users the ability to subscribe, donate , and view current issues in their local municipals from their PC or mobile devices.</center>
+
+
 ---
-
-
 
 
 ![Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114322784-ed4f2d00-9ad6-11eb-8b50-704b96023c4e.png)
@@ -35,9 +35,11 @@
 
 
 ### <a name="Description"></a>Description
+---
 Yewnity founded by UCLAx Web Development Boot Camp Students
 
 ## Screenshots
+---
 
 
 
@@ -50,14 +52,14 @@ Yewnity founded by UCLAx Web Development Boot Camp Students
 
 
 
-### <a name="Developers"></a>Developers
-[Github Jefferey Patterson](https://github.com/jpatterson933)
+### <a name="Developers"></a>Developers Github Profiles
+[Jefferey Patterson](https://github.com/jpatterson933)
 <br>
-[Github Matthew A. John](https://github.com/MattJ900)
+[Matthew A. John](https://github.com/MattJ900)
 <br>
-[Github Sharon Martinez](https://github.com/Sharon1106)
+[Sharon Martinez](https://github.com/Sharon1106)
 <br>
-[Github William Thorne](https://github.com/IdFightGandhi)
+[William Thorne](https://github.com/IdFightGandhi)
 
 
 ### <a name="Questions"></a>Questions
