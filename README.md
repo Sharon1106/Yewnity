@@ -3,15 +3,13 @@
 
 <h1 align ="center">www.yewnity.org</h1>
 
-<h3 align ="center">User Story
-Yewnity a non-profit organization set on ending its user's growing environmental and social affairs. By enabling its users the ability to subscribe, donate , and view current issues in their local municipals from their mobile devices.
-
-</h3>
+<h3 align ="center">Mission Statement
+Yewnity a non-profit organization set on ending its user's growing environmental and social affairs. By enabling its users the ability to subscribe, donate , and view current issues in their local municipals from their mobile devices.</h3>
 
 
 
 
-![Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114321155-20d98980-9ace-11eb-9aba-9268e065877d.png)
+<h1 align ="center">![Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114321155-20d98980-9ace-11eb-9aba-9268e065877d.png)</h1>
 
 
 
@@ -28,7 +26,7 @@ Yewnity a non-profit organization set on ending its user's growing environmental
 
 ### [Usage](#usage)
 
-### [Contributing](#contributing)
+### [Developers](#developers)
 
 ### [Questions](#questions)
 
@@ -39,30 +37,23 @@ Yewnity a non-profit organization set on ending its user's growing environmental
 
 
 ### <a name="Description"></a>Description
-Yewnity a non-profit organization set on ending its user's growing environmental and social affairs. By enabling its users the ability to subscribe, donate , and view current issues in their local municipals from their mobile devices.
-
+Yewnity founded by UCLAx Web Developers Student Cohort Bootcamp Web Development 
 
 ## Screenshots
 
 
 
-### <a name="Contributing"></a>Contributing
-Jeffery Patterson
-<br>
-Matthew A. John
-<br>
-Sharon Martinez
-<br>
-William Thorne
+### <a name="Developers"></a>Developers
+[Github URL](https://github.com/jpatterson933) Jefferey Patterson
+[Github URL](https://github.com/MattJ900) Matthew A. John
+[Github URL](https://github.com/Sharon1106) Sharon Martinez
+[Github URL](https://github.com/IdFightGandhi) William Thorne
+
 
 ### <a name="Questions"></a>Questions
 Questions or related bussiness inquiries can be reached at support@yewnity.org
 
 ## Deployed-Links
 
-
-### <a name="Github"></a>Github Profiles
-[Github URL](https://github.com/jpatterson933)
-[Github URL](https://github.com/MattJ900)
-[Github URL](https://github.com/Sharon1106)
-[Github URL](https://github.com/IdFightGandhi)
+www.yewnity.com
+www.yewnity.org
