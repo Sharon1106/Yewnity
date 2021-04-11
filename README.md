@@ -4,15 +4,14 @@
 
 <h1 align ="center">www.yewnity.org</h1>
 
-<h3 align ="center">Mission Statement:</h1>Mission Statement:</h3>
-<center align ="center">Yewnity a non-profit organization set on ending its user's growing environmental and social affairs. By enabling its users the ability to subscribe, donate , and view current issues in their local municipals from their PC or mobile devices.</center>
+<h3 align ="center">Mission Statement:</h3
+<center align ="center">a non-profit organization set on ending its user's growing environmental and social affairs. By enabling its users the ability to subscribe, donate , and view current issues in their local municipals from their PC or mobile devices.</center>
 ---
 
 
 
 
-
-<h1 align ="center">![Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114321155-20d98980-9ace-11eb-9aba-9268e065877d.png)</h1>
+[Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114321155-20d98980-9ace-11eb-9aba-9268e065877d.png)
 
 
 
