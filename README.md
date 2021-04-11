@@ -51,13 +51,13 @@ Yewnity founded by UCLAx Web Development Boot Camp Students
 
 
 ### <a name="Developers"></a>Developers
-[Github Profile](https://github.com/jpatterson933) Jefferey Patterson
+[Github Jefferey Patterson](https://github.com/jpatterson933)
 <br>
-[Github Profile](https://github.com/MattJ900) Matthew A. John
+[Github Matthew A. John](https://github.com/MattJ900)
 <br>
-[Github Profile](https://github.com/Sharon1106) Sharon Martinez
+[Github Sharon Martinez](https://github.com/Sharon1106)
 <br>
-[Github Profile](https://github.com/IdFightGandhi) William Thorne
+[Github William Thorne](https://github.com/IdFightGandhi)
 
 
 ### <a name="Questions"></a>Questions
