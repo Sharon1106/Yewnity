@@ -1,7 +1,5 @@
 <h1 align ="center">Yewnity 🌍</h1>
 
----
-
 <h1 align ="center">www.yewnity.org</h1>
 
 <h3 align ="center">Mission Statement:</h3
@@ -11,7 +9,7 @@
 
 
 
-[Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114321155-20d98980-9ace-11eb-9aba-9268e065877d.png)
+![Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114322784-ed4f2d00-9ad6-11eb-8b50-704b96023c4e.png)
 
 
 
