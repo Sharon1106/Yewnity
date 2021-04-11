@@ -5,17 +5,11 @@
 <h3 align ="center">Mission Statement:</h3
 <center align ="center">a non-profit organization set on ending its user's growing environmental and social affairs. By enabling its users the ability to subscribe, donate , and view current issues in their local municipals from their PC or mobile devices.</center>
 
-
----
-
-
 ![Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114322784-ed4f2d00-9ad6-11eb-8b50-704b96023c4e.png)
 
 
-
-
 <h2 align ="center">Table of Contents</h2>
----
+
 
 ### [Description](#description)
 
