@@ -1,7 +1,14 @@
 <h1 align ="center">Yewnity 🌍</h1>
 ---
 
-<h1 align ="center">(https//www.yewnity.org<)</h1>
+<h1 align ="center">(www.yewnity.org)</h1>
+
+<h3 align ="center">User Story
+Yewnity a non-profit organization set on ending its user's growing environmental and social affairs. By enabling its users the ability to subscribe, donate , and view current issues in their local municipals from their mobile devices.
+
+</h3>
+
+
 
 
 ![Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114321155-20d98980-9ace-11eb-9aba-9268e065877d.png)
