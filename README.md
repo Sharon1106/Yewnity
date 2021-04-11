@@ -1,7 +1,7 @@
 <h1 align ="center">Yewnity 🌍</h1>
 ---
 
-<h1 align ="center">(https//www.yewnity.org<)/h1>
+<h1 align ="center">(https//www.yewnity.org<)</h1>
 
 
 ![Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114321155-20d98980-9ace-11eb-9aba-9268e065877d.png)
