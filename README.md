@@ -1,7 +1,7 @@
 <h1 align ="center">Yewnity 🌍</h1>
 ---
 
-<h1 align ="center">(www.yewnity.org)</h1>
+<h1 align ="center">www.yewnity.org</h1>
 
 <h3 align ="center">User Story
 Yewnity a non-profit organization set on ending its user's growing environmental and social affairs. By enabling its users the ability to subscribe, donate , and view current issues in their local municipals from their mobile devices.
