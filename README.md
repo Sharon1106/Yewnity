@@ -41,8 +41,11 @@ Yewnity a non-profit organization set on ending its user's growing environmental
 
 ### <a name="Contributing"></a>Contributing
 Jeffery Patterson
+<br>
 Matthew A. John
+<br>
 Sharon Martinez
+<br>
 William Thorne
 
 ### <a name="Questions"></a>Questions
