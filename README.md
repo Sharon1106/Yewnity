@@ -13,7 +13,8 @@
 
 
 
-## Table of Contents
+
+<h2 align ="center">Table of Contents</h2>
 ---
 
 ### [Description](#description)
