@@ -3,15 +3,13 @@
 
 <h1 align ="center">www.yewnity.org</h1>
 
-<center align ="center">Mission Statement
+<center align ="center">Mission Statement:
 Yewnity a non-profit organization set on ending its user's growing environmental and social affairs. By enabling its users the ability to subscribe, donate , and view current issues in their local municipals from their mobile devices.</center>
 
 
 
 
-(https://user-images.githubusercontent.com/77504986/114321155-20d98980-9ace-11eb-9aba-9268e065877d.png)
-
-
+![Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114321155-20d98980-9ace-11eb-9aba-9268e065877d.png)
 
 
 
@@ -37,8 +35,7 @@ Yewnity a non-profit organization set on ending its user's growing environmental
 
 
 ### <a name="Description"></a>Description
-Yewnity founded by UCLAx Web Developers Student Cohort Bootcamp Web Development 
-
+Yewnity founded by UCLAx Web Development Boot Camp Students.
 ## Screenshots
 
 
