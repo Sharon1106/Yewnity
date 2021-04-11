@@ -9,7 +9,7 @@ Yewnity a non-profit organization set on ending its user's growing environmental
 
 
 
-<h1 align ="center">![Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114321155-20d98980-9ace-11eb-9aba-9268e065877d.png)</h1>
+(https://user-images.githubusercontent.com/77504986/114321155-20d98980-9ace-11eb-9aba-9268e065877d.png)
 
 
 
