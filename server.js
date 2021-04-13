@@ -15,5 +15,5 @@ app.use(express.json());
 
 //app running, not getting
 app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+  console.log(`🌎  ==> API Server now listening on http://localhost:${PORT}!`);
 });
