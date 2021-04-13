@@ -1,5 +1,5 @@
 import React , {useState }from "react"
-import "./style.css"
+import "./Footer.css"
 function Footer () {
     return (
         <div className="wrapper">

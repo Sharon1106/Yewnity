@@ -1,5 +1,5 @@
 import React , {useState }from "react"
-import "./style.css"
+import "./Banner.css"
 function Banner () {
 
 const [toggle,settoggle]=useState(false)
