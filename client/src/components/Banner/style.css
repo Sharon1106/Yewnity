@@ -1,13 +1,3 @@
-:root {
-    --fw--reg: 300;
-    --fw-bold: 900;
-
-    --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #43658D;
-
-  
-}
 
 .nav {
     position: fixed;
