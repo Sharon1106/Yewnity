@@ -1,0 +1,20 @@
+
+#event-mini{
+    border: 1px solid black;
+    box-shadow: 2px 2px 7px black;
+    margin-top: 3em;
+
+}
+
+#event-title {
+    width: 150px;
+}
+
+#event-date{
+    width: 150px;
+}
+
+#event-description-mini {
+    padding: 0.7em;
+    text-align: center;
+}
