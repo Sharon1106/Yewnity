@@ -15,14 +15,14 @@ function LandingCard() {
                     <ul className='cards-items'>
                         <LandingCardItem
                         src={ orgcard1 }
-                        size = '100px'
+                        style={{width:'100px', height:100, position:'absolute'}}
                         text="Test"
                         label="Org"
                         path='/org'
                         />
                         <LandingCardItem
                         src={orgcard2}
-                        size= '100px'
+                        style={{width:100, height:100, position:'absolute'}}
                         text="Test2"
                         label="Org"
                         path='/org'
