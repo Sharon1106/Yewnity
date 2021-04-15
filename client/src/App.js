@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Banner from './components/Banner/Banner';
 import Footer from './components//Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import GoogleLogin from 'react-google-login';
+import GoogleLogin from './components/googlelogin/googlelogin';
 
 
 
