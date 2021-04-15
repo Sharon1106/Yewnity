@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-
+import  Button  from '../Button/Button'
+import sliderone from '../../images/Volunteer-1.jpeg'
 
 function LandingHero() {
     return (
@@ -9,12 +10,15 @@ function LandingHero() {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://c8.alamy.com/comp/E87H2A/crowd-in-a-park-at-a-community-event-in-richmond-hill-canada-E87H2A.jpg"
+      src={ sliderone }
       alt="First slide"
     />
     <Carousel.Caption>
       <h3>First slide label</h3>
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <Button> Sign Up </Button>
+      <Button> Log In </Button>
+      
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>

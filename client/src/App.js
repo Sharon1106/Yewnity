@@ -21,14 +21,10 @@ function App() {
     <>
     <Router>
     <Banner></Banner>
-    
       <AppHome/>
-    
-      
       <Switch>
         <Route path='/' exact />
       </Switch>
-      
       <Footer></Footer>
     </Router>
     </>
