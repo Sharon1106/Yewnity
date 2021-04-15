@@ -11,7 +11,6 @@ import EventMed from './components/Event-Med';
 import EventMini from './components/Event-Mini';
 import IssueMini from './components/Issue-Mini';
 //----------------END Jeff additions--------------------//
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 
