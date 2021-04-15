@@ -1,3 +1,4 @@
-// module.exports = {
-//   Recipe: require("./recipe")
-// };
+
+module.exports = {
+    User: require('./Users')
+};

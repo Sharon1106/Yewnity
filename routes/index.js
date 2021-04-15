@@ -4,7 +4,7 @@ const apiRoutes = require("./api");
 // const authRoutes = require("../server/auth");
 
 // API Routes
-router.use("/routes/api", apiRoutes);
+router.use("/api", apiRoutes);
 //user authentication
 // router.use("/routes/authRoutes.js", authRoutes);
 
