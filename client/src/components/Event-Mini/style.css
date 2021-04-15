@@ -1,20 +1,21 @@
-
+/* main wrap around mini event component */
 #event-mini{
     border: 1px solid black;
     box-shadow: 2px 2px 7px black;
     margin-top: 3em;
 
 }
-
+/* event title styling */
 #event-title {
-    width: 150px;
+    width: fit-content;
 }
-
+/* event date styling */
 #event-date{
-    width: 150px;
+    width: fit-content;
 }
-
+/* event description styling */
 #event-description-mini {
     padding: 0.7em;
     text-align: center;
+    margin: 0;
 }
