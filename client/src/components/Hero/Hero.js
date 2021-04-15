@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import  Button  from '../Button/Button'
 import sliderone from '../../images/Volunteer-1.jpeg'
 
+// google, login, signup
 function LandingHero() {
     return (
         <div className ="heroBlock">
@@ -16,7 +17,9 @@ function LandingHero() {
     <Carousel.Caption>
       <h3>First slide label</h3>
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      {/* //NEED onclick  */}
       <Button> Sign Up </Button>
+      {/* //onclick  */}
       <Button> Log In </Button>
       
     </Carousel.Caption>

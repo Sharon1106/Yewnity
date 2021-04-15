@@ -5,7 +5,7 @@ function Banner () {
 const [toggle,settoggle]=useState(false)
     return (
         <header className ={toggle ? "nav-open":""} >
-        
+        {/* // use for sign up button onclick when modal pops up  */}
         <button className="nav-toggle" onClick={()=>settoggle(!toggle)} aria-label="toggle navigtion">
             <span className="hamburger"></span>
         </button>
