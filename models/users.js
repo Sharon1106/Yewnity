@@ -16,7 +16,6 @@ const UserSchema = new Schema ({
     password: {
         type: String,
     }
-
 });
 
 //causing issues with post routes-------------------------------
@@ -26,7 +25,7 @@ UserSchema.pre("save", function(next) {
     
     user.password = bcrypt.hashSync(user.password, 10);
     console.log(user)
-    return next(user);
+    return next();
 });
 
 const User = mongoose.model("User", UserSchema);
