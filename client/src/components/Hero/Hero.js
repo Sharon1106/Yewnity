@@ -2,6 +2,7 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import  Button  from '../Button/Button'
 import sliderone from '../../images/Volunteer-1.jpeg'
+import Google from '../GoogleLogin/GoogleLogin';
 
 function LandingHero() {
     return (
@@ -18,6 +19,7 @@ function LandingHero() {
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       <Button> Sign Up </Button>
       <Button> Log In </Button>
+      <Google />
       
     </Carousel.Caption>
   </Carousel.Item>
