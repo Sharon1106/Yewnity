@@ -15,6 +15,7 @@ const [toggle,settoggle]=useState(false)
                 <li className="nav__item"><a href="#about" onClick={()=>settoggle(false)} className="nav__link">Autobiography</a></li>
                 <li className="nav__item"><a href="#services" onClick={()=>settoggle(false)} className="nav__link">Contact Information</a></li>
                 <li className="nav__item"><a href="#work" onClick={()=>settoggle(false)} className="nav__link">Current Projects</a></li>
+                <button className="btn">Log-Out</button>
             </ul>
         </nav>
     </header>
