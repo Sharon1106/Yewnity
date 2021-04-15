@@ -15,10 +15,10 @@ app.use(express.json());
 // }
 
 // Add routes, both API and view
-// app.use(routes);
+app.use(routes);
 
 // Connect to the Mongo DB /need to make changes once we have a mongo database
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/yewnitydb");
 
 
 //app running, not getting
