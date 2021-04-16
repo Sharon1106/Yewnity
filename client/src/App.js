@@ -28,7 +28,7 @@ function App() {
     <Banner></Banner>
 
      
-      <GoogleLogin/>
+      
 
       <AppHome/>
 
