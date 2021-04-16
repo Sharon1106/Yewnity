@@ -17,14 +17,17 @@ import IssueMini from './components/Issue-Mini';
 import AppHome from './views/home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Profile from './views/profile'
+
+
 function App() {
   return (
     <>
     <Router>
     <Banner></Banner>
-      <AppHome/>
       <Switch>
-        <Route path='/' exact component= { AppHome } />
+        <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
+        <Route path='/about' component = {About} />    {/*About Page*/}
         <Route path='/profile' exact component={ Profile } />
       </Switch>
       <IssueMini />
