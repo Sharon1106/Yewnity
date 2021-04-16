@@ -5,7 +5,6 @@ import Banner from './components/Banner/Banner';
 import Footer from './components//Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 //switched file path - react app works now - Jeff -
-import GoogleLogin from './components/googlelogin';
 //----------------Jeff additions--------------------//
 import EventMain from './components/Event-Main';
 import EventMed from './components/Event-Med';
@@ -27,7 +26,7 @@ function App() {
     <Banner></Banner>
       <Switch>
         <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
-        <Route path='/about' component = {About} />    {/*About Page*/}
+      
         <Route path='/profile' exact component={ Profile } />
       </Switch>
       <IssueMini />

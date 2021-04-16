@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Google from '../GoogleLogin/GoogleLogin';
+import Google from '../GoogleLogin';
 import { Link } from 'react-router-dom';
 
 export default class SignUp extends Component {
