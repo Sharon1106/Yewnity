@@ -12,7 +12,8 @@ const Profile = () => {
                 display:"flex",
                 justifyContent:"space-around",
                 margin:"18px 0px",
-                borderBottom:"1px solid grey"
+                borderBottom:"1px solid grey",
+                paddingBottom:"30px"
             }}>
                 <div>
                     <img style={{width:"300px", height:"250px", borderRadius:"80px"}} 
@@ -31,6 +32,7 @@ const Profile = () => {
            </div>  
             <div className="postHistory" style={{justifyContent:"center", borderBottom:"1px solid grey", paddingBottom:"50px"}}>
                 <h2>Recent Posts</h2>
+                
                 <CardDeck>
                     <Card>
                         <Card.Img variant="top" src="holder.js/100px160" />
