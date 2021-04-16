@@ -18,6 +18,8 @@ import IssueMini from './components/Issue-Mini';
 import AppHome from './views/home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Profile from './views/profile'
+
 
 
 
@@ -27,13 +29,10 @@ function App() {
     <Router>
     <Banner></Banner>
 
-     
-      
-
-      <AppHome/>
-
       <Switch>
-        <Route path='/' exact />
+        <Route path='/' exact component= { AppHome } />
+        <Route path='/profile' exact component={ Profile } />
+
       </Switch>
       <IssueMini />
       <Footer></Footer>

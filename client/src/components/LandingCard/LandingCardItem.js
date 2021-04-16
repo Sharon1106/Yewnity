@@ -9,6 +9,7 @@ function LandingCardItem(props) {
             className="cards-item-link" to={props.path}>
                 <figure className="cards-item-pic-wrap" data-category={props.label}>
                     <img 
+                    style={{width:100, height:100, position:'absolute'}}
                     src={props.src}
                     alt="Orgs Image"
                     className="cards-item-img"/>
