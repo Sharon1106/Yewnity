@@ -5,7 +5,7 @@ function Banner () {
 const [toggle,settoggle]=useState(false)
     return (
         <header className ={toggle ? "nav-open":""} >
-        
+         <button className="btn log-out">Log-Out</button>
         <button className="nav-toggle" onClick={()=>settoggle(!toggle)} aria-label="toggle navigtion">
             <span className="hamburger"></span>
         </button>
