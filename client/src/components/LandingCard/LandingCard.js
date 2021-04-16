@@ -1,49 +1,58 @@
 import React from 'react'
 import LandingCardItem from './LandingCardItem'
-import './LandingCard.css'
+import Card from 'react-bootstrap/Card'
 import orgcard1 from '../../images/Dummy-logo-1.png'
 import orgcard2 from '../../images/Dummy-logo-2.jpeg'
 import orgcard3 from '../../images/Dummy-logo-3.jpeg'
 import orgcard4 from '../../images/Dummy-logo-4.jpeg'
+import CardDeck from 'react-bootstrap/CardDeck'
 
 function LandingCard() {
     return (
         <div className='cards'>
-            <h1>ORGANIZATIONS HEADER</h1>
-            <div className='cards-coontainer'>
-                <div className='cards-wrapper'>
-                    <ul className='cards-items'>
-                        <LandingCardItem
-                        src={ orgcard1 }
-                        style={{width:'100px', height:100, position:'absolute'}}
-                        text="Test"
-                        label="Org"
-                        path='/org'
-                        />
-                        <LandingCardItem
-                        src={orgcard2}
-                        style={{width:100, height:100, position:'absolute'}}
-                        text="Test2"
-                        label="Org"
-                        path='/org'
-                        />
-                        <LandingCardItem
-                        src={orgcard3}
-                        text="Test3"
-                        label="Org"
-                        path='/org'
-                        />
-                        <LandingCardItem
-                        src={orgcard4}
-                        text="Test4"
-                        label="Org"
-                        path='/org'
-                        />
-                        
-
-                    </ul>
-                </div>
-            </div>
+            <h1>WHO WE WORK WITH</h1>
+            <CardDeck>
+  <Card>
+    <Card.Img variant="top" src={ orgcard1 } />
+    <Card.Body>
+      <Card.Title>ORG 1</Card.Title>
+      <Card.Text>
+        This is a wider card with supporting text below as a natural lead-in to
+        additional content. This content is a little bit longer.
+      </Card.Text>
+    </Card.Body>
+    <Card.Footer>
+      <small className="text-muted">Last updated 3 mins ago</small>
+    </Card.Footer>
+  </Card>
+  <Card>
+    <Card.Img variant="top" src={ orgcard2 } />
+    <Card.Body>
+      <Card.Title>Card title</Card.Title>
+      <Card.Text>
+        This card has supporting text below as a natural lead-in to additional
+        content.{' '}
+      </Card.Text>
+    </Card.Body>
+    <Card.Footer>
+      <small className="text-muted">Last updated 3 mins ago</small>
+    </Card.Footer>
+  </Card>
+  <Card>
+    <Card.Img variant="top" src={ orgcard3 } />
+    <Card.Body>
+      <Card.Title>Card title</Card.Title>
+      <Card.Text>
+        This is a wider card with supporting text below as a natural lead-in to
+        additional content. This card has even longer content than the first to
+        show that equal height action.
+      </Card.Text>
+    </Card.Body>
+    <Card.Footer>
+      <small className="text-muted">Last updated 3 mins ago</small>
+    </Card.Footer>
+  </Card>
+</CardDeck>
             
         </div>
     )
