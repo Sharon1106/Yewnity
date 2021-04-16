@@ -12,7 +12,7 @@ export class Google extends Component {
       <div>
         <GoogleLogin
         clientId="141942233468-9aertq4rvk22nhalrg7g706ku6tljjfj.apps.googleusercontent.com"
-        buttonText="login"
+        buttonText="Google login"
         onSuccess={this.responseGoogle}
         onFailure={this.responseGoogle}
         cookiePolicy={'single_host_origin'}
