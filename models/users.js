@@ -15,7 +15,13 @@ const UserSchema = new Schema ({
     //we will need to use bcrypt somehwere here to encrypt password
     password: {
         type: String,
-    }
+    },
+    events: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "Event"
+        }
+      ]
 });
 
 //causing issues with post routes-------------------------------
