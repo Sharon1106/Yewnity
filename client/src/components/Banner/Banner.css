@@ -113,3 +113,19 @@
    .hamburger::after{
        bottom: 6px;
    }
+
+   .log-out {
+       float: right;
+       margin-left: -100px;
+       position: relative;
+       right: 100px;
+   }
+
+   @media (max-width: 540px)  {
+        .log-out {
+            display: none !important;
+           
+
+        }
+
+   }

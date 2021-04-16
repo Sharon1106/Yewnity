@@ -4,7 +4,7 @@ import  Button  from '../Button/Button'
 import sliderone from '../../images/Volunteer-1.jpeg'
 import slidertwo from '../../images/Volunteer-2.jpeg'
 import sliderthree from '../../images/Community-Event.jpeg'
-import Google from '../GoogleLogin/GoogleLogin';
+import Google from '../googlelogin/googlelogin';
 
 function LandingHero() {
     return (

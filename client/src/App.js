@@ -11,7 +11,7 @@ import EventMed from './components/Event-Med';
 import EventMini from './components/Event-Mini';
 import IssueMini from './components/Issue-Mini';
 //----------------END Jeff additions--------------------//
-
+import About from './pages/About';
 
 //Landing Hero
 import AppHome from './views/home';
@@ -29,10 +29,11 @@ function App() {
      
       
 
-      <AppHome/>
+  
 
       <Switch>
-        <Route path='/' exact />
+        <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
+        <Route path='/about' component = {About} />    {/*About Page*/}
       </Switch>
       <Footer></Footer>
     </Router>
