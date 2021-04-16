@@ -5,6 +5,7 @@ import SignUp from "../Login/SignUp";
 import "./SignUpLogin.css";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+//here is a note
 
 function SignUpLogin() {
   const [show, setShow] = useState(false);
