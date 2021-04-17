@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import DiscussionBoard from 'react-discussion-board'
 import 'react-discussion-board/dist/index.css'
-import Banner from '../components/Banner/Banner'
-import Footer from '../components/Footer/Footer'
+import Banner from '../Banner/Banner'
+import Footer from '../Footer/Footer'
 
 
 
