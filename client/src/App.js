@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Banner from './components/Banner/Banner';
 import Footer from './components//Footer/Footer';
-import Navbar from './components/Navbar/Navbar';
+
 //switched file path - react app works now - Jeff -
 //----------------Jeff additions--------------------//
 import EventMain from './components/Event-Main';
@@ -17,7 +17,9 @@ import AppHome from './views/home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MsgBoard from './components/MsgBoard/MsgBoard'
 import Profile from './views/profile'
-
+import Forum from './views/forum';
+import ForumApp from './components/Forum/forumApp'
+import forumApp from './components/Forum/forumApp';
 
 function App() {
   return (
@@ -26,7 +28,7 @@ function App() {
     <Banner></Banner>
       <Switch>
         <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
-        <Route path='/forum' exact component = { MsgBoard } />
+        <Route path='/forum' exact component = { forumApp } />
         <Route path='/profile' exact component={ Profile } />
       </Switch>
       <Footer></Footer>
