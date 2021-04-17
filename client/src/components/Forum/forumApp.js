@@ -3,7 +3,7 @@ import React from 'react'
 import Poost from "./components/post";
 import db from "./lib/firebase";
 
-const App = () => {
+const forumApp = () => {
     const [posts, setPosts] = useState([]);
   
     useEffect(() => {
@@ -22,12 +22,16 @@ const App = () => {
         });
     }, []);
     return (
-        <div>
-            return (
-                <div className="div">Hello World</div>
-            )
-        </div>
-    )
-}
-
-export default forumApp;
+        <>
+          <Container maxW="md" centerContent p={8}>
+            <VStack spacing={8} w="100%">
+              {posts.map((post) => (
+                <Post post={post} key={post.id} />
+              ))}
+            </VStack>
+          </Container>
+        </>
+      );
+    };
+    
+    export default App;
