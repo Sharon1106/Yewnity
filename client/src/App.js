@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Banner from './components/Banner/Banner';
 import Footer from './components//Footer/Footer';
-import Navbar from './components/Navbar/Navbar';
+
 //switched file path - react app works now - Jeff -
 //----------------Jeff additions--------------------//
 import EventMain from './components/Event-Main';
@@ -15,7 +15,7 @@ import IssueMini from './components/Issue-Mini';
 //Landing Hero
 import AppHome from './views/home';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import MsgBoard from './components/MsgBoard/MsgBoard'
 import Profile from './views/profile'
 import MsgBoard from './views/discussions'
 
