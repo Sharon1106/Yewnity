@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Google from '../GoogleLogin';
+import Google from '../GoogleLogin/googlelogin';
 
 export default class Login extends Component {
     render() {
