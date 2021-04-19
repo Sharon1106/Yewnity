@@ -19,9 +19,9 @@ import IssueMini from './components/Issue-Mini';
 //Landing Hero
 import AppHome from './views/home';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MsgBoard from './components/MsgBoard/MsgBoard'
 import Profile from './views/profile'
 import Discussions from './views/discussions'
+import Main from './views/main'
 
 
 function App() {
@@ -33,6 +33,8 @@ function App() {
       <Switch>
         <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
         <Route path='/forum' exact component = { Discussions }  />
+        <Route path='/main' exact component = { Main }  />
+        
       
         <Route path='/profile' exact component={ Profile } />
       </Switch>
