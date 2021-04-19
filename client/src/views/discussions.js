@@ -1,7 +1,7 @@
 import React from 'react'
-import MsgBoard from '../components/MsgBoard/msgBoard'
+import MsgBoard from '../components/MsgBoard/MsgBoard'
 
-function discussions() {
+function Discussions() {
     return (
         <div className='discussion'>
             <MsgBoard/>
@@ -9,4 +9,4 @@ function discussions() {
     )
 }
 
-export default discussions;
+export default Discussions;

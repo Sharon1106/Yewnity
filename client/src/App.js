@@ -17,7 +17,7 @@ import AppHome from './views/home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MsgBoard from './components/MsgBoard/MsgBoard'
 import Profile from './views/profile'
-import MsgBoard from './views/discussions'
+import Discussions from './views/discussions'
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
     <Banner></Banner>
       <Switch>
         <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
-        <Route path='/forum' exact component = { MsgBoard}  />
+        <Route path='/forum' exact component = { Discussions }  />
       
         <Route path='/profile' exact component={ Profile } />
       </Switch>
