@@ -5,18 +5,17 @@ const Schema = mongoose.Schema;
 const EventSchema = new Schema ({
     title: {
         type: String,
+        required: true,
     },
     description: {
         type: String,
-     
+        required: true,
     },
     date: {
-        type: Date,
-    
+        type: Date,    
     },
     time: {
         type: String,
-    
     },
     address: {
         type: String,

@@ -2,10 +2,17 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt')
 
+//------------------------this verifies the input has an @ symbol--------------------//
+require ('mongoose-type-email');
+//displays message if no @ symbol provided in user input
+mongoose.SchemaTypes.Email.defaults.message = 'Email address is invalid';
+//-----------------------------------------------------------------------------------//
+
 
 const UserSchema = new Schema ({
     email: {
-        type: String,
+        //email verification
+        type: mongoose.SchemaTypes.Email,
         unique: true
     },
     username: {

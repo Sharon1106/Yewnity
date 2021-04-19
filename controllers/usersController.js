@@ -26,7 +26,13 @@ module.exports = {
                     console.log("fail", err);
                     res.status(400).json(err);
             });
-            
+            //need to add the code below to save the sessesion -------- our LOGIN TOKEN
+            // req.session.save(() => {
+            //     req.session.user_id = userData.id;
+            //     req.session.logged_in = true;
+                
+            //     res.json({ user: userData, message: 'You are now logged in!' });
+            //   });
     },
     update: function (req, res) {
         db.User
