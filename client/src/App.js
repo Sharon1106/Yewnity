@@ -5,7 +5,7 @@ import Banner from './components/Banner/Banner';
 import Footer from './components//Footer/Footer';
 /// Matthew
 import Navbar2 from './components/Navbar2';
-=======
+
 
 //main
 //switched file path - react app works now - Jeff -

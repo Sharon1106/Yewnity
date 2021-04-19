@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const EventSchema = new Schema ({
+const PostSchema = new Schema ({
     title: {
         type: String,
     },
@@ -14,16 +14,15 @@ const EventSchema = new Schema ({
         type: Date,
     
     },
-    time: {
-        type: String,
-    
-    },
-    address: {
-        type: String,
-    }
+    comments: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Comment"
+        },
+    ]
 });
 
 
-const Event = mongoose.model("Event", EventSchema);
+const Post = mongoose.model("Post", PostSchema);
 
-module.exports = Event;
+module.exports = Post;
