@@ -3,7 +3,11 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Banner from './components/Banner/Banner';
 import Footer from './components//Footer/Footer';
+/// Matthew
+import Navbar2 from './components/Navbar2';
+=======
 
+//main
 //switched file path - react app works now - Jeff -
 //----------------Jeff additions--------------------//
 import EventMain from './components/Event-Main';
@@ -24,7 +28,8 @@ function App() {
   return (
     <>
     <Router>
-    <Banner></Banner>
+    {/* <Banner></Banner> */}
+    <Navbar2></Navbar2>
       <Switch>
         <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
         <Route path='/forum' exact component = { Discussions }  />

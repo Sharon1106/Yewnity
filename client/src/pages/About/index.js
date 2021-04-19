@@ -4,131 +4,158 @@ import Will from "../../images/Wil.png";
 import Sharon from "../../images/Sharon.png";
 import Jeff from "../../images/Jeff.png";
 import Matthew from "../../images/Matthew.png";
+import Tree from "../../images/tree.png";
+import Tree2 from "../../images/tree2.png";
+import Bird from "../../images/bird.png";
+import Matthew2 from "../../images/Matt.png";
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function About() {
     return (
-        
+
         <div class="wrapper">
             <header class="header sub_header">
                 <h1 class="header_title">Meet the Yewnity Team</h1>
             </header>
             <div class="about">
-            <main class="row">
-                <section class="col-md-3 profile Jeff">
-                    <img class="profile-jeff" src={Jeff}></img>
-                    <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
-                    <div class="row">
-                        <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
-                        </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                            <i class="fab fa-twitter-square"></i>
+                <main class="row">
+                    <section class="col-md-3 profile">
+                        <div class="circle">
+                            <img class="profile-img" src={Jeff}></img>
 
-                        </button>
                         </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
-                        </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
-                        </div>
+                        <p>Jeffrey W. Patterson</p>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button class="social-list__item0"><a class="social-list__link" href="https://github.com/jpatterson933">
+                                    <i class="fab fa-github"></i>
+                                </a></button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="social-list__item2">
+                                    <a class="social-list__link"
+                                    id="email1" href="mailto:jpatterson933@ucla.edu">
+                                    <i class="fas fa-envelope"></i>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="social-list__item1"><a class="social-list__link" href="https://www.linkedin.com/in/jefferywpatterson/">
+                                  <i class="fab fa-linkedin"></i>
+                                </a></button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="social-list__item3"><a class="social-list__link" href="https://github.com/MattJ900">
+                                <i class="fab fa-facebook"></i>
+                                </a></button>
+                            </div>
 
-                    </div>
-                </section>
-                <section class="col-md-3 profile Matthew">
-                <img class="profile" src={Matthew}></img>
-                    <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
-                    <div class="row">
-                    <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
                         </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                        <i class="fab fa-twitter-square"></i>
-                        </button>
+                    </section>
+                    <section class="col-md-3 profile">
+                        <div class="circle2">
+                            <img class="profile-img" src={Matthew2}></img>
                         </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
+                        <p>Matthew A. John</p>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button class="social-list__item0"><a class="social-list__link" href="https://github.com/MattJ900">
+                                    <i class="fab fa-github"></i>
+                                </a></button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="social-list__item2">
+                                    <a class="social-list__link"
+                                    id="email2" href="mailto:matthewj.dev">
+                                     <i class="fas fa-envelope"></i>
+                                </a></button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="social-list__item1"><a class="social-list__link" href="https://github.com/MattJ900">
+                                    <i class="fab fa-linkedin"></i>
+                                </a></button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="social-list__item3"><a class="social-list__link" href="https://github.com/MattJ900">
+                                    <i class="fab fa-facebook"></i>
+                                </a></button>
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
+                    </section>
+                    <section class="col-md-3 profile Sharon">
+                        <div class="circle3">
+                            <img class="profile-img" src={Sharon}></img>
                         </div>
-                    </div>
-                </section>
-                <section class="col-md-3 profile William">
-                <img class="profile" src={Sharon}></img>
-                    <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
-                    <div class="row">
-                    <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
+                        <p>Sharon Martinez</p>
+                        <div class="row">
+                            <div class="col-md-3">
+                            <button class="social-list__item0"><a class="social-list__link" href="https://github.com/Sharon1106/">
+                                    <i class="fab fa-github"></i>
+                                </a></button>
+                            </div>
+                            <div class="col-md-3">
+                            <button class="social-list__item2">
+                            <a class="social-list__link"
+                                    id="email3" href="mailto:martinezsharonr@gmail.com">
+                                 <i class="fas fa-envelope"></i>
+                                </a></button>
+                            </div>
+                            <div class="col-md-3">
+                            <button class="social-list__item1"><a class="social-list__link" href="https://www.linkedin.com/in/sharon-martinez-835723205/">
+                                <i class="fab fa-linkedin"></i>
+                                </a></button>
+                            </div>
+                            <div class="col-md-3">
+                            <button class="social-list__item3"><a class="social-list__link" href="https://github.com/MattJ900">
+                                <i class="fab fa-facebook"></i>
+                                </a></button>
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                            <i class="fab fa-twitter-square"></i>
-                        </button>
+                    </section>
+                    <section class="col-md-3 profile William">
+                        <div class="circle4">
+                            <img class="profile-img" src={Will}></img>
                         </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
+                        <p>William Thorne</p>
+                        <div class="row">
+                            <div class="col-md-3">
+                            <button class="social-list__item0"><a class="social-list__link" href="https://github.com/IdFightGandhi">
+                                    <i class="fab fa-github"></i>
+                                </a></button>
+                            </div>
+                            <div class="col-md-3">
+                            <button class="social-list__item2">
+                                <a class="social-list__link" 
+                                id="email4" href="mailto:williamcthorne@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                                </a></button>
+                            </div>
+                            <div class="col-md-3">
+                            <button class="social-list__item1"><a class="social-list__link" href="https://www.linkedin.com/in/sharon-martinez-835723205/">
+                                <i class="fab fa-linkedin"></i>
+                                </a></button>
+                            </div>
+                            <div class="col-md-3">
+                            <button class="social-list__item3"><a class="social-list__link" href="https://github.com/MattJ900">
+                                <i class="fab fa-facebook"></i>
+                                </a></button>
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
-                        </div>
-                    </div>
-                </section>
-                <section class="col-md-3 profile Sharon">
-                <img class="profile" src={Will}></img>
-                    <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
-                    <div class="row">
-                    <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
-                        </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                        <i class="fab fa-twitter-square"></i>
-                        </button>
-                        </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
-                        </div>
-                        <div class="col-md-3">
-                        <button class="about_button">
-                            <i className="fab fa-github"></i>
-                        </button>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            </div> 
-            <div class="description">
-                <p>The World is yours he World is yours he World is yours he World is yours he World is yours he World is yours he World is yours he World is yours he World is yours he World is yours he World is yours</p>
-                </div> 
+                    </section>
+                </main>
             </div>
-         
+            <div class="description">
+                <div class="tree">
+                        <strong><h1> Our Story</h1>
+                        <h4>Written by Matthew A. John</h4>
+                        <br></br>
+                        <p> Founded: April 2021, Yewnity deployed by UCLAx web developer rookies Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Date 04/16/2021</p></strong>
+                </div>
+            </div>
+        </div>
+
     )
 }
 
