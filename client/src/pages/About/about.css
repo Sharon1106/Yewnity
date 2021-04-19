@@ -8,28 +8,81 @@
 } */
 
 .wrapper {
-    margin-top: 45px;
-    background-color: #aba4d8;
+  margin-top: 45px;
+  background-color: white;
 }
-    
-
 
 .about {
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 100px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 25px;
+  background-image: url(../../images/tree.png);
+ 
+}
+
+.about_button {
+}
+
+.header {
+  align-items: center;
+  justify-content: center;
+}
+
+.header_title {
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding: 45px;
+  background-color: black;
+  color: white;
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+  background-image:url(../../images/bird.png);
+  background-size: 100px;
+  background-repeat: no-repeat;;
+
+}
+
+.circle {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: #669db3ff;
+  margin: auto;
+  display: flex;
+}
+
+
+.circle2 {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F5F8;
+    margin: auto;
+    display: flex;
+    
+  }
+  
+
+.circle3{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #FF4F58FF;
+    margin: auto;
+    display: flex;
     
 }
 
 
-
-.header_title{
-    border: 2px solid black;
-    margin-bottom: 10px;
-    padding: 45px;
-    background-color: black;
-    color: white;
-    font-family: 'Dosis', sans-serif;
+.circle4{
+    width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: #A89C94FF;
+  margin: auto; 
+  display: flex;
 }
 
 
@@ -37,47 +90,126 @@
 
 
 .profile {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    /* justify-content: center; */
-    /* background-color: blue; */
-     border-radius: 50%;
-     border-radius: 5px 10px 15px 20px; 
-     box-shadow: 10px solid black;
-     
-
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  /* justify-content: center; */
+  /* background-color: blue; */
+  /* border-radius: 5px 10px 15px 20px black; */
+  /* box-shadow: 10px solid black; */
 }
 
+.profile-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  width: 50%;
+  height: 50%;
+  margin-bottom: auto;
 
-
-.profile-jeff {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-     border-radius: 5px 10px 15px 20px; 
-     box-shadow: 5px 5px 30px 5px  blue;
+  /* position: absolute;
+  top: 25%;
+  left: 25%; */
 }
 
+.profile Matthew {
+    display: block;
+    
+    width: 50%;
+    height: 50%;
+  
+    /* position: absolute; */
+    top: 15%;
+    left: 25%;
+}
 
 .profile p {
-    color: green;
-    border-style: solid;
-    margin-top:30px;
-    padding: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: xx-large;
+  margin-top: 50px;
+  padding: 10px;
+  text-align: center;
 }
 .about_button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  font-weight: bold;
 }
 .description {
-    width: 50%;
-    border: 2px solid black;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 50%;
+  font-weight: 10px;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-image: url(../../images/tree2.png);
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  
+
 }
+
+.tree {
+  
+}
+.story{
+  font-weight: bold;
+}
+
+.info {
+   font-weight: bold;
+}
+
+.social-list__item {
+  background-color: black;
+  
+}
+
+.social-list__item1 {
+  background-color: #2877B5;
+
+  
+}
+
+
+
+.social-list__item0 {
+  background-color: black;
+}
+
+
+.social-list__item2 {
+  background-color: #c71511
+}
+
+
+
+.social-list__item3 {
+  background-color: #4267B2 
+}
+
+
+
+
+.fab {
+  color: white;
+  width: 80px;
+  text-align: center;
+}
+
+.fas {
+  width: 80px;
+  color: white;
+  text-align: center;
+}
+
+
+/* 
+#4267B2 */
