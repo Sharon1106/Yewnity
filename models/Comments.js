@@ -8,9 +8,15 @@ const CommentSchema = new Schema ({
      
     },
     date: {
-        type: String,
+        type: Date,
     
     },
+    user: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "User"
+        }
+    ]
 });
 
 
