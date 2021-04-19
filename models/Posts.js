@@ -5,15 +5,13 @@ const Schema = mongoose.Schema;
 const PostSchema = new Schema ({
     title: {
         type: String,
-      
-     
     },
     description: {
         type: String,
      
     },
     date: {
-        type: String,
+        type: Date,
     
     },
     comments: [
