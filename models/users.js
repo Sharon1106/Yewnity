@@ -11,17 +11,31 @@ const UserSchema = new Schema ({
     username: {
         type: String,
         unique: true,
+        minLength: 6,
     },
     //we will need to use bcrypt somehwere here to encrypt password
     password: {
         type: String,
+        minLength: 6,
     },
     events: [
         {
           type: Schema.Types.ObjectId,
           ref: "Event"
-        }
-      ]
+        },
+      ],
+    posts: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Post"
+        },
+    ],
+    comments: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Comment"
+        },
+    ]
 });
 
 //causing issues with post routes-------------------------------
