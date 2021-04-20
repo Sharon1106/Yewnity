@@ -6,7 +6,7 @@ export default class SignUp extends Component {
     
     render() {
         return (
-            <form>
+            <form className="signup">
                 <h3 className="signup text-center">Sign Up</h3>
                 <div className="form-group">
                     <label>Email address</label>

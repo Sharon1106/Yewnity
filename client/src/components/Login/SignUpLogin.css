@@ -16,3 +16,7 @@
 .SignupLogin-link {
   color: #09d3ac;
 }
+
+button {
+  align-items: center;
+}

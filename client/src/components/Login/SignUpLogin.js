@@ -36,9 +36,9 @@ function SignUpLogin() {
     <>
       <Button variant="primary" onClick={handleShow}> SignUp </Button>
         <Modal show={show} onHide={handleClose}>
-          <Modal.Header 
+          {/* <Modal.Header 
           closeButton>
-          </Modal.Header>  
+          </Modal.Header>   */}
             <Modal.Body>
               {!signup ? (<Login/>):(<SignUp/>)} {signup ? (<Button onClick={showlogin}>Login</Button>): (<Button onClick={showsignup}>Signup</Button>)}
             </Modal.Body>

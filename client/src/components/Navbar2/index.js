@@ -1,11 +1,14 @@
 import React , {useState}from "react";
 import "./style.css";
 import logo from "../../images/logo.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import SignUpLogin from "../Login/SignUpLogin";
 
 const Navbar2 = () => {
     const [toggle,settoggle]=useState(false)
     const icon = ""
+    const user = null;
+
   return (
     <header className ={toggle ? "nav-open":""} >
     <nav id="navbar" className="navbar navbar-expand-lg sticky fixed-top shadow-1 navbar-light bg-dark">
@@ -32,6 +35,10 @@ const Navbar2 = () => {
             <li className="nav-item">
               <a className="nav-link" href="/profile">Profile</a>
             </li>
+            <li className="nav-item">
+            <SignUpLogin/>
+            </li>
+            
           </ul>        
           <ul className="navbar-nav d-flex flex-row">
                   {/* Add-Another button or feature */}
