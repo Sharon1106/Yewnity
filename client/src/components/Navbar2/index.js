@@ -37,7 +37,7 @@ const Navbar2 = () => {
             </li>
             <li className="nav-item">
             </li>
-            
+        
           </ul>        
           <ul className="navbar-nav d-flex flex-row">
                   {/* Add-Another button or feature */}

@@ -36,7 +36,7 @@ function SignUp () {
             <form className="signup">
                 <h3 className="signup text-center">Sign Up</h3>
                 {/* ---------- Component Added ~ Jeff ~ --> Can be found in components/form/ ------------ */}
-                <Input onchange={(event) => handleFormSubmit(event)
+                <Input
                 name="Email Address"
                 type="email"
                 placeholder="Enter Email" 
@@ -70,3 +70,5 @@ function SignUp () {
         );
     
 }
+
+export default SignUp;
