@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Input, SubmitBtn } from "../Form";
 
 export default class SignUp extends Component {
-    
+    //name is each of the titles 
     render() {
         return (
             <form className="signup">
@@ -32,7 +32,10 @@ export default class SignUp extends Component {
                 name="Sign Up"
                 type="submit"
                 className=" my-5 text-center btn btn-primary btn-block"
+                
+                // upon submitting user is saved to database and is taken to their profile page 
                 onClick={() => {}}
+            
                 />
                 {/* ---------------------------- END JEFF ADDITIONS ---------------------------- */}
                     <p>Already have an account?</p>

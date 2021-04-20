@@ -18,21 +18,19 @@ function SignUpLogin() {
     console.log(signup)
   }, [signup])
 
- 
-
-  const [users, setUsers] = useState([])
-  const [formObject, setFormObject] = useState({})
-  useEffect(() => {
-    loadUsers()
-  }, [])
+  // const [users, setUsers] = useState([])
+  // const [formObject, setFormObject] = useState({})
+  // useEffect(() => {
+  //   loadUsers()
+  // }, [])
   
-  function loadUsers() {
-    API.getUsers()
-      .then(res => 
-        setUsers(res.data)
-      )
-      .catch(err => console.log(err));
-  };
+  // function loadUsers() {
+  //   API.getUsers()
+  //     .then(res => 
+  //       setUsers(res.data)
+  //     )
+  //     .catch(err => console.log(err));
+  // };
 
   return (
     <>

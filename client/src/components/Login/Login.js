@@ -38,6 +38,8 @@ export default class Login extends Component {
                 type="submit"
                 className="btn btn-primary btn-block"
                 //we need to create a function to handleFormSubmit
+                // when user submits then user is taken to their main feed 
+                // onclick get user and route to profile page
                 onClick={() => {}}
                 />
                 {/* - -------------------------------- - */}
