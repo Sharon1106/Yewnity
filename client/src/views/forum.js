@@ -1,7 +1,7 @@
 import React from 'react'
 import ForumApp from '../components/Forum/forumApp'
 
-function forum() {
+function ForumApp() {
     return (
         <div className="forum">
             <forumApp/>

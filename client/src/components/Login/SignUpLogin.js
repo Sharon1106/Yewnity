@@ -1,11 +1,10 @@
 import React, { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "../Login/Login";
-import SignUp from "../Login/SignUp";
+import SignUp from "../Login/Signup";
 import "./SignUpLogin.css";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-
 
 function SignUpLogin() {
   const [show, setShow] = useState(false);
@@ -18,6 +17,20 @@ function SignUpLogin() {
   useEffect(()=> {
     console.log(signup)
   }, [signup])
+
+  const [users, setUsers] = useState([])
+  const [formObject, setFormObject] = useState({})
+  useEffect(() => {
+    loadUsers()
+  }, [])
+  
+  function loadUsers() {
+    API.getUsers()
+      .then(res => 
+        setUsers(res.data)
+      )
+      .catch(err => console.log(err));
+  };
 
   return (
     <>
