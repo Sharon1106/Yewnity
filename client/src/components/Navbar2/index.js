@@ -36,9 +36,8 @@ const Navbar2 = () => {
               <a className="nav-link" href="/profile">Profile</a>
             </li>
             <li className="nav-item">
-            <SignUpLogin/>
             </li>
-            
+        
           </ul>        
           <ul className="navbar-nav d-flex flex-row">
                   {/* Add-Another button or feature */}

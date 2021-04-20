@@ -18,27 +18,13 @@ function SignUpLogin() {
     console.log(signup)
   }, [signup])
 
-  // const [users, setUsers] = useState([])
-  // const [formObject, setFormObject] = useState({})
-  // useEffect(() => {
-  //   loadUsers()
-  // }, [])
-  
-  // function loadUsers() {
-  //   API.getUsers()
-  //     .then(res => 
-  //       setUsers(res.data)
-  //     )
-  //     .catch(err => console.log(err));
-  // };
-
   return (
     <>
       <Button variant="primary" onClick={handleShow}> SignUp </Button>
         <Modal show={show} onHide={handleClose}>
-          {/* <Modal.Header 
+          <Modal.Header 
           closeButton>
-          </Modal.Header>   */}
+          </Modal.Header>  
             <Modal.Body>
               {!signup ? (<Login/>):(<SignUp/>)} {signup ? (<Button onClick={showlogin}>Login</Button>): (<Button onClick={showsignup}>Signup</Button>)}
             </Modal.Body>
