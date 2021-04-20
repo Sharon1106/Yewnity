@@ -1,5 +1,5 @@
-import React,{ Component } from 'react'
-import { GoogleLogin } from 'react-google-login';
+import React,{ Component } from "react";
+import { GoogleLogin } from "react-google-login";
 
 export class Google extends Component {
   responseGoogle=(response) => {
@@ -8,11 +8,10 @@ export class Google extends Component {
   }
   render() {
     return (
-
       <div>
         <GoogleLogin
         clientId="141942233468-9aertq4rvk22nhalrg7g706ku6tljjfj.apps.googleusercontent.com"
-        buttonText="Google login"
+        buttonText="Google"
         onSuccess={this.responseGoogle}
         onFailure={this.responseGoogle}
         cookiePolicy={'single_host_origin'}

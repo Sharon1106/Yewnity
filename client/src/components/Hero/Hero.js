@@ -7,7 +7,6 @@ import slidertwo from '../../images/Volunteer-2.jpeg';
 import sliderthree from '../../images/Community-Event.jpeg';
 import SignUpLogin from "../Login/SignUpLogin";
 
-
 // google, login, signup
 function LandingHero() {
     return (    
@@ -18,9 +17,7 @@ function LandingHero() {
           <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            {/* component for modal  */}
             <SignUpLogin/>
-              
           </Carousel.Caption>
       </Carousel.Item>
         <Carousel.Item>

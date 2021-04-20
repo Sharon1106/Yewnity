@@ -1,36 +1,46 @@
-import React , {useState }from "react"
-import "./style.css"
+import React , {useState}from "react";
+import "./style.css";
 import logo from "../../images/logo.png";
+import { Link } from "react-router-dom";
+import SignUpLogin from "../Login/SignUpLogin";
 
 const Navbar2 = () => {
     const [toggle,settoggle]=useState(false)
     const icon = ""
+    const user = null;
+
   return (
     <header className ={toggle ? "nav-open":""} >
     <nav id="navbar" className="navbar navbar-expand-lg sticky fixed-top shadow-1 navbar-light bg-dark">
       <div className="container">
           <img className="icon" src={logo} height="50" alt="SM" loading="lazy" />
           <h1 class="title">Yewnity</h1>
-          <button className="nav-toggle" onClick={()=>settoggle(!toggle)} aria-label="toggle navigtion">
+          <button className="nav-toggle" onClick={()=>settoggle(!toggle)} aria-label="toggle navigation">
             <span className="hamburger"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
-              <a className="nav-link " aria-current="page" href="#">Main <span className="sr-only">(current)</span></a>
+          <li className="nav-item">
+              <a className="nav-link" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#about-me">Events</a>
+              <a className="nav-link" href="/main">Main</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#projects">Forum</a>
+              <a className="nav-link" href="/events">Events</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contact-me">Profile</a>
+              <a className="nav-link" href="/forum">Forum</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/profile">Profile</a>
+            </li>
+            <li className="nav-item">
+            <SignUpLogin/>
+            </li>
+            
           </ul>        
           <ul className="navbar-nav d-flex flex-row">
-        
                   {/* Add-Another button or feature */}
               
           
