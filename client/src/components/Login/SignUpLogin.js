@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Login from "../Login/Login";
-import SignUp from "./Signup";
+import Login from "./Login";
+import SignUp from "./SignUp";
 import "./SignUpLogin.css";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';

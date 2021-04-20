@@ -45,6 +45,7 @@
     "mongoose-type-email": "^1.1.2",
     "morgan": "^1.10.0",
     "prettier": "^2.2.1",
+    "react-activity-feed": "^0.10.9",
     "react-discussion-board": "^1.0.3",
     "react-google-login": "^5.2.2",
     "typescript": "^4.2.4"

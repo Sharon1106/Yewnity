@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import profilepic from '../images/User-Example.jpeg'
 import EventMini from '../../src/components/Event-Mini/index'
 import CardGroup from 'react-bootstrap/CardGroup'
@@ -6,10 +6,70 @@ import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import "./profile.css"
 import UCLAv from '../views/images/uclav.png'
+import LAC9 from '../views/images/Lac9.png'
+import HM from '../views/images/humane.png'
+import avatar from '../views/images/avatar.png'
+{/* <Card>
+<Card.Img variant="top" src={} />
+<Card.Body>
+<Card.Title>UCLA Veterans</Card.Title>
+<Card.Text>
+Yewnity is proud to be associated with UCLA Veterans!
+</Card.Text>
+</Card.Body>
+<Card.Footer>
+<small className="text-muted">Last updated 3 mins ago</small>
+</Card.Footer>
+</Card>
+))} */}
+                    // <Card>
+                    //     <Card.Img variant="top" src={ LAC9 } />
+                    //     <Card.Body>
+                    //     <Card.Title>Card title</Card.Title>
+                    //     <Card.Text>
+                    //         This card has supporting text below as a natural lead-in to additional
+                    //         content.{' '}
+                    //     </Card.Text>
+                    //     </Card.Body>
+                    //     <Card.Footer>
+                    //     <small className="text-muted">Last updated 3 mins ago</small>
+                    //     </Card.Footer>
+                    // </Card>
+                    // <Card>
+                    //     <Card.Img variant="top" src="holder.js/100px160" />
+                    //     <Card.Body>
+                    //     <Card.Title>Card title</Card.Title>
+                    //     <Card.Text>
+                    //         This is a wider card with supporting text below as a natural lead-in to
+                    //         additional content. This card has even longer content than the first to
+                    //         show that equal height action.
+                    //     </Card.Text>
+                    //     </Card.Body>
+                    //     <Card.Footer>
+                    //     <small className="text-muted">Last updated 3 mins ago</small>
+                    //     </Card.Footer>
+                    // </Card>
 const Profile = () => {
+    const [username,setusername]=useState("Random")
+    const [organizations,setorganizations]=useState([
+        {img:UCLAv,title:"UCLA Veterans",text:"Yewnity is proud to be associated with UCLA Veterans!",updated:"Last updated 3 mins ago"},
+        {
+            img:HM,title:"UCLA Veterans",text:"Yewnity is proud to be associated with UCLA Veterans!",updated:"Last updated 3 mins ago"
+        },
+        {img:HM,title:"UCLA Veterans",text:"Yewnity is proud to be associated with UCLA Veterans!",updated:"Last updated 3 mins ago"},
+        {img:HM,title:"UCLA Veterans",text:"Yewnity is proud to be associated with UCLA Veterans!",updated:"Last updated 3 mins ago"}
+    ])
+    useEffect(()=>{
+        //API CALL (back-end job getUser Info(name atm))
+    },[])
+    function updateUsername () 
+    { console.log(username);
+        //API CALL BACK-END /UPDATE Username
+        //API .updateUsername(username)
+    }
     return (
-        <div>
-            <div style={{
+        <div class="brain">
+            <div class="controller" style={{
                 display:"flex",
                 justifyContent:"space-around",
                 margin:"18px 0px",
@@ -18,12 +78,17 @@ const Profile = () => {
             }}>
                 <div>
                     <img style={{width:"300px", height:"250px", borderRadius:"80px"}} 
-                    src="holder.js/100px160"
+                    src={avatar}
                     />
                 </div>
                 <div>
-                    <h4>Guy McFly</h4>
-                    <div style={{display:"flex",justifyContent:"space-between", width:"108%"}}>
+                    <h4>Username:</h4>
+                    <div class="profile" style={{display:"flex",justifyContent:"space-between", width:"108%"}}>
+                        <input value = {username}
+                        onChange={(e)=>setusername(e.target.value)}>
+                            
+                        </input>
+                        <button onClick={updateUsername}>Change Username</button>
                         <h1>TEST</h1>Welcome to Yewnity Profile Page here you can see!
                         <h6>Something goes here</h6>
                         <h6>Something goes here</h6>
@@ -48,7 +113,7 @@ const Profile = () => {
                         </Card.Footer>
                     </Card>
                     <Card>
-                        <Card.Img variant="top" src="holder.js/100px160" />
+                        <Card.Img variant="top" src={ LAC9 } />
                         <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -79,45 +144,22 @@ const Profile = () => {
             <div className="orgSubscriptions" style={{paddingTop:"30px",borderBottom:"1px solid grey", paddingBottom:"50px"}}>
                 <h3>Organizations I'm Following</h3>
                 <CardDeck>
-                    <Card>
-                        <Card.Img variant="top" src={UCLAv} />
+                    {organizations?.map(org=>(
+                        <Card>
+                        <Card.Img variant="top" src={org.img} />
                         <Card.Body>
-                        <Card.Title>UCLA Veterans</Card.Title>
+                        <Card.Title>{org.title}</Card.Title>
                         <Card.Text>
-                        Yewnity is proud to be associated with UCLA Veterans!
+                       {org.text}
                         </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
+                        <small className="text-muted">{org.updated}</small>
                         </Card.Footer>
                     </Card>
-                    <Card>
-                        <Card.Img variant="top" src="holder.js/100px160" />
-                        <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This card has supporting text below as a natural lead-in to additional
-                            content.{' '}
-                        </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
-                    </Card>
-                    <Card>
-                        <Card.Img variant="top" src="holder.js/100px160" />
-                        <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to
-                            show that equal height action.
-                        </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
-                    </Card>
+                    ))}
+               
+                    
                 </CardDeck>
 
             </div>
