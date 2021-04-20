@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Google from '../GoogleLogin/googlelogin';
 import { Link } from 'react-router-dom';
-import { Input } from "../Form";
+import { Input, SubmitBtn } from "../Form";
 
 export default class SignUp extends Component {
     render() {
@@ -11,30 +11,35 @@ export default class SignUp extends Component {
                 {/* ---------- Component Added ~ Jeff ~ --> Can be found in components/form/ ------------ */}
                 <Input
                 name="First Name"
-                onchange={() => {}}
                 type="text"
                 placeholder="First Name" 
-                />
-                  <Input
-                name="Last Name"
                 onchange={() => {}}
+                />
+                <Input
+                name="Last Name"
                 type="text"
                 placeholder="Last Name" 
+                onchange={() => {}}
                 />
                 <Input
                 name="Email Address"
-                onchange={() => {}}
                 type="email"
                 placeholder="Enter Email" 
+                onchange={() => {}}
                 />
                 <Input
                 name="Password"
-                //do we need to add a funciton here?
-                onchange={() => {}}
                 type="password"
                 placeholder="Enter Password" 
+                onchange={() => {}}
                 />
-                <button type="submit" className=" my-5 text-center btn btn-primary btn-block">Sign Up</button>
+                <SubmitBtn 
+                name="Sign Up"
+                type="submit"
+                className=" my-5 text-center btn btn-primary btn-block"
+                onClick={() => {}}
+                />
+                {/* ---------------------------- END JEFF ADDITIONS ---------------------------- */}
                     <p>Already signed up?</p>
                     <Google/>
             </form>

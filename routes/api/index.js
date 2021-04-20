@@ -5,11 +5,13 @@ const userRoutes = require('./users');
 const eventRoutes = require('./events')
 const postRoutes = require('./posts');
 const commentRoutes = require('./comments');
+const organizationRoutes = require('./organizations');
 
 router.use("/users", userRoutes)
 router.use("/events", eventRoutes)
 router.use("/posts", postRoutes)
 router.use("/comments", commentRoutes)
+router.use("/organizations", organizationRoutes)
 
 
 module.exports = router;

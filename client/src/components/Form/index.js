@@ -1,5 +1,6 @@
 import React from "react";
 
+//this is an input component that can be used on forms
 export function Input(props) {
     return (
         <div className="form-group">
@@ -9,8 +10,9 @@ export function Input(props) {
     );
 }
 
-export function FormBtn(props) {
+//this is a buttun to use for submitting forms
+export function SubmitBtn(props) {
     return (
-        <button {...props} className="btn btn-primary btn-block">Submit</button>
+        <button {...props}>{props.name}</button>
     )
 }

@@ -28,27 +28,32 @@ function About() {
                         <p>Jeffrey W. Patterson</p>
                         <div class="row">
                             <div class="col-md-3">
-                                <button class="social-list__item0"><a class="social-list__link" href="https://github.com/jpatterson933">
-                                    <i class="fab fa-github"></i>
-                                </a></button>
-                            </div>
-                            <div class="col-md-3">
-                                <button class="social-list__item2">
-                                    <a class="social-list__link"
-                                    id="email1" href="mailto:jpatterson933@ucla.edu">
-                                    <i class="fas fa-envelope"></i>
+                                <button class="social-list__item0">
+                                    <a class="social-list__link" href="https://github.com/jpatterson933">
+                                        <i class="fab fa-github"></i>
                                     </a>
                                 </button>
                             </div>
                             <div class="col-md-3">
-                                <button class="social-list__item1"><a class="social-list__link" href="https://www.linkedin.com/in/jefferywpatterson/">
-                                  <i class="fab fa-linkedin"></i>
-                                </a></button>
+                                <button class="social-list__item2">
+                                    <a class="social-list__link" id="email1" href="mailto:jpatterson933@ucla.edu">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </button>
                             </div>
                             <div class="col-md-3">
-                                <button class="social-list__item3"><a class="social-list__link" href="https://github.com/MattJ900">
-                                <i class="fab fa-facebook"></i>
-                                </a></button>
+                                <button class="social-list__item1">
+                                    <a class="social-list__link" href="https://www.linkedin.com/in/jefferywpatterson/">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="social-list__item3">
+                                    <a class="social-list__link" href="https://github.com/MattJ900">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </button>
                             </div>
 
                         </div>
