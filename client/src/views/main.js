@@ -1,7 +1,5 @@
-import React from 'react'
-import Stream from "../components/MainFeed/stream"
-
-
+import React from "react";
+import Stream from "../components/MainFeed/stream";
 
 function Main() {
     return (

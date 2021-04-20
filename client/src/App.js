@@ -21,7 +21,6 @@ import Profile from './views/profile'
 import Discussions from './views/discussions'
 import Main from './views/main'
 
-
 function App() {
   return (
     <>
@@ -30,13 +29,11 @@ function App() {
     <Navbar2></Navbar2>
       <Switch>
         <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
-        <Route path='/forum' exact component = { Discussions }  />
         <Route path='/main' exact component = { Main }  />
-        
-      
+        <Route path='/events' exact component = { EventMain }  />
+        <Route path='/forum' exact component = { Discussions }  />
         <Route path='/profile' exact component={ Profile } />
       </Switch>
-     
       <Footer></Footer>
     </Router>
     </>
