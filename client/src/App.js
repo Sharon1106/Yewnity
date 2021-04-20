@@ -20,6 +20,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Profile from './views/profile'
 import Discussions from './views/discussions'
 import Main from './views/main'
+// import Login from './components/Login'
 
 function App() {
   return (
