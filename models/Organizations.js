@@ -9,55 +9,40 @@ mongoose.SchemaTypes.Email.defaults.message = 'Email address is invalid';
 //-----------------------------------------------------------------------------------//
 
 
-const UserSchema = new Schema ({
+const OrganizationSchema = new Schema ({
     email: {
         //email verification
         type: mongoose.SchemaTypes.Email,
         unique: true
     },
+    organization: {
+        type: String,
+        unique: true,
+    },
+    bio: {
+        type: String,
+    },
     username: {
         type: String,
         unique: true,
-        minLength: 6,
     },
     //we will need to use bcrypt somehwere here to encrypt password
     password: {
         type: String,
         minLength: 6,
     },
-    image: {
-        type: String,
-    }
-    // events: [
-    //     {
-    //       type: Schema.Types.ObjectId,
-    //       ref: "Event"
-    //     },
-    //   ],
-    // posts: [
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref: "Post"
-    //     },
-    // ],
-    // comments: [
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref: "Comment"
-    //     },
-    // ]
 });
 
 //causing issues with post routes-------------------------------
 //before we save UserSchema to the database we runthis function
-UserSchema.pre("save", function(next) {
-    const user = this;
+OrganizationSchema.pre("save", function(next) {
+    const organization = this;
     
-    user.password = bcrypt.hashSync(user.password, 10);
-    console.log(user)
+    organization.password = bcrypt.hashSync(organization.password, 10);
+    console.log(organization)
     return next();
 });
 
-const User = mongoose.model("User", UserSchema);
+const Organization = mongoose.model("Organization", OrganizationSchema);
 
-module.exports = User;
+module.exports = Organization;

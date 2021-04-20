@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Google from '../GoogleLogin/googlelogin';
+import { Input, SubmitBtn } from "../Form";
 import "./SignUpLogin.css";
 
 export default class Login extends Component {
@@ -8,19 +9,38 @@ export default class Login extends Component {
         return (
             <form className="login shadow-5-strong">
                 <h3 className="signup text-center">Log In</h3>
-                <div className="form-group">
-                    <label>Email</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
-                </div>
-                <div className="form-group">
-                    <label>Username</label>
-                    <input type="text" className="form-control" placeholder="Enter username" placeholder="Username" />
-                </div>
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
-                </div>
-                <button type="submit" className="btn btn-primary btn-block">Submit</button>
+                {/* ---------- Component Added ~ Jeff ~ --> Can be found in components/form/ ------------ */}
+                <Input
+                name="Email Address"
+                type="email"
+                placeholder="Enter Email" 
+                onchange={() => {}}
+                />
+                    <Input
+                name="Username"
+                type="text"
+                placeholder="Enter Username" 
+                onchange={() => {}}
+                />
+                   <Input
+                name="Password"
+                type="password"
+                placeholder="Enter Password" 
+                onchange={() => {}}
+                />
+                {/* ---------------------------- END JEFF ADDITIONS ---------------------------- */}
+                <p className="forgot-password text-right">
+                    Forgot <a href="#">password?</a>
+                </p>
+                {/* - Can be found in components/form/ - */}
+                <SubmitBtn 
+                name="Submit"
+                type="submit"
+                className="btn btn-primary btn-block"
+                //we need to create a function to handleFormSubmit
+                onClick={() => {}}
+                />
+                {/* - -------------------------------- - */}
                 <p>Or sign in with <Google/></p>
             </form>
         );
