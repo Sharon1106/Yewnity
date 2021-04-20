@@ -1,11 +1,10 @@
 import React, { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "../Login/Login";
-import SignUp from "./SignUp";
+import SignUp from "./Signup";
 import "./SignUpLogin.css";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-
 
 function SignUpLogin() {
   const [show, setShow] = useState(false);
@@ -19,13 +18,27 @@ function SignUpLogin() {
     console.log(signup)
   }, [signup])
 
+  // const [users, setUsers] = useState([])
+  // const [formObject, setFormObject] = useState({})
+  // useEffect(() => {
+  //   loadUsers()
+  // }, [])
+  
+  // function loadUsers() {
+  //   API.getUsers()
+  //     .then(res => 
+  //       setUsers(res.data)
+  //     )
+  //     .catch(err => console.log(err));
+  // };
+
   return (
     <>
       <Button variant="primary" onClick={handleShow}> SignUp </Button>
         <Modal show={show} onHide={handleClose}>
-          <Modal.Header 
+          {/* <Modal.Header 
           closeButton>
-          </Modal.Header>  
+          </Modal.Header>   */}
             <Modal.Body>
               {!signup ? (<Login/>):(<SignUp/>)} {signup ? (<Button onClick={showlogin}>Login</Button>): (<Button onClick={showsignup}>Signup</Button>)}
             </Modal.Body>
