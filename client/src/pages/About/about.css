@@ -140,6 +140,14 @@
   width: 100%;
   font-weight: bold;
 }
+
+/* .description::before {
+ 
+  opacity: 0.5;
+
+}   */
+
+
 .description {
   width: 50%;
   font-weight: 10px;
@@ -151,7 +159,8 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     background-image: url(../../images/tree2.png);
   background-repeat: no-repeat;
-  opacity: 0.5;
+  opacity: 1.0;
+  background-color: rgba(255,255,255,0.5);
   
 
 }
