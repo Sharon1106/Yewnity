@@ -18,7 +18,7 @@ req.session.save(() => {
   res.json({ user: userData, token: req.session.token, message: 'You are now logged in!' });
 });
 
-//middleware
+//middlewar
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
