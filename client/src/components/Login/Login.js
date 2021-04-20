@@ -2,31 +2,66 @@ import React, { Component } from "react";
 import Google from '../GoogleLogin/googlelogin';
 import { Input, SubmitBtn } from "../Form";
 import "./SignUpLogin.css";
+import API from "../../utils/API";
 
-export default class Login extends Component {
+function Users () {
+    // initial state
+    const[users, setUsers] = useState([])
+    const [formObject, setFormObject] = useState([])
     
-    render() {
+      // Load all users and store them with setUsers
+    useEffect(() => {
+        loadUsers()
+    }, [])
+
+    // Loads all users and sets them to users
+    function loadUsers() {
+        API.getUsers()
+          .then(res =>
+            setUsers(res.data)
+          )
+          .catch(err => console.log(err));
+    };
+
+    function handleInputChange(event) {
+        const { name, value } = event.target;
+        setFormObject({...formObject, [name]: value})
+      };
+ 
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        if (formObject.email && formObject.username) {
+          API.saveUser({
+            email: formObject.email,
+            username: formObject.username,
+            password: formObject.password
+          })
+            .then(res => loadUsers())
+            .catch(err => console.log(err));
+        }
+      };
+    
         return (
             <form className="login shadow-5-strong">
                 <h3 className="signup text-center">Log In</h3>
                 {/* ---------- Component Added ~ Jeff ~ --> Can be found in components/form/ ------------ */}
                 <Input
-                name="Email Address"
+                name="email"
                 type="email"
                 placeholder="Enter Email" 
-                onchange={() => {}}
+                onchange={(handleInputChange) => {}}
                 />
                     <Input
-                name="Username"
+                name="username"
                 type="text"
                 placeholder="Enter Username" 
-                onchange={() => {}}
+                onchange={(handleInputChange) => {}}
                 />
                    <Input
-                name="Password"
+                name="password"
                 type="password"
                 placeholder="Enter Password" 
-                onchange={() => {}}
+                onchange={(handleInputChange) => {}}
                 />
                 {/* ---------------------------- END JEFF ADDITIONS ---------------------------- */}
                 <p className="forgot-password text-right">
@@ -40,11 +75,14 @@ export default class Login extends Component {
                 //we need to create a function to handleFormSubmit
                 // when user submits then user is taken to their main feed 
                 // onclick get user and route to profile page
-                onClick={() => {}}
+                onClick={(handleFormSubmit) => {
+                    
+                }}
                 />
                 {/* - -------------------------------- - */}
                 <p>Or sign in with <Google/></p>
             </form>
         );
-    }
 }
+
+export default Users;

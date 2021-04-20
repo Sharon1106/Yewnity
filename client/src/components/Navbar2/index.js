@@ -36,7 +36,6 @@ const Navbar2 = () => {
               <a className="nav-link" href="/profile">Profile</a>
             </li>
             <li className="nav-item">
-            <SignUpLogin/>
             </li>
             
           </ul>        
