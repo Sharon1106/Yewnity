@@ -7,7 +7,7 @@ export default class Login extends Component {
         return (
             <form>
                 <h3>Log In</h3>
-                
+                {/* ---------- Component Added ~ Jeff ~ --> Can be found in components/form/ ------------ */}
                 <Input
                 name="Email Address"
                 onchange={() => {}}
@@ -21,6 +21,8 @@ export default class Login extends Component {
                 type="password"
                 placeholder="Enter Password" 
                 />
+                {/* ---------------------------- END JEFF ADDITIONS ---------------------------- */}
+
                 <div className="form-group">
                     <div className="custom-control custom-checkbox">
                         <input type="checkbox" className="custom-control-input" id="customCheck1" />

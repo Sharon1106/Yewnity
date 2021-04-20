@@ -7,12 +7,8 @@ export default class SignUp extends Component {
     render() {
         return (
             <form>
-                <div>
-                    <button type="submit" className=" my-5 text-center btn btn-primary btn-block">Sign Up</button>
-                    <p>Already signed up?</p>
-                    <Google/>
-                </div>
                 <h3>Sign Up</h3>
+                {/* ---------- Component Added ~ Jeff ~ --> Can be found in components/form/ ------------ */}
                 <Input
                 name="First Name"
                 onchange={() => {}}
@@ -38,7 +34,9 @@ export default class SignUp extends Component {
                 type="password"
                 placeholder="Enter Password" 
                 />
-                
+                <button type="submit" className=" my-5 text-center btn btn-primary btn-block">Sign Up</button>
+                    <p>Already signed up?</p>
+                    <Google/>
             </form>
         );
     }

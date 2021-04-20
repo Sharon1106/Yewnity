@@ -8,3 +8,9 @@ export function Input(props) {
         </div>
     );
 }
+
+export function FormBtn(props) {
+    return (
+        <button {...props} className="btn btn-primary btn-block">Submit</button>
+    )
+}
