@@ -21,7 +21,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MsgBoard from './components/MsgBoard/MsgBoard';
 import Profile from './views/profile';
 import Discussions from './views/discussions';
-import ForumApp from "./views/forum";
+// import ForumApp from "./views/forum";
 
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
         <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
         <Route path='/main' exact component = { EventMain } />
         <Route path='/events' exact component = { EventMain }  />
-        <Route path='/forum' exact component = { ForumApp }  />
+        {/* <Route path='/forum' exact component = { ForumApp }  /> */}
         <Route path='/profile' exact component={ Profile } />
       </Switch>
      
