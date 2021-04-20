@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Google from '../GoogleLogin/googlelogin';
 import { Input, SubmitBtn } from "../Form";
 import "./SignUpLogin.css";
 import API from "../../utils/API";
+
 
 function Users () {
     // initial state

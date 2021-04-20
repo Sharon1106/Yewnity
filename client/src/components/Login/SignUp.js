@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import Google from '../GoogleLogin/googlelogin';
 import { Link } from 'react-router-dom';
 import { Input, SubmitBtn } from "../Form";
