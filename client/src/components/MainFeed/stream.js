@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 
+import { connect } from 'getstream';
 import {
   StreamApp,
   StatusUpdateForm,
@@ -13,16 +14,21 @@ import {
   CommentItem,
   InfiniteScrollPaginator,
 } from 'react-activity-feed';
+
 import 'react-activity-feed/dist/index.es.css';
 
-const apiKey = 'sesb46h7zb6p';
-const appId = '66001';
-const token =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmF0bWFuIn0.8aYd7O_fx-1YMx28DXG1n274o4pa3SjHnRM8AIHLqkE';
 
+// client = stream.connect('5r5cn6dk4hcs', null, '1120553');
+const apiKey = '56ngat98cs7g';
+const appId = '1120536';
+const token =
+//generated using the token.js --type node token
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiamVmZiJ9.EcyKS2n6qpv8wiuPRpBy9Trmffx-Bn-cyo3Lks-OK6Y';
+const client = connect(apiKey, token, appId);
+client.user('jeff').get()
+console.log(client)
 export default class App extends Component<{}> {
   containerRef = React.createRef();
-
   render() {
     return (
       <div
@@ -59,6 +65,7 @@ export default class App extends Component<{}> {
           />
           <FlatFeed
             feedGroup="user" // or timeline
+            userId='jeff'
             notify
             options={{
               limit: 6,
