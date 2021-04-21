@@ -26,7 +26,7 @@ function App() {
       <Switch>
         <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
         <Route path='/main' exact component = { Main }  />
-        <Route path='/events' exact component = { EventMain }  />
+        {/* <Route path='/events' exact component = {}  /> */}
         <Route path='/forum' exact component = { Discussions }  />
         <Route path='/profile' exact component={ Profile } />
       </Switch>
