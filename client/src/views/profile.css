@@ -921,6 +921,42 @@
     border-bottom-left-radius: 0;
   }
   
+
+
+.ava {
+  justify-content: center;
+  text-align: center;
+
+  
+}
+
+
+
+
+  .avatar0 {
+    justify-content: center;
+    text-align: center;
+    
+    
+  }
+
+
+  .roar {
+    justify-content: center;
+    text-align: center;
+    bottom: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
   .nav {
     display: flex;
     margin-bottom: 0;
