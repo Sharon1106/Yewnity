@@ -18,6 +18,8 @@ const PORT = process.env.PORT || 3001;
 //   res.json({ user: userData, token: req.session.token, message: 'You are now logged in!' });
 // });
 
+
+
 //middlewar
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

@@ -25,10 +25,27 @@ const token =
 //generated using the token.js --type node token
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiamVmZiJ9.EcyKS2n6qpv8wiuPRpBy9Trmffx-Bn-cyo3Lks-OK6Y';
 const client = connect(apiKey, token, appId);
-client.user('jeff').get()
-console.log(client)
-export default class App extends Component<{}> {
+client.user('will').get().then(res=>{
+
+  // name here will be firstName prop from user table
+  res.data.name = "Will"; 
+  console.log(res)
+
+  //this will need the client.user to take in UserId or the username
+  client.user('jeff').update(res.data)
+})
+//console.log(id)
+export default class App extends Component {
   containerRef = React.createRef();
+
+  state = {
+    id:""
+  }
+
+  componentDidMount(){
+
+    this.setState({id: client.userId})
+  }
   render() {
     return (
       <div
@@ -65,11 +82,11 @@ export default class App extends Component<{}> {
           />
           <FlatFeed
             feedGroup="user" // or timeline
-            userId='jeff'
+            userId={this.state.id}
             notify
             options={{
               limit: 6,
-              // withOwnChildren: true,
+              withOwnChildren: true,
               // withRecentReactions: true
             }}
             Paginator={(props) => (
