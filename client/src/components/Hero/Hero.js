@@ -1,7 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
-import  Button  from '../Button/Button';
 import sliderone from '../../images/Volunteer-1.jpeg';
 import slidertwo from '../../images/Volunteer-2.jpeg';
 import sliderthree from '../../images/Community-Event.jpeg';
@@ -17,6 +16,7 @@ function LandingHero() {
           <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            {/* user registration */}
             <SignUpLogin/>
           </Carousel.Caption>
       </Carousel.Item>
