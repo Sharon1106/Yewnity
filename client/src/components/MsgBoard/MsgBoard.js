@@ -4,8 +4,6 @@ import 'react-discussion-board/dist/index.css'
 import Banner from '../Banner/Banner'
 import Footer from '../Footer/Footer'
 
-
-
 function MsgBoard() {
 
     const allPosts = [

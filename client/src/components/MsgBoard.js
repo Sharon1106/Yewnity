@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
 import DiscussionBoard from 'react-discussion-board'
 import 'react-discussion-board/dist/index.css'
-import Banner from './Banner/Banner'
-import Footer from './Footer/Footer'
-
-
 
 function MsgBoard() {
-
     const allPosts = [
         {
             profileImage:
@@ -15,7 +10,6 @@ function MsgBoard() {
             name:'John Doe',
             content: '<p>Hello Everyone!</p><p>-John</>',
             date: new Date ('17, Apr 2021 13:44.00 GMT')
-
         },
         {
             profileImage:'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
@@ -26,7 +20,6 @@ function MsgBoard() {
     ]
 
     const [posts, setPosts] = useState(allPosts)
-
     const submitPost = (text) => {
         const currentDate = new Date()
 
@@ -37,7 +30,6 @@ function MsgBoard() {
                 name: 'Jane Doe',
                 content: 'Maiores velit, atque voluptatum aliquam sapiente',
                 date:currentDate
-
             }
         ])
     }

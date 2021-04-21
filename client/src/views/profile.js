@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import profilepic from '../images/User-Example.jpeg'
-import EventMini from '../../src/components/Event-Mini/index'
 import CardGroup from 'react-bootstrap/CardGroup'
 import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
@@ -69,12 +68,7 @@ const Profile = () => {
     }
     return (
         <div className="brain">
-
-
-
-
             <div className="main-content">
-
                 <nav className="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
                     <div className="container-fluid">
 
@@ -302,24 +296,6 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <div className="controller" style={{
                 display: "flex",
