@@ -20,12 +20,12 @@ function SignUpLogin() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}> SignUp </Button>
+      <Button className="button text-center"variant="primary" onClick={handleShow}> SignUp </Button>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header 
           closeButton>
           </Modal.Header>  
-            <Modal.Body>
+            <Modal.Body >
               {!signup ? (<Login/>):(<SignUp/>)} {signup ? (<Button onClick={showlogin}>Login</Button>): (<Button onClick={showsignup}>Signup</Button>)}
             </Modal.Body>
             <Modal.Footer>
