@@ -68,12 +68,7 @@ const Profile = () => {
     }
     return (
         <div className="brain">
-
-
-
-
             <div className="main-content">
-
                 <nav className="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
                     <div className="container-fluid">
 
@@ -301,24 +296,6 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <div className="controller" style={{
                 display: "flex",

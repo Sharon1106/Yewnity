@@ -37,10 +37,10 @@ function Footer() {
                         </SocialList>
                     </ul>
                 </div>
-                <div className="child footer__link">About
+                <div className="child footer__link">
                     <SocialLink url="/aboutus">About Us</SocialLink>
                 </div>
-                <div className="child footer__link">Support
+                <div className="child footer__link">
                     <SocialLink url="https://www.facebook.com/yewnity.forall/">Donate</SocialLink>
                         <i className="fab fa-kickstarter"></i>
                 </div>
