@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Google from "../GoogleLogin/googlelogin";
 import { useHistory } from "react-router-dom";
 import { Input, SubmitBtn } from "../Form";
@@ -16,7 +16,7 @@ function SignUp () {
 
   //upon saving user redirect to profile page
   function handleFormSubmit(event) {
-    console.log("im here now")
+    console.log("sign up user")
     event.preventDefault()
       API.saveUser({
         email: user.email,
@@ -25,6 +25,7 @@ function SignUp () {
       })
       .then(res =>{
         console.log(res)
+        localStorage.setItem("user", JSON.stringify(res.data._id))
         history.push("/profile")
       })
   };

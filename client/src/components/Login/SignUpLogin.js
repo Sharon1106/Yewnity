@@ -1,10 +1,9 @@
-import React, { useState, useEffect} from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { useState, useEffect} from "react";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import "./SignUpLogin.css";
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 function SignUpLogin() {
   const [show, setShow] = useState(false);
@@ -23,14 +22,15 @@ function SignUpLogin() {
       <Button className="button text-center"variant="primary" onClick={handleShow}> SignUp </Button>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header 
-          closeButton>
+            closeButton>
           </Modal.Header>  
             <Modal.Body >
-              {!signup ? (<Login/>):(<SignUp/>)} {signup ? (<Button onClick={showlogin}>Login</Button>): (<Button onClick={showsignup}>Signup</Button>)}
+              {!signup ? (<Login/>):(<SignUp/>)} 
+              {signup ? (<Button onClick={showlogin}>Login</Button>): (<Button onClick={showsignup}>Signup</Button>)}
             </Modal.Body>
             <Modal.Footer>
               <Button 
-              variant="secondary" onClick={handleClose}>Close
+                  variant="secondary" onClick={handleClose}>Close
               </Button>
             </Modal.Footer>
         </Modal>

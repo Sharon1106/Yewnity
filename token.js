@@ -5,4 +5,3 @@ streamclient = stream.connect('56ngat98cs7g', 'fd9rhdxsrrq5uxv4c4jrzy895a6wqaz7p
 var feed = streamclient.feed('user', 'jeff');
 var feedToken = streamclient.createUserToken('jeff');
 console.log(feedToken)
-

@@ -1,27 +1,22 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Banner from './components/Banner/Banner';
-import Footer from './components//Footer/Footer';
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 /// Matthew
-import Navbar2 from './components/Navbar2';
+import Navbar2 from "./components/Navbar2";
+import Footer from "./components//Footer/Footer";
 //main
 //switched file path - react app works now - Jeff -
-
-
 //Landing Hero
-import AppHome from './views/home';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Profile from './views/profile'
-import Discussions from './views/discussions'
-import Main from './views/main'
-// import Login from './components/Login'
+import AppHome from "./views/home";
+import Profile from "./views/profile"
+import Discussions from "./views/discussions"
+import Main from "./views/main"
 
 function App() {
   return (
     <>
     <Router>
-    {/* <Banner></Banner> */}
     <Navbar2></Navbar2>
       <Switch>
         <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
