@@ -50,19 +50,19 @@ function Users () {
                 name="email"
                 type="email"
                 placeholder="Enter Email" 
-                onchange={(handleInputChange) => {}}
+                onChange={(handleInputChange) => {}}
                 />
                     <Input
                 name="username"
                 type="text"
                 placeholder="Enter Username" 
-                onchange={(handleInputChange) => {}}
+                onChange={(handleInputChange) => {}}
                 />
                    <Input
                 name="password"
                 type="password"
                 placeholder="Enter Password" 
-                onchange={(handleInputChange) => {}}
+                onChange={(handleInputChange) => {}}
                 />
                 {/* ---------------------------- END JEFF ADDITIONS ---------------------------- */}
                 <p className="forgot-password text-right">

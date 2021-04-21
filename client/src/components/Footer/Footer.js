@@ -1,93 +1,57 @@
 import React from "react"
 import image from "../../images/unity.png"
 import "./Footer.css"
-// import images from "../../images/unity.png"
+import { FooterListItem, SocialLink, SocialList } from "../Form";
+
 function Footer() {
     return (
         <div className="wrapper">
-
             <footer className="footer">
-                {/* <div className="footer__link">Social
-            <ul className="social-list">
-                        <li className="social-list__item"><a className="social-list__link" href="https://twitter.com/Yewnity1/">
-                            <i class="fab fa-twitter"></i>
-                        </a></li>
-
-                        <li className="social-list__item"><a className="social-list__link" href="https://github.com/Sharon1106/Yewnity">
-                            <i className="fab fa-github"></i>
-                        </a></li>
-                        <li className="social-list__item"><a className="social-list__link" href="https://www.youtube.com/channel/UClYS3rgySnucF8dn61pqEjA/">
-                            <i class="fab fa-youtube"></i>
-                        </a></li>
-                        <li className="social-list__item"><a className="social-list__link" href="https://www.facebook.com/yewnity.forall/">
-                            <i class="fab fa-facebook-f"></i>
-                        </a></li>
-                        <li className="social-list__item"><a className="social-list__link" href="https://www.facebook.com/yewnity.forall/">
-                            <i class="fab fa-instagram"></i>
-                        </a></li>
+                <div className="child footer__link" >Social Media
+                    <ul className="social-list">
+                        {/* All of this is imported above CHECK:: line 4 from '../form' */}
+                        <SocialList>
+                            <SocialLink url="https://twitter.com/Yewnity1/">
+                                <i className="fab fa-twitter"></i>
+                            </SocialLink>
+                        </SocialList>
+                        <SocialList>
+                            <SocialLink url="https://github.com/Sharon1106/Yewnity">
+                                <i className="fab fa-github"></i>
+                            </SocialLink>
+                        </SocialList>
+                        <SocialList>
+                            <SocialLink url="https://www.youtube.com/channel/UClYS3rgySnucF8dn61pqEjA/">
+                                <i className="fab fa-youtube"></i>
+                            </SocialLink>
+                        </SocialList>
+                        <SocialList>
+                            <SocialLink url="https://www.facebook.com/yewnity.forall/">
+                                <i className="fab fa-facebook-f"></i>
+                            </SocialLink>
+                        </SocialList>
+                        <SocialList>
+                            <SocialLink url="https://www.facebook.com/yewnity.forall/">
+                                <i className="fab fa-instagram"></i>
+                            </SocialLink>
+                        </SocialList>
                     </ul>
                 </div>
-
-                <div className="footerb">About
-            <a className="social-list__link" href="/aboutus">About US
-                </a>
-                </div>
-
-                <div className="Unity">
-                <img src={images} />
-            </div> 
-                <div className="footerc">Support
-            <br></br>
-                    <a className="social-list__link" href="/aboutus">Donate
-                </a>
-                </div> */}
-
-            <div className="child footer__link" >Social Media
-            <ul className="social-list">
-                        <li className="social-list__item"><a className="social-list__link" href="https://twitter.com/Yewnity1/">
-                            <i class="fab fa-twitter"></i>
-                        </a></li>
-
-                        <li className="social-list__item"><a className="social-list__link" href="https://github.com/Sharon1106/Yewnity">
-                            <i className="fab fa-github"></i>
-                        </a></li>
-                        <li className="social-list__item"><a className="social-list__link" href="https://www.youtube.com/channel/UClYS3rgySnucF8dn61pqEjA/">
-                            <i class="fab fa-youtube"></i>
-                        </a></li>
-                        <li className="social-list__item"><a className="social-list__link" href="https://www.facebook.com/yewnity.forall/">
-                            <i class="fab fa-facebook-f"></i>
-                        </a></li>
-                        <li className="social-list__item"><a className="social-list__link" href="https://www.facebook.com/yewnity.forall/">
-                            <i class="fab fa-instagram"></i>
-                        </a></li>
-                    </ul>
-            </div>
                 <div className="child footer__link">About
-                <a className="social-list__link" href="/aboutus">About Us</a>
+                    <SocialLink url="/aboutus">About Us</SocialLink>
                 </div>
                 <div className="child footer__link">Support
-                <a className="social-list__link" href="https://www.facebook.com/yewnity.forall/">Donate</a>
-                
-                <i class="fab fa-kickstarter"></i>
-
+                    <SocialLink url="https://www.facebook.com/yewnity.forall/">Donate</SocialLink>
+                        <i className="fab fa-kickstarter"></i>
                 </div>
-            <div className="child">
-            <div className="unitywrapper">
-                <img className="unity"src={image}/>
-            </div>    
-            </div>
+                <div className="child">
+                    <div className="unitywrapper">
+                        <img className="unity" src={image} />
+                    </div>
+                </div>
             </footer>
-
-
-
-
-
-
         </div>
-
     )
-
 }
-<i class="fab fa-facebook-f"></i>
 
 export default Footer;

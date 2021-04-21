@@ -19,7 +19,6 @@ const [toggle,settoggle]=useState(false)
             </ul>
         </nav>
     </header>
-
     )
 }
 export default Banner;

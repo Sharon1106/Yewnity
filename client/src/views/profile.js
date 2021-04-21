@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import profilepic from '../images/User-Example.jpeg'
-import EventMini from '../../src/components/Event-Mini/index'
 import CardGroup from 'react-bootstrap/CardGroup'
 import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'

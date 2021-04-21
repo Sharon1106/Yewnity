@@ -7,12 +7,7 @@ import Footer from './components//Footer/Footer';
 import Navbar2 from './components/Navbar2';
 //main
 //switched file path - react app works now - Jeff -
-//----------------Jeff additions--------------------//
-import EventMain from './components/Event-Main';
-import EventMed from './components/Event-Med';
-import EventMini from './components/Event-Mini';
-import IssueMini from './components/Issue-Mini';
-//----------------END Jeff additions--------------------//
+
 
 //Landing Hero
 import AppHome from './views/home';

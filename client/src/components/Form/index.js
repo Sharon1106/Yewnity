@@ -17,3 +17,19 @@ export function SubmitBtn(props) {
         <button {...props}>{props.name}</button>
     )
 }
+
+//list item for social
+export function SocialList(props) {
+    return (
+        <li className="social-list__item" {...props}>
+        </li>
+    )
+}
+//link for list item -- social
+export function SocialLink(props) {
+    return (
+            <a className="social-list__link" href={props.url}>
+                <i {...props}></i>
+            </a>
+    )
+}
