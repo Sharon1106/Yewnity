@@ -1,13 +1,34 @@
 import React , {useState}from "react";
 import "./style.css";
 import logo from "../../images/logo.png";
-import { Link } from "react-router-dom";
-import SignUpLogin from "../Login/SignUpLogin";
+import { useHistory } from "react-router-dom";
+import Button from "../Button/Button"
 
 const Navbar2 = () => {
     const [toggle,settoggle]=useState(false)
     const icon = ""
-    const user = null;
+    // const user = null;
+    const[user, setUser] = useState({
+      email:"",
+      username:"",
+      password:"",
+    })
+
+    // redirect
+    let history = useHistory()
+
+    //onclick clear user info in local storage
+  function handleLogout (event) {
+    console.log("logout user")
+    event.preventDefault()
+    setUser({
+      email:"",
+      username:"",
+      password:"",
+    }) 
+      localStorage.clear()
+      history.push("/")
+  };
 
   return (
     <header className ={toggle ? "nav-open":""} >
@@ -36,6 +57,11 @@ const Navbar2 = () => {
               <a className="nav-link" href="/profile">Profile</a>
             </li>
             <li className="nav-item">
+            <Button onClick={handleLogout}>Logout</Button>
+            </li>
+
+
+            <li className="nav-item">
             </li>
         
           </ul>        
@@ -54,7 +80,7 @@ const Navbar2 = () => {
                 <i className="dropdown">TEST</i>
               </a>
               <ul className="dropdown-content" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">TEEST</a>
+                <a className="dropdown-item" href="#">TEST</a>
               </ul> 
             </li>
           </ul>

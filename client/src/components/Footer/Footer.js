@@ -1,7 +1,7 @@
 import React from "react"
 import image from "../../images/unity.png"
 import "./Footer.css"
-import { FooterListItem, SocialLink, SocialList } from "../Form";
+import {SocialLink, SocialList } from "../Form";
 
 function Footer() {
     return (

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
 
 //------------------------this verifies the input has an @ symbol--------------------//
 require ('mongoose-type-email');

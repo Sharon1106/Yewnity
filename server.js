@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3001;
 //   res.json({ user: userData, token: req.session.token, message: 'You are now logged in!' });
 // });
 
-//middlewar
+//middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -32,7 +32,6 @@ app.use(routes);
 
 // Connect to the Mongo DB /need to make changes once we have a mongo database
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/yewnitydb");
-
 
 //app running, not getting
 app.listen(PORT, function() {
