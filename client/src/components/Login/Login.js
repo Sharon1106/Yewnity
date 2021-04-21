@@ -31,33 +31,6 @@ function Login () {
     };
 
     
-<<<<<<< HEAD
-        return (
-            <form className="login shadow-5-strong">
-                <h3 className="signup text-center">Log In</h3>
-                {/* ---------- Component Added ~ Jeff ~ --> Can be found in components/form/ ------------ */}
-                <Input
-                name="email"
-                type="email"
-                placeholder="Enter Email" 
-                onChange={(handleInputChange) => {}}
-                />
-                    <Input
-                name="username"
-                type="text"
-                placeholder="Enter Username" 
-                onChange={(handleInputChange) => {}}
-                />
-                   <Input
-                name="password"
-                type="password"
-                placeholder="Enter Password" 
-                onChange={(handleInputChange) => {}}
-                />
-                {/* ---------------------------- END JEFF ADDITIONS ---------------------------- */}
-                <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
-=======
   function handleInputChange(event) {
     console.log("Im here")
     const newuser = {...user}
@@ -140,7 +113,6 @@ function Login () {
                 <p>Not a member? Sign up below!</p>
                 <p>or sign up with:
                 <Google/>
->>>>>>> 5e0d10e037ee873404649e4073aed16d4722c210
                 </p>
                 </div>
     </form>
