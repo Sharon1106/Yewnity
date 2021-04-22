@@ -1224,6 +1224,7 @@
   
   .mb-0 {
     margin-bottom: 0 !important;
+    color: white;
   }
   
   .mr-2 {
@@ -1697,7 +1698,7 @@
   .form-control-label {
     font-size: .875rem;
     font-weight: 600;
-    color: #525f7f;
+    color: white;
   }
   
   .form-control {
@@ -2056,8 +2057,19 @@
     padding-bottom: .25rem;
     letter-spacing: .04em;
     text-transform: uppercase;
+    /* color: #f7fafc !important; */
+    /* background-color: green; */
+    color: white;
+    
+    
   }
   
+
+
+
+
+
+
   .display-2 span {
     font-weight: 300;
     display: block;
