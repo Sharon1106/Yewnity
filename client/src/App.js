@@ -36,10 +36,10 @@ function App() {
         <Navbar></Navbar>
         <Switch>
           <Route path='/' exact component={AppHome} /> {/*Landing Page*/}
-          <PrivateRoute path='/main' exact component={Main} />
+          <Route path='/main' exact component={Main} />
           <Route path='/events' exact component={MsgBoard} />
           <Route path='/forum' exact component={Discussions} />
-          <PrivateRoute path='/profile' exact component={Profile} />
+          <Route path='/profile' exact component={Profile} />
         </Switch>
         <Footer></Footer>
       </Router>
