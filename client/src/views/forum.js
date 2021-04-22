@@ -5,7 +5,6 @@ function Forum() {
     return (
         <div className="forum">
             <forumApp/>
-            
         </div>
     )
 }
