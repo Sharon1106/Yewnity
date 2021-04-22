@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -10,6 +10,25 @@ import Discussions from "./views/discussions";
 import Main from "./views/main";
 import MsgBoard from "./views/discussions";
 
+
+const PrivateRoute = ({ component: Compoonent, ...rest }) => (
+  <Route
+    {...rest}
+    render={props =>
+      localStorage.getItem("user") ? (
+        <Component {...props} />
+      ) : (
+        <Redirect
+          to={{
+            pathname: "/",
+            state: { from: props.location }
+          }}
+        />
+      )
+    }
+  />
+);
+
 function App() {
   return (
     <>
@@ -17,10 +36,10 @@ function App() {
         <Navbar></Navbar>
         <Switch>
           <Route path='/' exact component={AppHome} /> {/*Landing Page*/}
-          <Route path='/main' exact component={Main} />
+          <PrivateRoute path='/main' exact component={Main} />
           <Route path='/events' exact component={MsgBoard} />
           <Route path='/forum' exact component={Discussions} />
-          <Route path='/profile' exact component={Profile} />
+          <PrivateRoute path='/profile' exact component={Profile} />
         </Switch>
         <Footer></Footer>
       </Router>
