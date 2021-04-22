@@ -15,7 +15,7 @@ export function DateTime(props) {
     return (
         <div className="form-group">
             <label className="col-form-label">{props.label}</label>
-            <input className="form-control" type="datetime-local" value="2021-04-21T13:45:00"></input>
+            <input className="form-control" type="datetime-local" value="2021-04-21T13:45:00" {...props}></input>
         </div>
     )
 }

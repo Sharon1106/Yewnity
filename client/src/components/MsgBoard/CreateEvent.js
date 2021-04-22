@@ -6,6 +6,7 @@ import { DateTime, Input } from "../Events";
 import './style.css';
 
 export function CreateEvent() {
+  //[state, functionToUpdateState]
     const[events, setEvents] = useState({
       title:"",
       description:"",
@@ -28,10 +29,10 @@ export function CreateEvent() {
       event.preventDefault()
 
       API.saveEvent({
-        title: event.target.title,
-        description: event.target.description,
-        moment: event.target.moment,
-        city: event.target.city
+        title: events.title,
+        description: events.description,
+        moment: events.moment,
+        city: events.city
       })
         .then(res =>{
           console.log(res)
@@ -41,6 +42,7 @@ export function CreateEvent() {
         console.log("input gathered here")
         const existingEvent = {...events}
         existingEvent[event.target.name] = event.target.value
+        //this is updating the state
         setEvents(existingEvent)
         console.log(existingEvent)
     };
@@ -62,7 +64,8 @@ export function CreateEvent() {
                         placeholder="Enter Description"
                         onChange={(event) => handleInputChange(event)}
                     />
-                    <DateTime 
+                    <DateTime
+                        name="moment"
                         label="Date and Time of Event"
                         onChange={(event) => handleInputChange(event)}
                     />
