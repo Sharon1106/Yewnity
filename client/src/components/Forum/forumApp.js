@@ -34,4 +34,4 @@ const forumApp = () => {
       );
     };
     
-    export default App;
+    export default forumApp;

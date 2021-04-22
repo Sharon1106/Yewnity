@@ -11,14 +11,9 @@ const EventSchema = new Schema ({
         type: String,
         required: true,
     },
-    date: {
-        type: Date,
-        required: true,   
-    },
-    time: {
+    moment: {
         type: String,
-        required: true,
-
+        required: true,   
     },
     city: {
         type: String,

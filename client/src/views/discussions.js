@@ -9,11 +9,6 @@ function Discussions() {
     return (
         <div className='discussion'>
             <MsgBoard />
-            <Button
-            label="Create Event"
-            />
-            {/* <MsgBoard
-            /> */}
         </div>
     )
 }

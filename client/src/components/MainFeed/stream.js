@@ -16,17 +16,28 @@ import {
 } from 'react-activity-feed';
 
 import 'react-activity-feed/dist/index.es.css';
+let apiKey;
+let appId;
+let tempToken;
+let token;
+let client;
 
-
+if (localStorage.getItem('user')) {
 // client = stream.connect('5r5cn6dk4hcs', null, '1120553');
-const apiKey = '56ngat98cs7g';
-const appId = '1120536';
-const token =
+apiKey = '56ngat98cs7g';
+appId = '1120536';
+tempToken = JSON.parse(localStorage.getItem('user'))
+token = tempToken.token
 //generated using the token.js --type node token
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiamVmZiJ9.EcyKS2n6qpv8wiuPRpBy9Trmffx-Bn-cyo3Lks-OK6Y';
-const client = connect(apiKey, token, appId);
-client.user('jeff').get()
-console.log(client)
+client = connect(apiKey, token, appId);
+
+client.user(tempToken.user.username).get().then(res=>{
+  res.data.name = tempToken.user.username;
+  console.log(res)
+  client.user(tempToken.user.username).update(res.data)
+
+})
+}
 export default class App extends Component<{}> {
   containerRef = React.createRef();
   render() {
@@ -65,7 +76,7 @@ export default class App extends Component<{}> {
           />
           <FlatFeed
             feedGroup="user" // or timeline
-            userId='jeff'
+            userId= {tempToken.user.username}
             notify
             options={{
               limit: 6,

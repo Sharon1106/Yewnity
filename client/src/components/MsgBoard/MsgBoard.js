@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import DiscussionBoard from 'react-discussion-board';
 import 'react-discussion-board/dist/index.css';
-import './MsgBoard.css';
-import { CreateEvent } from "./CreateEvent";
-import { Button } from "../Form";
+import './style.css';
 import EventModal from "./EventModal";
 
 
@@ -42,7 +40,7 @@ function MsgBoard() {
         ])
     }
     return (
-        <div>
+        <div className="MsgBoard">
             <EventModal />         
             <div className='MsgBoard'>
                 <DiscussionBoard posts={posts} onSubmit={submitPost}/>
