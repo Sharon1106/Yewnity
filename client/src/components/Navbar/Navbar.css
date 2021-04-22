@@ -1,157 +1,193 @@
-.navbar {
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-.navbar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    max-width: 1500px;
-}
-.navbar-logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-}
-  
-.fa-typo3 {
-    margin-left: 0.5rem;
-    font-size: 1.8rem;
-}
-  
-.nav-menu {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
-    list-style: none;
-    text-align: center;
-    width: 60vw;
-    justify-content: end;
-    margin-right: 2rem;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+:root {
+  --primary-white: #f5f5f5;
+  --primary-blue: #6699cc;
+  --primary-dark: rgba(255, 255, 255, 0);
 }
 
-.nav-item {
-    height: 80px;
-}
-  
-.nav-links {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    height: 100%;
-}
-  
-.nav-links:hover {
-    border-bottom: 4px solid #fff;
-    transition: all 0.2s ease-out;
-}
-  
-.fa-bars {
-    color: #fff;
-}
-  
-.nav-links-mobile {
-    display: none;
-}
-  
-.menu-icon {
-    display: none;
+body {
+  font-family: "Roboto Condensed" sans-serif;
+  text-align: center;
 }
 
-@media screen and (max-width: 960px) {
+body p {
+  margin: 10%;
+}
+/* //////////////////NAVBAR////////////// */
+.logo {
+  width: 16.25rem;
+}
+/* ////////////////menu links////////////// */
+nav a.nav-link {
+  font-size: 0.875rem;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primary-white);
+}
 
-    .NavbarItems {
-        position: relative;
-        }
+nav ul li {
+  text-transform: uppercase;
+  color: var(--primary-white);
+}
 
-    .nav-menu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 90vh;
-        position: absolute;
-        top: 80px;
-        left: -100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-    }
+.navbar-nav > li > a {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: var(--primary-white) !important;
+  border-top: 0.1875rem solid var(--primary-dark);
+}
+.navbar-brand {
+  max-width: 17.25rem;
+  padding: 0% !important;
+  height: 6rem !important;
+}
 
-    .nav-menu.active {
-        background: #242222;
-        left: 0;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
-    }
+.navbar-nav > li > a.active,
+.navbar-nav > li > a.active:focus {
+  border-top: 0.1875rem solid var(--primary-blue);
+}
 
-    .nav-links {
-        text-align: center;
-        padding: 2rem;
-        width: 100%;
-        display: table;
-    }
+.navbar-nav > li > a:hover {
+  border-top: 0.1875rem solid var(--primary-blue);
+}
 
-    .nav-links:hover {
-        background-color: #fff;
-        color: #242424;
-        border-radius: 0;
-    }
+.fa-bars:before {
+  content: "\f0c9";
+  color: white;
+}
 
-    .navbar-logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(25%, 50%);
-    }
+/* drop down */
 
-    .menu-icon {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 60%);
-        font-size: 1.8rem;
-        cursor: pointer;
-    }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-    .fa-times {
-        color: #fff;
-        font-size: 2rem;
-    }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
 
-    .nav-links-mobile {
-        display: block;
-        text-align: center;
-        margin: 2rem auto;
-        border-radius: 4px;
-        width: 80%;
-        text-decoration: none;
-        font-size: 1.5rem;
-        background-color: transparent;
-        color: #fff;
-        padding: 14px 20px;
-        border: 1px solid #fff;
-        transition: all 0.3s ease-out;
-    }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-    .nav-links-mobile:hover {
-        background: #fff;
-        color: #242424;
-        transition: 250ms;
-    }
+.title {
+  color: white;
+}
+.nav {
+  position: fixed;
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: inherit;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--clr-accent);
+}
+
+.nav-toggle {
+  padding: 0.5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
+}
+
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(0.625turn);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: var(--clr-accent);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before {
+  top: 6px;
+}
+
+.hamburger::after {
+  bottom: 6px;
+}
+
+.log-out {
+  float: right;
+  margin-left: -100px;
+  position: relative;
+  right: 100px;
+}
+
+@media (max-width: 540px) {
+  .log-out {
+    display: none !important;
+  }
 }
