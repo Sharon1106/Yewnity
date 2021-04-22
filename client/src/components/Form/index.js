@@ -23,7 +23,7 @@ export function LargeInput(props) {
     return (
         <div class="form-group">
             <label>{props.label}</label>
-            <textarea class="form-control" rows="3" placeholder={props.placeholder}></textarea>
+            <textarea class="form-control" rows="3" {...props}></textarea>
         </div>
     )
 }
