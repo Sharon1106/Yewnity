@@ -5,11 +5,27 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// const session = require ('express-session')
+var Store = require('express-session').Store;
+var MongooseStore = require('mongoose-express-session')(Store);
 
 
-//middlewar
+//middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(require('express-session')({
+    secret: 'keyboard cat',
+    resave: false,
+    rolling: false,
+    saveUninitialized: true,
+    store: new MongooseStore({
+        /* configuration */
+        mongoose:mongoose,
+        store:Store,
+
+    })
+}));
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
