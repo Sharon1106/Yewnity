@@ -1,28 +1,20 @@
 // removed useEffect/ import if used
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Google from '../GoogleLogin/googlelogin';
 import { useHistory } from "react-router-dom";
 import { Input, SubmitBtn } from "../Form";
 import "./SignUpLogin.css";
 import API from "../../utils/API";
 
-function Login () {
-  const[user, setUser] = useState({
-    email:"",
-    username:"",
-    password:"",
+function Login() {
+  const [user, setUser] = useState({
+    email: "",
+    username: "",
+    password: "",
   })
 
-  //   useEffect(() => {
-  //   const loggedInUser = API.getUser()
-  //   if (loggedInUser) {
-  //     const foundUser = JSON.stringify(loggedInUser);
-  //     setUser(foundUser);
-  //   }
-  // }, [])
-  
-   // redirect
-  let history = useHistory() 
+  // redirect
+  let history = useHistory()
 
   function handleFormSubmit(event) {
     console.log("Login user")
@@ -33,56 +25,56 @@ function Login () {
       //pass in hashed password
       password: event.target.password,
     })
-      .then(res =>{
+      .then(res => {
         console.log(res)
         localStorage.setItem("user", JSON.stringify(res.data._id))
         history.push("/login")
       })
-    };
+  };
 
   function handleInputChange(event) {
     console.log("Im here")
-    const existingUser = {...user}
+    const existingUser = { ...user }
     existingUser[event.target.name] = event.target.value
     setUser(existingUser)
     console.log(existingUser)
   };
-    
+
   return (
-  <div className="login shadow-5-strong">
-    <form className="login form-outline mb-4 shadow-5-strong">
-      <h3 className="signup text-center">Log In</h3>
+    <div className="login shadow-5-strong">
+      <form className="login form-outline mb-4 shadow-5-strong">
+        <h3 className="signup text-center">Log In</h3>
         <Input
           name="email"
           type="email"
-          placeholder="Enter Email" 
+          placeholder="Enter Email"
           onChange={(event) => handleInputChange(event)}
         />
         <Input
           name="username"
           type="text"
-          placeholder="Enter Username" 
+          placeholder="Enter Username"
           onChange={(event) => handleInputChange(event)}
         />
         <Input
           name="password"
           type="password"
-          placeholder="Enter Password" 
+          placeholder="Enter Password"
           onChange={(event) => handleInputChange(event)}
         />
-        <SubmitBtn 
+        <SubmitBtn
           className="btn btn-primary my-5 text-center btn-floating mx-1btn-block"
           name="login"
           type="submit"
-          onClick={ handleFormSubmit}
+          onClick={handleFormSubmit}
         />
-          <div class="text-center">
-            <p>Not a member? Sign up below!</p>
-            <p>or sign up with:
-              <Google/></p>
-          </div>
-    </form>
-  </div> 
+        <div class="text-center">
+          <p>Not a member? Sign up below!</p>
+          <p>or sign up with:
+            <Google /></p>
+        </div>
+      </form>
+    </div>
   );
 }
 
