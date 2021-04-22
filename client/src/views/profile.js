@@ -9,6 +9,8 @@ import LAC9 from '../views/images/Lac9.png'
 import HM from '../views/images/humane.png'
 import avatar from '../views/images/avatar.png'
 import { Row } from "../components/Profile";
+import {ProfileViewer} from "../components/ProfileViewer";
+import {ProfileForm} from "../components/ProfileForm";
 {/* <Card>
 <Card.Img variant="top" src={} />
 <Card.Body>
@@ -145,131 +147,21 @@ const Profile = () => {
                         <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0">
                             <div className="card card-profile shadow">
 
-                                <div className="card-body pt-0 pt-md-4">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="ava">
-                                                <img className="avatar0" style={{ width: "300px", height: "250px", borderRadius: "80px" }}
-                                                    src={avatar}
-                                                />
-                                            <br></br>
+            <ProfileViewer>
 
 
 
-                                                <button className="roar"> Upload Avatar Image</button>
-                                                <button className="roar"> Reset</button>
-                                                <div>
-                                                    <h5>About me:</h5>
-                                                    <h5>Contact Information:</h5>
-                                                    <h5>Email:</h5>
-                                                    <h5>Organizations:</h5>
-                                                    <textarea></textarea>
-                                                    <div className="profile" style={{ display: "flex", justifyContent: "space-between", width: "108%" }}>
-                                                        <input value={username}
-                                                            onChange={(e) => setusername(e.target.value)}>
 
-                                                        </input>
-                                                        <button onClick={updateUsername}>Test</button>
-
-
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
+            </ProfileViewer>
                             </div>
                         </div>
-                        <div className="col-xl-8 order-xl-1"> start here
-                            <div className="card bg-secondary shadow">
-                                <div className="card-header bg-white border-0">
-                                    <div className="row align-items-center">
-                                        <div className="col-8">
-                                            <h3 className="mb-0">My account</h3>
-                                        </div>
-                                        <div className="col-4 text-right">
-                                            <a href="#!" className="btn btn-sm btn-primary">Update</a>
-                                            <a href="#!" className="btn btn-sm btn-primary">Reset</a>
-                                        </div>
-                                    </div>
-                                </div>
- {/* ------------------this is the form to update the users information---------------------------------- */}
-                                <div className="card-body">
-                                    <form>
-                                        <h6 className="heading-small text-muted mb-4">User information</h6>
-                                        <div className="pl-lg-4">
-                                            <Row>
-                                                <div className="col-lg-6">
-                                                    <div className="form-group focused">
-                                                        <label className="form-control-label" for="input-username">Username</label>
-                                                        <input type="text" id="input-username" className="form-control form-control-alternative" placeholder="Username" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-6">
-                                                    <div className="form-group">
-                                                        <label className="form-control-label" for="input-email">Email address</label>
-                                                        <input type="email" id="input-email" className="form-control form-control-alternative" placeholder="lion@example.com" />
-                                                    </div>
-                                                </div>
-                                            </Row>
-                                            <Row>
-                                                <div className="col-lg-6">
-                                                    <div className="form-group focused">
-                                                        <label className="form-control-label" for="input-first-name">Organization Name</label>
-                                                        <input type="text" id="input-first-name" className="form-control form-control-alternative" placeholder="First name" />
-                                                    </div>
-                                                </div>
-                                            </Row>
-                                        </div>
-                                        <hr className="my-4" />
 
-                                        <h6 className="heading-small text-muted mb-4">Contact information</h6>
-                                        <div className="pl-lg-4">
-                                            <div className="row">
-                                                <div className="col-md-12">
-                                                    <div className="form-group focused">
-                                                        <label className="form-control-label" for="input-address">Address</label>
-                                                        <input id="input-address" className="form-control form-control-alternative" placeholder="Home Address" type="text" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="col-lg-4">
-                                                    <div className="form-group focused">
-                                                        <label className="form-control-label" for="input-city">City</label>
-                                                        <input type="text" id="input-city" className="form-control form-control-alternative" placeholder="City" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-4">
-                                                    <div className="form-group focused">
-                                                        <label className="form-control-label" for="input-country">Country</label>
-                                                        <input type="text" id="input-country" className="form-control form-control-alternative" placeholder="Country" value="United States" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-4">
-                                                    <div className="form-group">
-                                                        <label className="form-control-label" for="input-country">Zip code</label>
-                                                        <input type="number" id="input-postal-code" className="form-control form-control-alternative" placeholder="Postal code" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr className="my-4" />
 
-                                        <h6 className="heading-small text-muted mb-4">About me</h6>
-                                        <div className="pl-lg-4">
-                                            <div className="form-group focused">
-                                                <label>About Me</label>
-                                                <textarea rows="4" className="form-control form-control-alternative" placeholder="A few words about you ..."></textarea>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                     <ProfileForm> 
+                      
+                      
+                      
+                    </ProfileForm>  
                     </div>
                 </div>
             </div>
