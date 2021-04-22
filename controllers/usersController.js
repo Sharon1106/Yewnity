@@ -27,12 +27,19 @@ module.exports = {
                     res.status(400).json(err);
             });
             //need to add the code below to save the sessesion -------- our LOGIN TOKEN
-            // req.session.save(() => {
-            //     req.session.user_id = userData.id;
-            //     req.session.logged_in = true;
-                
-            //     res.json({ user: userData, message: 'You are now logged in!' });
-            //   });
+            req.session.save(() => {
+              var stream = require('getstream');
+              // pass the app secret when connecting on the server-side
+              streamclient = stream.connect('56ngat98cs7g', 'fd9rhdxsrrq5uxv4c4jrzy895a6wqaz7pbhpvwraca6ycu4dg6zu2nb9yyndfbrx', '1120553', { location: 'us-west', timeout: 15000 });
+              // no feed token is req'd when the Stream client was connected with an app secret
+              var feed = streamclient.feed('user', '');
+              var feedToken = streamclient.createUserToken('user');
+              req.session.user_id = userData.id;
+              console.log(userData)
+              req.session.logged_in = true;
+              req.session.feedToken = feedToken
+              res.json({ user: userData, token: req.session.token, message: 'You are now logged in!' });
+            });
     },
     update: function (req, res) {
         db.User

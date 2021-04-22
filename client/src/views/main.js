@@ -4,7 +4,7 @@ import Stream from "../components/MainFeed/stream";
 function Main() {
     return (
         <div className="main-feed">
-        <Stream/>
+            <Stream/>
         </div>
     )
 }

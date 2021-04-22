@@ -8,6 +8,7 @@ import UCLAv from '../views/images/uclav.png'
 import LAC9 from '../views/images/Lac9.png'
 import HM from '../views/images/humane.png'
 import avatar from '../views/images/avatar.png'
+import { Row } from "../components/Profile";
 {/* <Card>
 <Card.Img variant="top" src={} />
 <Card.Body>
@@ -195,11 +196,12 @@ const Profile = () => {
                                         </div>
                                     </div>
                                 </div>
+ {/* ------------------this is the form to update the users information---------------------------------- */}
                                 <div className="card-body">
                                     <form>
                                         <h6 className="heading-small text-muted mb-4">User information</h6>
                                         <div className="pl-lg-4">
-                                            <div className="row">
+                                            <Row>
                                                 <div className="col-lg-6">
                                                     <div className="form-group focused">
                                                         <label className="form-control-label" for="input-username">Username</label>
@@ -212,21 +214,15 @@ const Profile = () => {
                                                         <input type="email" id="input-email" className="form-control form-control-alternative" placeholder="lion@example.com" />
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="row">
+                                            </Row>
+                                            <Row>
                                                 <div className="col-lg-6">
                                                     <div className="form-group focused">
-                                                        <label className="form-control-label" for="input-first-name">First name</label>
+                                                        <label className="form-control-label" for="input-first-name">Organization Name</label>
                                                         <input type="text" id="input-first-name" className="form-control form-control-alternative" placeholder="First name" />
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-6">
-                                                    <div className="form-group focused">
-                                                        <label className="form-control-label" for="input-last-name">Last name</label>
-                                                        <input type="text" id="input-last-name" className="form-control form-control-alternative" placeholder="Last name" />
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            </Row>
                                         </div>
                                         <hr className="my-4" />
 
