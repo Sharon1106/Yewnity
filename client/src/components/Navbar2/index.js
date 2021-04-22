@@ -3,6 +3,7 @@ import "./style.css";
 import logo from "../../images/logo.png";
 import { useHistory, Link } from "react-router-dom";
 import Button from "../Button/Button";
+import Logout from "../Login/SignUpLogin"
 
 const Navbar2 = () => {
   const icon = "";
@@ -37,7 +38,7 @@ const Navbar2 = () => {
             <i className="fas fa-bars"></i>
           </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav ml-auto text-white bg-dark">
             <li className="nav-item">
               <a className="nav-link" href="/">Home</a>
             </li>
@@ -57,15 +58,7 @@ const Navbar2 = () => {
 
           <ul className="navbar-nav d-flex flex-row">
                   {/* Add-Another button or feature */}
-              
-          
-            <li className="nav-item me-3 me-lg-0">
-              {/* Add-Another button or feature */}
-            </li>          
-            <li className="nav-item me-3 me-lg-0">
-          
-            </li>
-            <li className="nav-item me-3 me-lg-0 dropdown">
+                  <li className="nav-item me-3 me-lg-0 dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                 <i className="dropdown">Logout</i>
               </a>
@@ -74,16 +67,7 @@ const Navbar2 = () => {
               </ul> 
             </li>
           </ul>
-          {/* <nav className="nav">
-            <ul className="nav__list">
-                <li className="nav__item"><a href="#home" onClick={()=>settoggle(false)} className="nav__link">Main</a></li>
-                <li className="nav__item"><a href="#about" onClick={()=>settoggle(false)} className="nav__link">Events</a></li>
-                <li className="nav__item"><a href="#services" onClick={()=>settoggle(false)} className="nav__link">Issues</a></li>
-                <li className="nav__item"><a href="#work" onClick={()=>settoggle(false)} className="nav__link">Forum</a></li>
-                <button className="btn">Log-Out</button>
-            </ul>
-        </nav> */}
-        </div> 
+      </div>
       </div>
     </nav>
   )

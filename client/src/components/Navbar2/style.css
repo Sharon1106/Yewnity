@@ -19,13 +19,16 @@ body p {
 }
 /* ////////////////menu links////////////// */
 nav a.nav-link {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   letter-spacing: 0.0375rem;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--primary-white);
 }
 
 nav ul li {
   text-transform: uppercase;
+  color: var(--primary-white);
 }
 
 .navbar-nav > li > a {
