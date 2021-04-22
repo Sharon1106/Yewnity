@@ -20,8 +20,30 @@ export default {
   // Saves a user to the database
   saveUser: function(userData) {
     return axios.post("/api/users", userData);
+  },
+  //grabs events
+  getEvents: function() {
+    return axios.get("/api/events");
+  },
+  // grabs specific events
+  getEvent: function(id) {
+    return axios.get("/api/events/" + id);
+  },
+  // Deletes the user with the given id
+  deleteEvent: function(id) {
+    return axios.delete("/api/events/" + id);
+  },
+  // Saves a user to the database
+  saveEvent: function(eventData) {
+    return axios.post("/api/events", eventData);
   }
 };
+
+
+
+
+
+
 
 const options = {
   method: 'GET',
