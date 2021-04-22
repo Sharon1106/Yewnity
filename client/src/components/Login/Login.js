@@ -1,10 +1,11 @@
 // removed useEffect/ import if used
 import React, { useState } from "react";
-import Google from '../GoogleLogin/googlelogin';
+import Google from './googlelogin';
 import { useHistory } from "react-router-dom";
 import { Input, SubmitBtn } from "../Form";
 import "./SignUpLogin.css";
 import API from "../../utils/API";
+import Bcrypt from "bcryptjs";
 
 function Login() {
   const [user, setUser] = useState({
@@ -25,12 +26,23 @@ function Login() {
       //pass in hashed password
       password: event.target.password,
     })
-      .then(res => {
+      .then((res, req) => {
+        if (!user) {
+          return res.status(400).send({ message: "The username does not exist" });
+        }
+        if (!Bcrypt.compareSync(req.body.password, user.password)) {
+          return res.status(400).send({
+
+            message: "The password is invalid"
+          })
+        }
+        res.send({ message: "The username and password combination is correct!" });
         console.log(res)
         localStorage.setItem("user", JSON.stringify(res.data))
         history.push("/profile")
       })
-  };
+  }
+
 
   function handleInputChange(event) {
     console.log("Im here")
@@ -63,9 +75,9 @@ function Login() {
           onChange={(event) => handleInputChange(event)}
         />
         <SubmitBtn
-          className="btn btn-primary my-5 text-center btn-floating mx-1btn-block"
           name="login"
           type="submit"
+          className="btn btn-primary btn-block my-5 text-center "
           onClick={handleFormSubmit}
         />
         <div class="text-center">
