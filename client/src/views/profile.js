@@ -9,8 +9,19 @@ import LAC9 from '../views/images/Lac9.png'
 import HM from '../views/images/humane.png'
 import avatar from '../views/images/avatar.png'
 import { Row } from "../components/Profile";
-import {ProfileViewer} from "../components/ProfileViewer";
-import {ProfileForm} from "../components/ProfileForm";
+import { ProfileViewer } from "../components/ProfileViewer";
+import { ProfileForm } from "../components/ProfileForm";
+import Organization from "../components/Organization";
+import API from "../utils/API";
+
+
+
+
+
+
+
+
+
 {/* <Card>
 <Card.Img variant="top" src={} />
 <Card.Body>
@@ -147,21 +158,21 @@ const Profile = () => {
                         <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0">
                             <div className="card card-profile shadow">
 
-            <ProfileViewer>
+                                <ProfileViewer>
 
 
 
 
-            </ProfileViewer>
+                                </ProfileViewer>
                             </div>
                         </div>
 
 
-                     <ProfileForm> 
-                      
-                      
-                      
-                    </ProfileForm>  
+                        <ProfileForm>
+
+
+
+                        </ProfileForm>
                     </div>
                 </div>
             </div>
@@ -175,22 +186,14 @@ const Profile = () => {
             }}>
 
             </div>
-            {/* <div className="postHistory" style={{ justifyContent: "center", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
+            <div className="postHistory" style={{ justifyContent: "center", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
                 <h2>Recent Posts</h2>
 
                 <CardDeck>
-                    <Card>
-                        <Card.Img variant="top" src={UCLAv} />
-                        <Card.Body>
-                            <Card.Title>UCLA Veterans</Card.Title>
-                            <Card.Text>
-                                Yewnity is proud to be partner with UCLA Veterans. UCLA Veterans has been serving veterans for over 70 years! Whether it's our medical school faculty and residents providing care to 3,000 individual patients a year at the VA, our on-campus supportive services for student veterans, state-of-the-art cosmetic and reconstructive surgery for warriors wounded while serving overseas, or groundbreaking research revolutionizing the way the U.S. military does business, UCLA serves those who serve in myriad ways. If you have any questions about the information, research, resources, and support that UCLA provides to veterans, please contact 310.206.6915 or email us at veteran@saonet.ucla.edu
-                        </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
-                    </Card>
+                    {
+                    organizations.map((value,index)=><Organization lastUpdated={value.updated} image={value.img} title={value.title} text={value.text}
+                    key={index}/>)
+                    }
                     <Card>
                         <Card.Img variant="top" src={LAC9} />
                         <Card.Body>
@@ -241,7 +244,7 @@ const Profile = () => {
 
                 </CardDeck>
 
-            </div> */}
+            </div>
         </div>
 
     )

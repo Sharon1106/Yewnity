@@ -9,13 +9,25 @@ import LAC9 from '../ProfileViewer/images/Lac9.png'
 import HM from '../ProfileViewer/images/humane.png'
 import avatar from '../ProfileViewer/images/avatar.png'
 import {Row} from "../Profile";
+import API from "../../utils/API";
 
 
 
 //------------------------anything inside of a form, create the component here!--------------------------//
 
 //this is an input component that can be used on forms
+
 export function ProfileForm (props) {
+    const [user, setUser] = useState({
+        email: "",
+        username: "",
+        
+      })
+    
+    API.getUser({
+        username: user.username,
+        
+    })
     return (
 
 
