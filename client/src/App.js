@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar2 from "./components/Navbar2";
-import Footer from "./components//Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import AppHome from "./views/home";
 import Profile from "./views/profile";
 import Discussions from "./views/discussions";

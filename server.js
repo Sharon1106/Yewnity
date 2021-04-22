@@ -5,8 +5,6 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-
-
 //middlewar
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

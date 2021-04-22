@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import DiscussionBoard from 'react-discussion-board';
 import 'react-discussion-board/dist/index.css';
+import './MsgBoard.css';
+import { CreateEvent } from "./CreateEvent";
+import { Button } from "../Form";
+import EventModal from "./EventModal";
+
+
 
 function MsgBoard() {
-
-    const[event, setEvent] = useState({
-        email:"",
-        username:"",
-        password:"",
-      })
 
     const allPosts = [
         {
@@ -17,7 +17,6 @@ function MsgBoard() {
             name:'John Doe',
             content: '<p>Hello Everyone!</p><p>-John</>',
             date: new Date ('17, Apr 2021 13:44.00 GMT')
-
         },
         {
             profileImage:'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
@@ -39,15 +38,17 @@ function MsgBoard() {
                 name: 'Jane Doe',
                 content: 'Maiores velit, atque voluptatum aliquam sapiente',
                 date:currentDate
-
             }
         ])
     }
     return (
-        <div className='MsgBoard'>
-            <DiscussionBoard posts={posts} onSubmit={submitPost}/>
+        <div>
+            <EventModal />         
+            <div className='MsgBoard'>
+                <DiscussionBoard posts={posts} onSubmit={submitPost}/>
+            </div>
         </div>
     )
 }
 
-export default MsgBoard
+export default MsgBoard;

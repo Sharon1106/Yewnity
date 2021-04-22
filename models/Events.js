@@ -12,13 +12,17 @@ const EventSchema = new Schema ({
         required: true,
     },
     date: {
-        type: Date,    
+        type: Date,
+        required: true,   
     },
     time: {
         type: String,
+        required: true,
+
     },
-    address: {
+    city: {
         type: String,
+        require: true
     }
 });
 
