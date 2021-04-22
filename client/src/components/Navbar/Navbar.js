@@ -1,76 +1,76 @@
-import { set } from 'mongoose';
-import React, { useState} from 'react'
-import { Link } from 'react-router-dom';
-import Button from '../Button/Button'
-import '../Button/Button.css'
-import '../Navbar/Navbar.css'
+import React, { useState } from "react";
+import "./Navbar.css";
+import logo from "../../images/logo.png";
+import { useHistory, Link } from "react-router-dom";
+import Button from "../Button/Button";
+import Logout from "../Login/SignUpLogin"
 
-function Navbar() {
-    const [click, setClick] = useState(false)
-    const[button, setButton] = useState(true)
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
-    const showButton = () => {
-        if(window.innerWidth <= 960) {
-            setButton(false);
-        }else {
-            setButton(true)
-        }
-    };
+const Navbar = () => {
+  const icon = "";
+  const [user, setUser] = useState({
+    email: "",
+    username: "",
+    password: "",
+  })
 
-    window.addEventListener('resize', showButton)
-    return (
-        <>
-        <nav className="navbar">
-            <div className="navbar-container">
-                <Link to="/" className="navbar-logo">
-                    YEWNITY LOGO
-                </Link>
-                <div className='menu-icon' onClick={handleClick}>
-                    <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-                </div>
-                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                    <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                            Your Feed
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                            Events
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                            Issues
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                            Forum
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                            Profile
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                            Log In
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/' className='nav-links-mobile' onClick={closeMobileMenu}>
-                            Sign Up
-                        </Link>
-                    </li>
-                </ul>
-                {button && <Button buttonStyle='btn--outline'>Sign Up</Button>}
-            </div>
-        </nav>
-        </>
-    )
+  // redirect
+  let history = useHistory()
+
+  //onclick clear user info in local storage
+  function handleLogout(event) {
+    console.log("logout user")
+    event.preventDefault()
+    setUser({
+      email: "",
+      username: "",
+      password: "",
+    })
+    localStorage.clear()
+    history.push("/")
+  };
+
+  return (
+    <nav id="navbar" className="navbar navbar-expand-lg sticky fixed-top shadow-1 navbar-light bg-dark">
+      <div className="container">
+        <img className="icon" src={logo} height="50" alt="SM" loading="lazy" />
+        <h1 class="title">Yewnity</h1>
+        <button className="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i className="fas fa-bars"></i>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ml-auto text-white bg-dark">
+            <li className="nav-item">
+              <a className="nav-link" href="/">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/main">Main</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/events">Events</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/forum">Forum</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/profile">Profile</a>
+            </li>
+          </ul>
+
+          <ul className="navbar-nav d-flex flex-row">
+            {/* Add-Another button or feature */}
+            <li className="nav-item me-3 me-lg-0 dropdown">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <i className="dropdown">Logout</i>
+              </a>
+              <ul className="dropdown-content" aria-labelledby="navbarDropdown">
+                <Link onClick={handleLogout}>Logout</Link>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  )
 }
 
-export default Navbar
+export default Navbar;
