@@ -9,9 +9,10 @@ import Footer from "./components//Footer/Footer";
 //switched file path - react app works now - Jeff -
 //Landing Hero
 import AppHome from "./views/home";
-import Profile from "./views/profile"
-import Discussions from "./views/discussions"
-import Main from "./views/main"
+import Profile from "./views/profile";
+import Discussions from "./views/discussions";
+import Main from "./views/main";
+import Forum from "./components/Forum/forumApp";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <Route path='/main' exact component = { Main }  />
         {/* this wil be the issues page --  */}
         {/* <Route path='/events' exact component = {}  /> */}
-        <Route path='/forum' exact component = { Discussions }  />
+        <Route path='/forum' exact component = { Forum }  />
         <Route path='/profile' exact component={ Profile } />
       </Switch>
       <Footer></Footer>
