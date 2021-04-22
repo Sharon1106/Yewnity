@@ -9,3 +9,10 @@ export function Row(props) {
         </div>
     );
 }
+
+export function Name(props) {
+    return (
+        <div className="row">
+        </div>
+    );
+}
