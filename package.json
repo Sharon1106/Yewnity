@@ -43,6 +43,7 @@
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
     "mongoose": "^5.12.4",
+    "mongoose-express-session": "0.0.5",
     "mongoose-type-email": "^1.1.2",
     "morgan": "^1.10.0",
     "prettier": "^2.2.1",

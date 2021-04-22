@@ -25,7 +25,7 @@ function SignUp () {
       })
       .then(res =>{
         console.log(res)
-        localStorage.setItem("user", JSON.stringify(res.data._id))
+        localStorage.setItem("user", JSON.stringify(res.data))
         history.push("/profile")
       })
   };
