@@ -8,6 +8,7 @@ import UCLAv from '../views/images/uclav.png'
 import LAC9 from '../views/images/Lac9.png'
 import HM from '../views/images/humane.png'
 import avatar from '../views/images/avatar.png'
+import { Row } from "../components/Profile";
 {/* <Card>
 <Card.Img variant="top" src={} />
 <Card.Body>
@@ -74,7 +75,7 @@ const Profile = () => {
 
                         <a className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">User profile</a>
 
-                        <form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+                        {/* <form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                             <div className="form-group mb-0">
                                 <div className="input-group input-group-alternative">
                                     <div className="input-group-prepend">
@@ -83,19 +84,12 @@ const Profile = () => {
                                     <input className="form-control" placeholder="Search" type="text" />
                                 </div>
                             </div>
-                        </form>
+                        </form> */}
 
                         <ul className="navbar-nav align-items-center d-none d-md-flex">
                             <li className="nav-item dropdown">
                                 <a className="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <div className="media align-items-center">
-                                        <span className="avatar avatar-sm rounded-circle">
-                                            <img alt="Image placeholder" src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4.jpg" />
-                                        </span>
-                                        <div className="media-body ml-2 d-none d-lg-block">
-                                            <span className="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
-                                        </div>
-                                    </div>
+
                                 </a>
                                 <div className="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
                                     <div className=" dropdown-header noti-title">
@@ -128,15 +122,17 @@ const Profile = () => {
                     </div>
                 </nav>
 
-                <div className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{minHeight: "600px", backgroundImage: 
-                "url(https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/profile-cover.jpg)", backgroundSize: "cover", backgroundPosition: "center top"}}>
+                <div className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{
+                    minHeight: "600px", backgroundImage:
+                        "url()", backgroundSize: "cover", backgroundPosition: "center top"
+                }}>
 
                     <span className="mask bg-gradient-default opacity-8"></span>
 
                     <div className="container-fluid d-flex align-items-center">
                         <div className="row">
                             <div className="col-lg-7 col-md-10">
-                                <h1 className="display-2 text-white">Hello Jesse</h1>
+                                <h1 className="display-2 text-white">Hello User</h1>
                                 <p className="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
                                 <a href="#!" className="btn btn-info">Edit profile</a>
                             </div>
@@ -148,61 +144,46 @@ const Profile = () => {
                     <div className="row">
                         <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0">
                             <div className="card card-profile shadow">
-                                <div className="row justify-content-center">
-                                    <div className="col-lg-3 order-lg-2">
-                                        <div className="card-profile-image">
-                                            <a href="#">
-                                                <img src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4.jpg" className="rounded-circle" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                                    <div className="d-flex justify-content-between">
-                                        <a href="#" className="btn btn-sm btn-info mr-4">Connect</a>
-                                        <a href="#" className="btn btn-sm btn-default float-right">Message</a>
-                                    </div>
-                                </div>
+
                                 <div className="card-body pt-0 pt-md-4">
                                     <div className="row">
                                         <div className="col">
-                                            <div className="card-profile-stats d-flex justify-content-center mt-md-5">
+                                            <div className="ava">
+                                                <img className="avatar0" style={{ width: "300px", height: "250px", borderRadius: "80px" }}
+                                                    src={avatar}
+                                                />
+                                            <br></br>
+
+
+
+                                                <button className="roar"> Upload Avatar Image</button>
+                                                <button className="roar"> Reset</button>
                                                 <div>
-                                                    <span className="heading">22</span>
-                                                    <span className="description">Friends</span>
+                                                    <h5>About me:</h5>
+                                                    <h5>Contact Information:</h5>
+                                                    <h5>Email:</h5>
+                                                    <h5>Organizations:</h5>
+                                                    <textarea></textarea>
+                                                    <div className="profile" style={{ display: "flex", justifyContent: "space-between", width: "108%" }}>
+                                                        <input value={username}
+                                                            onChange={(e) => setusername(e.target.value)}>
+
+                                                        </input>
+                                                        <button onClick={updateUsername}>Test</button>
+
+
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <span className="heading">10</span>
-                                                    <span className="description">Photos</span>
-                                                </div>
-                                                <div>
-                                                    <span className="heading">89</span>
-                                                    <span className="description">Comments</span>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="text-center">
-                                        <h3>
-                                            Jessica Jones<span className="font-weight-light">, 27</span>
-                                        </h3>
-                                        <div className="h5 font-weight-300">
-                                            <i className="ni location_pin mr-2"></i>Bucharest, Romania
-                </div>
-                                        <div className="h5 mt-4">
-                                            <i className="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
-                </div>
-                                        <div>
-                                            <i className="ni education_hat mr-2"></i>University of Computer Science
-                </div>
-                                        <hr className="my-4" />
-                                        <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
-                                        <a href="#">Show more</a>
-                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-8 order-xl-1">
+                        <div className="col-xl-8 order-xl-1"> start here
                             <div className="card bg-secondary shadow">
                                 <div className="card-header bg-white border-0">
                                     <div className="row align-items-center">
@@ -210,42 +191,38 @@ const Profile = () => {
                                             <h3 className="mb-0">My account</h3>
                                         </div>
                                         <div className="col-4 text-right">
-                                            <a href="#!" className="btn btn-sm btn-primary">Settings</a>
+                                            <a href="#!" className="btn btn-sm btn-primary">Update</a>
+                                            <a href="#!" className="btn btn-sm btn-primary">Reset</a>
                                         </div>
                                     </div>
                                 </div>
+ {/* ------------------this is the form to update the users information---------------------------------- */}
                                 <div className="card-body">
                                     <form>
                                         <h6 className="heading-small text-muted mb-4">User information</h6>
                                         <div className="pl-lg-4">
-                                            <div className="row">
+                                            <Row>
                                                 <div className="col-lg-6">
                                                     <div className="form-group focused">
                                                         <label className="form-control-label" for="input-username">Username</label>
-                                                        <input type="text" id="input-username" className="form-control form-control-alternative" placeholder="Username" value="lucky.jesse" />
+                                                        <input type="text" id="input-username" className="form-control form-control-alternative" placeholder="Username" />
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-6">
                                                     <div className="form-group">
                                                         <label className="form-control-label" for="input-email">Email address</label>
-                                                        <input type="email" id="input-email" className="form-control form-control-alternative" placeholder="jesse@example.com" />
+                                                        <input type="email" id="input-email" className="form-control form-control-alternative" placeholder="lion@example.com" />
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="row">
+                                            </Row>
+                                            <Row>
                                                 <div className="col-lg-6">
                                                     <div className="form-group focused">
-                                                        <label className="form-control-label" for="input-first-name">First name</label>
-                                                        <input type="text" id="input-first-name" className="form-control form-control-alternative" placeholder="First name" value="Lucky" />
+                                                        <label className="form-control-label" for="input-first-name">Organization Name</label>
+                                                        <input type="text" id="input-first-name" className="form-control form-control-alternative" placeholder="First name" />
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-6">
-                                                    <div className="form-group focused">
-                                                        <label className="form-control-label" for="input-last-name">Last name</label>
-                                                        <input type="text" id="input-last-name" className="form-control form-control-alternative" placeholder="Last name" value="Jesse" />
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            </Row>
                                         </div>
                                         <hr className="my-4" />
 
@@ -255,7 +232,7 @@ const Profile = () => {
                                                 <div className="col-md-12">
                                                     <div className="form-group focused">
                                                         <label className="form-control-label" for="input-address">Address</label>
-                                                        <input id="input-address" className="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text" />
+                                                        <input id="input-address" className="form-control form-control-alternative" placeholder="Home Address" type="text" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -263,7 +240,7 @@ const Profile = () => {
                                                 <div className="col-lg-4">
                                                     <div className="form-group focused">
                                                         <label className="form-control-label" for="input-city">City</label>
-                                                        <input type="text" id="input-city" className="form-control form-control-alternative" placeholder="City" value="New York" />
+                                                        <input type="text" id="input-city" className="form-control form-control-alternative" placeholder="City" />
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-4">
@@ -274,7 +251,7 @@ const Profile = () => {
                                                 </div>
                                                 <div className="col-lg-4">
                                                     <div className="form-group">
-                                                        <label className="form-control-label" for="input-country">Postal code</label>
+                                                        <label className="form-control-label" for="input-country">Zip code</label>
                                                         <input type="number" id="input-postal-code" className="form-control form-control-alternative" placeholder="Postal code" />
                                                     </div>
                                                 </div>
@@ -286,7 +263,7 @@ const Profile = () => {
                                         <div className="pl-lg-4">
                                             <div className="form-group focused">
                                                 <label>About Me</label>
-                                                <textarea rows="4" className="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+                                                <textarea rows="4" className="form-control form-control-alternative" placeholder="A few words about you ..."></textarea>
                                             </div>
                                         </div>
                                     </form>
@@ -304,29 +281,9 @@ const Profile = () => {
                 borderBottom: "1px solid grey",
                 paddingBottom: "30px"
             }}>
-                <div>
-                    <img style={{ width: "300px", height: "250px", borderRadius: "80px" }}
-                        src={avatar}
-                    />
-                </div>
-                <div>
-                    <h4>Username:</h4>
-                    <input></input>
-                    <div className="profile" style={{ display: "flex", justifyContent: "space-between", width: "108%" }}>
-                        <input value={username}
-                            onChange={(e) => setusername(e.target.value)}>
 
-                        </input>
-                        <button onClick={updateUsername}>Change Username</button>
-                        <h1>TEST</h1>Welcome to Yewnity Profile Page here you can see!
-                        <h6>Something goes here</h6>
-                        <h6>Something goes here</h6>
-
-                    </div>
-
-                </div>
             </div>
-            <div className="postHistory" style={{ justifyContent: "center", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
+            {/* <div className="postHistory" style={{ justifyContent: "center", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
                 <h2>Recent Posts</h2>
 
                 <CardDeck>
@@ -392,7 +349,7 @@ const Profile = () => {
 
                 </CardDeck>
 
-            </div>
+            </div> */}
         </div>
 
     )

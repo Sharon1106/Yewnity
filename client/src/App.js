@@ -2,17 +2,13 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-/// Matthew
 import Navbar2 from "./components/Navbar2";
 import Footer from "./components//Footer/Footer";
-//main
-//switched file path - react app works now - Jeff -
-//Landing Hero
 import AppHome from "./views/home";
 import Profile from "./views/profile";
 import Discussions from "./views/discussions";
 import Main from "./views/main";
-import Forum from "./components/Forum/forumApp";
+import MsgBoard from "./views/discussions";
 
 function App() {
   return (
@@ -22,9 +18,8 @@ function App() {
       <Switch>
         <Route path='/' exact component = {AppHome} /> {/*Landing Page*/}
         <Route path='/main' exact component = { Main }  />
-        {/* this wil be the issues page --  */}
-        {/* <Route path='/events' exact component = {}  /> */}
-        <Route path='/forum' exact component = { Forum }  />
+        <Route path='/events' exact component = { MsgBoard }  />
+        <Route path='/forum' exact component = { Discussions }  />
         <Route path='/profile' exact component={ Profile } />
       </Switch>
       <Footer></Footer>
