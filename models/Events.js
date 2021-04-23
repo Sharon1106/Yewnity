@@ -18,7 +18,13 @@ const EventSchema = new Schema ({
     city: {
         type: String,
         require: true
-    }
+    },
+    user: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "User"
+        },
+      ],
 });
 
 

@@ -27,13 +27,13 @@ const UserSchema = new Schema({
     },
     image: {
         type: String,
-    }
-    // events: [
-    //     {
-    //       type: Schema.Types.ObjectId,
-    //       ref: "Event"
-    //     },
-    //   ],
+    },
+    events: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "Event"
+        },
+      ],
     // posts: [
     //     {
     //         type: Schema.Types.ObjectId,
@@ -52,7 +52,6 @@ const UserSchema = new Schema({
 //before we save UserSchema to the database we runthis function
 UserSchema.pre("save", function (next) {
     const user = this;
-
     user.password = bcrypt.hashSync(user.password, 10);
     console.log(user)
     return next();

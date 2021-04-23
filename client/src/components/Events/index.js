@@ -1,34 +1,39 @@
 import React from "react";
+import { CardWrapper, FormGroup, Label, P } from "../Form";
+import './style.css';
 //------------------------anything inside of a form, create the component here!--------------------------//
 
 //this is an input component that can be used on forms
 export function Input(props) {
     return (
-        <div className="form-group">
-            <label>{props.label}</label>
+        <FormGroup>
+            <Label>{props.label}</Label>
             <input className="form-control" {...props} />
-        </div>
+        </FormGroup>
     );
 }
 
 export function DateTime(props) {
     return (
-        <div className="form-group">
-            <label className="col-form-label">{props.label}</label>
+        <FormGroup>
+            <Label className="col-form-label">{props.label}</Label>
             <input className="form-control" type="datetime-local" {...props}></input>
-        </div>
+        </FormGroup>
     )
 }
 
 export function Card(props) {
     return (
-        <div className="card">
+        <CardWrapper>
             <div className="card-body">
-                <h5 className="card-title">{props.title}</h5>
-                <p className="card-text">{props.description}</p>
-                <p className="card-text">{props.moment}</p>
-                <p className="card-text">{props.city}</p>
+                <h5 className="card-title"><Label className="label-title">Title:</Label>{props.title}</h5>
+                <Label className="label-description">Description:</Label>
+                <P id="descript">{props.description}</P>
+                <Label className="label">Date and Time:</Label>
+                <P id="moment">{props.moment}</P>
+                <Label className="label">Location:</Label>
+                <P id="city">{props.city}</P>
             </div>
-        </div>
+        </CardWrapper>
     )
 }
