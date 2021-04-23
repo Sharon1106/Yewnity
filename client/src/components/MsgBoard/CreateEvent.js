@@ -27,15 +27,15 @@ export function CreateEvent() {
     function handleFormSubmit(event) {
       console.log("Create event")
       event.preventDefault()
-
       API.saveEvent({
         title: events.title,
         description: events.description,
         moment: events.moment,
         city: events.city
       })
-        .then(res =>{
+        .then(res => {
           console.log(res)
+          console.log("response here")
         })
       };
     function handleInputChange(event) {
