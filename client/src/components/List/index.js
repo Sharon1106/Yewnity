@@ -5,8 +5,8 @@ import "./style.css";
 
 export function List({ children }) {
   return (
-    <div className="list-overflow-container">
-      <ul className="list-group">{children}</ul>
+    <div className="list-overflow-container" {...children}>
+      <ul className="list-group-item">{children}</ul>
     </div>
   );
 }
