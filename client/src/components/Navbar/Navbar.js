@@ -4,6 +4,7 @@ import logo from "../../images/logo.png";
 import { useHistory, Link } from "react-router-dom";
 // import Button from "../Button/Button";
 // import Logout from "../Login/SignUpLogin"
+import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-react';
 
 const Navbar = () => {
   // const icon = "";
