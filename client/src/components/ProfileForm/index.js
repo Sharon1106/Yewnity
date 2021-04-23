@@ -1,6 +1,6 @@
 import React from "react";
 // import profilepic from '../images/User-Example.jpeg'
-
+import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-react';
 import "../../views/profile.css"
 
 import {Row} from "../Profile";

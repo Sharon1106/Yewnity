@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import profilepic from '../images/User-Example.jpeg'
-import CardGroup from 'react-bootstrap/CardGroup'
-
 // import CardGroup from 'react-bootstrap/CardGroup'
-import Card from 'react-bootstrap/Card'
-
 import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import "./profile.css"
@@ -18,6 +13,8 @@ import FB from '../views/images/fb.png'
 import { ProfileViewer } from "../components/ProfileViewer";
 import { ProfileForm } from "../components/ProfileForm";
 import Organization from "../components/Organization";
+import Upload from '../components/Upload/Upload'
+import ImageUpload from '../components/ImageUpload/ImageUpload'
 // import API from "../utils/API";
 
 
@@ -60,15 +57,6 @@ const Profile = () => {
     const [toggleform, setoggleForm] = useState(false)
     const [user,setUser] = useState( JSON.parse(localStorage.getItem("user")))
 
-
-
-
-
-
-
-
-
-
     useEffect(() => {
     //API CALL (back-end job getUser Info(name atm))
    
@@ -80,6 +68,9 @@ const Profile = () => {
         //API .updateUsername(username)
     }
     return (
+        <><script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript">  
+    </script>
+    
         <div className="brain">
             <div className="main-content">
                 <nav className="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
@@ -247,7 +238,7 @@ const Profile = () => {
 
                         </div>
         </div>
-
+</>
     )
 }
 
