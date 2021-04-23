@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../images/logo.png";
 import { useHistory, Link } from "react-router-dom";
-import Button from "../Button/Button";
-import Logout from "../Login/SignUpLogin"
+// import Button from "../Button/Button";
+// import Logout from "../Login/SignUpLogin"
 
 const Navbar = () => {
-  const icon = "";
+  // const icon = "";
   const [user, setUser] = useState({
     email: "",
     username: "",
@@ -59,7 +59,7 @@ const Navbar = () => {
           <ul className="navbar-nav d-flex flex-row">
             {/* Add-Another button or feature */}
             <li className="nav-item me-3 me-lg-0 dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                 <i className="dropdown">Logout</i>
               </a>
               <ul className="dropdown-content" aria-labelledby="navbarDropdown">

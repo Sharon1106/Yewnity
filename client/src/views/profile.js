@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import profilepic from '../images/User-Example.jpeg'
-import CardGroup from 'react-bootstrap/CardGroup'
-import CardDeck from 'react-bootstrap/CardDeck'
-import Card from 'react-bootstrap/Card'
+
 import "./profile.css"
 import UCLAv from '../views/images/uclav.png'
 import LAC9 from '../views/images/Lac9.png'

@@ -11,11 +11,11 @@ function LandingCardItem(props) {
                     <img 
                     style={{width:100, height:100, position:'absolute'}}
                     src={props.src}
-                    alt="Orgs Image"
+                    alt="Orgs"
                     className="cards-item-img"/>
                 </figure>
                 <div className="cards-item-info">
-                    <h5 className='cards-item-text'></h5>
+                    <h5 className='cards-item-text'>"Text"</h5>
                 </div>
             
 

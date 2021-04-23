@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import API from "../../utils/API";
-import { useHistory } from "react-router-dom";
 import { LargeInput, SubmitBtn  } from "../Form";
 import { DateTime, Input } from "../Events";
 import './style.css';
@@ -13,16 +12,7 @@ export function CreateEvent() {
       moment: "",
       city:"",
     })
-    //   useEffect(() => {
-    //   const loggedInUser = API.getUser()
-    //   if (loggedInUser) {
-    //     const foundUser = JSON.stringify(loggedInUser);
-    //     setUser(foundUser);
-    //   }
-    // }, [])
-    
-     // redirect
-    let history = useHistory() 
+ 
   
     function handleFormSubmit(event) {
       console.log("Create event")
