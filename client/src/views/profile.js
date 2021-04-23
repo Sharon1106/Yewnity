@@ -8,6 +8,7 @@ import UCLAv from '../views/images/uclav.png'
 import LAC9 from '../views/images/Lac9.png'
 import HM from '../views/images/humane.png'
 import FB from '../views/images/fb.png'
+import test4 from '../views/images/test4.png'
 import avatar from '../views/images/avatar.png'
 import { Row } from "../components/Profile";
 import { ProfileViewer } from "../components/ProfileViewer";
@@ -237,6 +238,7 @@ const Profile = () => {
                                             
 
                         <div className="orgSubscriptions" style={{ paddingTop: "30px", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
+                            <nav className="Banner2">Testing</nav>
                             <h3>Organizations I'm Following</h3>
                             <CardDeck>
                                 {organizations?.map(org => (
@@ -260,6 +262,10 @@ const Profile = () => {
                             </CardDeck>
 
                         </div>
+
+
+
+                        
         </div>
 
     )

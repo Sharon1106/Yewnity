@@ -2070,6 +2070,7 @@
     color: #fff;
     background-color: #33b5e5 !important;
     
+    
   }
 
 
@@ -2080,7 +2081,9 @@
 }
 
 
-
+.Banner2{
+  background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;
+}
 
 
   .display-2 span {
