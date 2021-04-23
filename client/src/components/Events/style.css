@@ -1,0 +1,11 @@
+.card-title {
+    font-size: 2em;
+}
+.card-text {
+    margin: 0;
+    padding: 0;
+}
+.label-title {
+    margin-right: 1em;
+    font-weight: 500;
+}

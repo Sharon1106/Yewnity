@@ -25,17 +25,15 @@ export function ProfileViewer(props) {
                     <button className="btn"> Upload Avatar Image</button>
                     <button className="btn"> Reset</button>
                     <div>
-                        <h5>About me:</h5>
-                        <h5>Contact Information:</h5>
-                        <h5>Email:</h5>
+                        <h5>Username: {props.user?.username}</h5>
+                        <h5>Email:{props.user?.email}</h5>
                         <h5>Organizations:</h5>
-                        <textarea></textarea>
                         <div className="profile" style={{ display: "flex", justifyContent: "space-between", width: "108%" }}>
-                            <input value={props.username}
+                            <div value={props.username}
                                 onChange={(e) => props.setusername(e.target.value)}>
 
-                            </input>
-                            <button onClick={props.updateUsername}>Test</button>
+                            </div>
+                            {/* <button onClick={props.updateUsername}></button> */}
 
 
                         </div>

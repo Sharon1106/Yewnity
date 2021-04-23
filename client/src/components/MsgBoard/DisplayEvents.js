@@ -6,9 +6,9 @@ import './style.css';
 
 
 
+
 function Events() {
   const [events, setEvents] = useState([])
-
 
   // load all events and store them with setEvents
   useEffect(() => {

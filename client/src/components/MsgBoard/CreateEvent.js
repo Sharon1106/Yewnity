@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import API from "../../utils/API";
-import { LargeInput, SubmitBtn  } from "../Form";
-import { DateTime, Input } from "../Events";
+import { useHistory } from "react-router-dom";
+import { LargeInput, SubmitBtn, Form  } from "../Form";
+import { DateTime } from "../Events";
+import { Input } from "../Input";
 import './style.css';
 
 export function CreateEvent() {
@@ -12,7 +14,16 @@ export function CreateEvent() {
       moment: "",
       city:"",
     })
- 
+    //   useEffect(() => {
+    //   const loggedInUser = API.getUser()
+    //   if (loggedInUser) {
+    //     const foundUser = JSON.stringify(loggedInUser);
+    //     setUser(foundUser);
+    //   }
+    // }, [])
+    
+     // redirect
+    // let history = useHistory() 
   
     function handleFormSubmit(event) {
       console.log("Create event")
@@ -38,7 +49,7 @@ export function CreateEvent() {
     };
     return (
         <div className="create-event card shadow-5-strong">
-            <form className="form-outline mb-4 card-body shadow-5-strong">
+          <Form className="form-outline mb-4 card-body shadow-5-strong">
                 <h3 className="text-center">Create New event</h3>
                     <Input
                         name="title"
@@ -72,7 +83,7 @@ export function CreateEvent() {
                         type="submit"
                         onClick={ handleFormSubmit}
                     />
-            </form>
+          </Form>
         </div>
     );
 }
