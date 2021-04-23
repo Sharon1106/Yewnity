@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../images/logo.png";
+import { NavLink } from "../List";
 import { useHistory, Link } from "react-router-dom";
 // import Button from "../Button/Button";
 // import Logout from "../Login/SignUpLogin"
@@ -40,23 +41,11 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto text-white bg-dark">
-            <li className="nav-item">
-              <a className="nav-link" href="/">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/main">Main</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/events">Events</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/forum">Forum</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/profile">Profile</a>
-            </li>
+            <NavLink href="/" linkName="Home" />
+            <NavLink href="/main" linkName="Main" />
+            <NavLink href="/events" linkName="Events" />
+            <NavLink href="/profile" linkName="Profile" />
           </ul>
-
           <ul className="navbar-nav d-flex flex-row">
             {/* Add-Another button or feature */}
             <li className="nav-item me-3 me-lg-0 dropdown">

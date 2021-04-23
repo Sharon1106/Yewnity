@@ -1,6 +1,7 @@
 import React from "react";
 import {Cloudinary} from 'cloudinary-core';
 import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-react';
+import { FormGroup, Label } from "../Form";
 
 //------------------------anything inside of a form, create the component here!--------------------------//
 

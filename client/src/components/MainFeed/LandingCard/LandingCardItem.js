@@ -17,12 +17,8 @@ function LandingCardItem(props) {
                 <div className="cards-item-info">
                     <h5 className='cards-item-text'></h5>
                 </div>
-            
-
             </Link>
         </li>
-
-
         </>
     )
 }

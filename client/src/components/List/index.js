@@ -15,6 +15,14 @@ export function ListItem({ children }) {
   return <li className="list-group-item">{children}</li>;
 }
 
+export function NavLink (props) {
+  return (
+    <li className="nav-item">
+      <a className="nav-link" {...props}>{props.linkName}</a>
+    </li>
+  )
+}
+
 export function CardText({ children }) {
   return (
     <p className="card-text">{children}</p>
