@@ -2,6 +2,7 @@ const db = require("../models");
 
 module.exports = {
     login: function (req, res) {
+      console.log("TESTING-----------")
         db.User
             .findOne({
               username: req.body.username,

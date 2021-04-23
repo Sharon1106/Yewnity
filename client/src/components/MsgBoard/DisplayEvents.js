@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import API from "../../utils/API";
-import { useHistory } from "react-router-dom";
 import { List, ListItem } from "../List";
 import { Card } from "../Events";
 import './style.css';
 
 
 
+
 function Events() {
   const [events, setEvents] = useState([])
-
 
   // load all events and store them with setEvents
   useEffect(() => {

@@ -4,6 +4,7 @@ module.exports = {
     findAll: function (req, res) {
         db.User
             .find(req.query)
+            .populate("events")
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(400).json(err));
     },
