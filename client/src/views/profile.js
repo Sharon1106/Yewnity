@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
-
+import CardGroup from 'react-bootstrap/CardGroup'
+import Card from 'react-bootstrap/Card'
+import CardDeck from 'react-bootstrap/CardDeck'
 import "./profile.css"
 import UCLAv from '../views/images/uclav.png'
 import LAC9 from '../views/images/Lac9.png'
