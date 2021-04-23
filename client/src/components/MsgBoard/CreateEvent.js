@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import API from "../../utils/API";
-import { useHistory } from "react-router-dom";
 import { LargeInput, SubmitBtn, Form  } from "../Form";
 import { DateTime } from "../Events";
 import { Input } from "../Input";

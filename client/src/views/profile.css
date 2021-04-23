@@ -1,5 +1,5 @@
 .brain {
-    margin-top: 120px;
+    margin-top: 72px;
 }
 
 
@@ -2061,6 +2061,19 @@
   }
   
 
+
+  .sub2{
+    color: #fff;
+    background-color: #33b5e5 !important;
+    
+  }
+
+
+
+.card-footer {
+  align-content: center;
+  justify-content: center;
+}
 
 
 
