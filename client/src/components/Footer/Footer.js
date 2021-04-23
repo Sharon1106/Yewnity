@@ -46,7 +46,7 @@ function Footer() {
                 </div>
                 <div className="child">
                     <div className="unitywrapper">
-                        <img className="unity" src={image} />
+                        <img className="unity" src={image} alt=""/>
                     </div>
                 </div>
             </footer>

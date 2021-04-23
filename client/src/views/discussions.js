@@ -1,7 +1,6 @@
 import React from 'react'
 // import MsgBoard from '../components/MsgBoard/MsgBoard';
 import MsgBoard from '../components/MsgBoard/MsgBoard';
-import { Button } from '../components/Form';
 
 
 

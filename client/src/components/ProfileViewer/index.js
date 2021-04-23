@@ -1,12 +1,7 @@
 import React from "react";
-// import profilepic from '../images/User-Example.jpeg'
-import CardGroup from 'react-bootstrap/CardGroup'
-import CardDeck from 'react-bootstrap/CardDeck'
-import Card from 'react-bootstrap/Card'
+
 import "../../views/profile.css"
-import UCLAv from './images/uclav.png'
-import LAC9 from './images/Lac9.png'
-import HM from './images/humane.png'
+
 import avatar from './images/avatar.png'
 
 
@@ -21,7 +16,7 @@ export function ProfileViewer(props) {
             <div className="col">
                 <div className="ava">
                     <img className="avatar0" style={{ width: "300px", height: "250px", borderRadius: "80px" }}
-                        src={avatar}
+                        src={avatar} alt="avatar"
                     />
                 <br></br>
 

@@ -120,7 +120,7 @@ function About() {
                     </section>
                     <section class="col-md-3 profile William">
                         <div class="circle4">
-                            <img class="profile-img" src={Will}></img>
+                            <img class="profile-img" src={Will} alt='Will'></img>
                         </div>
                         <p>William Thorne</p>
                         <div class="row">
