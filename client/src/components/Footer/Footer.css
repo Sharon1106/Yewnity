@@ -1,10 +1,5 @@
-.wrapper {
-    min-height: 30%; 
-    position: relative;
-}
-
 .footer {
-    background: #111;
+    background-color: linear-gradient(87deg, #172b4d 0, #1a174d 100%);
     color: white;
     font-size: var(--fs-h3);
     position: absolute;
@@ -33,12 +28,8 @@ i {
 .footer__link:hover,
 .social-list__link:hover {
     opacity: .7;
-    text-decoration: none;
 }
 
-.footer__link:hover {
-    text-decoration: underline;;
-}
 
 .social-list {
     list-style: none;

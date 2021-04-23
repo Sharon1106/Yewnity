@@ -13,8 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function About() {
     return (
-
-        <div class="wrapper">
+        <div className="about">
             <header class="header sub_header">
                 <h1 class="header_title">Meet the Yewnity Team</h1>
             </header>
@@ -72,9 +71,9 @@ function About() {
                             <div class="col-md-3">
                                 <button class="social-list__item2">
                                     <a class="social-list__link"
-                                    id="email2" href="mailto:matthewj.dev">
-                                     <i class="fas fa-envelope"></i>
-                                </a></button>
+                                        id="email2" href="mailto:matthewj.dev">
+                                        <i class="fas fa-envelope"></i>
+                                    </a></button>
                             </div>
                             <div class="col-md-3">
                                 <button class="social-list__item1"><a class="social-list__link" href="https://github.com/MattJ900">
@@ -95,25 +94,25 @@ function About() {
                         <p>Sharon Martinez</p>
                         <div class="row">
                             <div class="col-md-3">
-                            <button class="social-list__item0"><a class="social-list__link" href="https://github.com/Sharon1106/">
+                                <button class="social-list__item0"><a class="social-list__link" href="https://github.com/Sharon1106/">
                                     <i class="fab fa-github"></i>
                                 </a></button>
                             </div>
                             <div class="col-md-3">
-                            <button class="social-list__item2">
-                            <a class="social-list__link"
-                                    id="email3" href="mailto:martinezsharonr@gmail.com">
-                                 <i class="fas fa-envelope"></i>
+                                <button class="social-list__item2">
+                                    <a class="social-list__link"
+                                        id="email3" href="mailto:martinezsharonr@gmail.com">
+                                        <i class="fas fa-envelope"></i>
+                                    </a></button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="social-list__item1"><a class="social-list__link" href="https://www.linkedin.com/in/sharon-martinez-835723205/">
+                                    <i class="fab fa-linkedin"></i>
                                 </a></button>
                             </div>
                             <div class="col-md-3">
-                            <button class="social-list__item1"><a class="social-list__link" href="https://www.linkedin.com/in/sharon-martinez-835723205/">
-                                <i class="fab fa-linkedin"></i>
-                                </a></button>
-                            </div>
-                            <div class="col-md-3">
-                            <button class="social-list__item3"><a class="social-list__link" href="https://github.com/MattJ900">
-                                <i class="fab fa-facebook"></i>
+                                <button class="social-list__item3"><a class="social-list__link" href="https://github.com/MattJ900">
+                                    <i class="fab fa-facebook"></i>
                                 </a></button>
                             </div>
                         </div>
@@ -125,25 +124,25 @@ function About() {
                         <p>William Thorne</p>
                         <div class="row">
                             <div class="col-md-3">
-                            <button class="social-list__item0"><a class="social-list__link" href="https://github.com/IdFightGandhi">
+                                <button class="social-list__item0"><a class="social-list__link" href="https://github.com/IdFightGandhi">
                                     <i class="fab fa-github"></i>
                                 </a></button>
                             </div>
                             <div class="col-md-3">
-                            <button class="social-list__item2">
-                                <a class="social-list__link" 
-                                id="email4" href="mailto:williamcthorne@gmail.com">
-                                <i class="fas fa-envelope"></i>
+                                <button class="social-list__item2">
+                                    <a class="social-list__link"
+                                        id="email4" href="mailto:williamcthorne@gmail.com">
+                                        <i class="fas fa-envelope"></i>
+                                    </a></button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="social-list__item1"><a class="social-list__link" href="https://www.linkedin.com/in/sharon-martinez-835723205/">
+                                    <i class="fab fa-linkedin"></i>
                                 </a></button>
                             </div>
                             <div class="col-md-3">
-                            <button class="social-list__item1"><a class="social-list__link" href="https://www.linkedin.com/in/sharon-martinez-835723205/">
-                                <i class="fab fa-linkedin"></i>
-                                </a></button>
-                            </div>
-                            <div class="col-md-3">
-                            <button class="social-list__item3"><a class="social-list__link" href="https://github.com/MattJ900">
-                                <i class="fab fa-facebook"></i>
+                                <button class="social-list__item3"><a class="social-list__link" href="https://github.com/MattJ900">
+                                    <i class="fab fa-facebook"></i>
                                 </a></button>
                             </div>
                         </div>
@@ -152,7 +151,7 @@ function About() {
             </div>
             <div class="description">
                 <div class="tree">
-                        <strong><h1> Our Story</h1>
+                    <strong><h1> Our Story</h1>
                         <h4>Written by Matthew A. John</h4>
                         <br></br>
                         <p> Founded: April 2021, Yewnity deployed by UCLAx web developer rookies Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

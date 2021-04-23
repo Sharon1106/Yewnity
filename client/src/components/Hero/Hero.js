@@ -7,7 +7,7 @@ import SignUpLogin from "../Login/SignUpLogin";
 
 function LandingHero() {
   return (
-    <div iv className="heroBlock">
+    <div id className="heroBlock">
       <Carousel fade>
         <Carousel.Item>
           <img className="d-block w-100" src={sliderone} alt="First slide" />

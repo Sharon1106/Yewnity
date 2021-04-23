@@ -3,7 +3,7 @@ import Google from "./googlelogin";
 import { useHistory } from "react-router-dom";
 import { Input, SubmitBtn } from "../Form";
 import API from "../../utils/API";
-
+import Button from "./SignUpLogin"
 function SignUp() {
   const [user, setUser] = useState({
     email: "",
@@ -14,7 +14,6 @@ function SignUp() {
   //redirect
   let history = useHistory()
 
-  //upon saving user redirect to profile page
   function handleFormSubmit(event) {
     console.log("sign up user")
     event.preventDefault()
@@ -39,9 +38,9 @@ function SignUp() {
   };
 
   return (
-    <div className="signup shadow-5-strong">
-      <form className="signup form-outline mb-4" >
-        <h3 className="signup text-center">Sign Up</h3>
+    <div>
+      <form className="signup" >
+        <h3 className="signup">Sign Up</h3>
         <Input
           name="email"
           type="email"

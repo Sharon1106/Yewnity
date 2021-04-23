@@ -1,13 +1,9 @@
-.wrapper {
-  margin-top: 45px;
-  background-color: white;
-}
-
 .about {
   margin-left: 25px;
   margin-right: 25px;
   margin-top: 25px;
   background-image: url(../../images/tree.png);
+  margin-top: 45px;
 }
 
 .header {
