@@ -1,39 +1,50 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import API from "../../utils/API";
 import { useHistory } from "react-router-dom";
-import { LargeInput, SubmitBtn } from "../Form";
-import { DateTime, Input } from "../Events";
+import { List, ListItem } from "../List";
+import { Card } from "../Events";
 import './style.css';
 
-export function DisplayEvents() {
-  //[state, functionToUpdateState]
-  const [events, setEvents] = useState({
-    title: "",
-    description: "",
-    moment: "",
-    city: "",
-  })
 
-  let history = useHistory();
 
-  function EventForum() {
-    console.log("Create event")
+function Events() {
+  const [events, setEvents] = useState([])
 
-    API.getEvents({
-      title: setEvents.title,
-      description: setEvents.description,
-      moment: setEvents.moment,
-      city: setEvents.city
-    })
-      .then(res => {
-        console.log(res)
-        console.log("something")
-      })
+
+  // load all events and store them with setEvents
+  useEffect(() => {
+    loadEvents()
+  }, [])
+
+  //loads all events
+  function loadEvents() {
+    API.getEvents()
+      .then(res =>
+        setEvents(res.data)
+      )
+      .catch(err => console.log(err));
   };
+
   return (
-    <div className="create-event card shadow-5-strong">
-      <h3 className="text-center">{setEvents.title}</h3>
+    <div>
+      {events.length ? (
+        <List>
+          {events.map(event => (
+            <ListItem key={event._id}>
+              <Card
+                title={event.title}
+                description={event.description}
+                moment={event.moment}
+                city={event.city}
+              />
+            </ListItem>
+          ))}
+        </List>
+      ) : (
+        <h3>No Events to Display</h3>
+      )}
     </div>
   );
 }
-export default DisplayEvents;
+
+export default Events;

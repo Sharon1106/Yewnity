@@ -25,7 +25,6 @@ function EventModal() {
                 </Modal.Header>
                 <Modal.Body >
                     <CreateEvent />
-                    <DisplayEvents />
                 </Modal.Body>
                 <Modal.Footer>
                     <Button

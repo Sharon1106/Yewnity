@@ -1,7 +1,6 @@
 import React , {useState }from "react"
 import "./Banner.css"
 function Banner () {
-
 const [toggle,settoggle]=useState(false)
     return (
         <header className ={toggle ? "nav-open":""} >
