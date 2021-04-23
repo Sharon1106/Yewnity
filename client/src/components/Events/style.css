@@ -1,11 +1,46 @@
+.card {
+    margin: 0;
+}
 .card-title {
     font-size: 2em;
+    margin: 0 -4px;
 }
 .card-text {
     margin: 0;
     padding: 0;
 }
+.label {
+    margin: 0;
+}
 .label-title {
-    margin-right: 1em;
+    margin: 0;
     font-weight: 500;
+}
+
+.label-description {
+    margin: 0;
+}
+
+#descript {
+    margin: 0;
+    color: black;
+    font-weight: 500;
+}
+
+.moment {
+    margin: 0;
+    color: black;
+    font-family: "Roboto",sans-serif;
+    font-weight: 500;
+}
+
+.city {
+    margin: 0;
+    color: black;
+    font-weight: 500;
+}
+
+.row-format {
+    margin: 0;
+    padding: 0;
 }

@@ -24,15 +24,21 @@ export function DateTime(props) {
 
 export function Card(props) {
     return (
-        <CardWrapper>
+        <CardWrapper className="card">
             <div className="card-body">
-                <h5 className="card-title"><Label className="label-title">Title:</Label>{props.title}</h5>
-                <Label className="label-description">Description:</Label>
-                <P id="descript">{props.description}</P>
-                <Label className="label">Date and Time:</Label>
-                <P id="moment">{props.moment}</P>
-                <Label className="label">Location:</Label>
-                <P id="city">{props.city}</P>
+                <Label className="label text-muted">Event:</Label>
+                    <P className="label-title">{props.title}</P>
+                <Label className="label-description text-muted">Event Description:</Label>
+                    <P id="descript">{props.description}</P>
+                <div className="row-format">
+                    <Label className="label text-muted">When: </Label>
+                    <P className="moment">{props.moment}</P>
+                </div>
+                <div className="row-format">
+                    <Label className="label text-muted">Location:</Label>
+                    <P className="city">{props.city}</P>
+                </div>
+                <Label className="label-user text-muted">User: {props.user}</Label>
             </div>
         </CardWrapper>
     )

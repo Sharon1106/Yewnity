@@ -10,7 +10,6 @@ module.exports = {
         // password: req.body.password
       })
 
-
       .then(dbModel => {
         console.log(dbModel)
         if (!dbModel) {
@@ -18,7 +17,6 @@ module.exports = {
         }
         if (!Bcrypt.compareSync(req.body.password, dbModel.password)) {
           return res.status(400).send({
-
             message: "The password is invalid"
           })
         }
@@ -36,7 +34,6 @@ module.exports = {
         });
 
       })
-
       .catch(err => res.status(400).json(err));
   },
 }

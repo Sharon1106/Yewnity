@@ -16,16 +16,10 @@ module.exports = {
     },
     create: function (req, res) {
         console.log(req.body)
-        // db.User
-        // .findOne({
-        //   _id: req.session.user_id,
-        // })
-        
         db.Event.create( {
             ...req.body,
             user: req.session.user_id
         })
-            .then(({ dbModel }) => db.Event.findOneAndUpdate({}, { $each: { user: req.session.user_id } }, { new: true }))
             .then(dbModel => {
                 res.status(200).json(dbModel);
             })
