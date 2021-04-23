@@ -24,8 +24,6 @@ module.exports = {
                 err => {
                     res.status(400).json(err);
                 });
-
-
     },
     update: function (req, res) {
         db.Event

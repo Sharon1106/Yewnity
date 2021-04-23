@@ -5,11 +5,9 @@ const Schema = mongoose.Schema;
 const CommentSchema = new Schema ({
     content: {
         type: String,
-     
     },
     date: {
         type: Date,
-    
     },
     user: [
         {
