@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import profilepic from '../images/User-Example.jpeg'
 import CardGroup from 'react-bootstrap/CardGroup'
-import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
+import Card from 'react-bootstrap/Card'
 import "./profile.css"
 import UCLAv from '../views/images/uclav.png'
 import LAC9 from '../views/images/Lac9.png'
@@ -65,12 +66,11 @@ Yewnity is proud to be associated with UCLA Veterans!
 const Profile = () => {
     const [username, setusername] = useState("Random")
     const [organizations, setorganizations] = useState([
-        { img: UCLAv, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago" },
+        { img: UCLAv, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!",},
         {
-            img: LAC9, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago"
-        },
-        { img: HM, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago" },
-        { img: FB, title: "UCLA Veterans", text: "Test123", updated: "Last updated 3 mins ago" }
+            img: LAC9, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!",},
+        { img: HM, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", },
+        { img: FB, title: "UCLA Veterans", text: "Test123",}
     ])
     const [toggleform, setoggleForm] = useState(false)
     const [user,setUser] = useState( JSON.parse(localStorage.getItem("user")))
@@ -100,7 +100,7 @@ const Profile = () => {
                 <nav className="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
                     <div className="container-fluid">
 
-                        <a className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">User profile</a>
+                        <a className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block">User profile</a>
 
                         {/* <form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                             <div className="form-group mb-0">
@@ -160,7 +160,7 @@ const Profile = () => {
                         <div className="row">
                             <div className="col-lg-7 col-md-10">
                                 <h1 className="display-2 text-white">Hello {user?.user?.username || "user"}</h1>
-                                <p className="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
+                                <p className="text-white mt-0 mb-5">This is your profile page. You can also view & the list of the organizations Yewnity recommends.</p>
                                 <a onClick={() => setoggleForm(!toggleform)} href="#!" className="btn btn-info">Edit profile </a>
                             </div>
                         </div>
@@ -193,76 +193,73 @@ const Profile = () => {
                 </div>
             </div>
 
-            <div className="controller" style={{
-                display: "flex",
-                justifyContent: "space-around",
-                margin: "18px 0px",
-                borderBottom: "1px solid grey",
-                paddingBottom: "30px"
-            }}>
+        
+                                        {/* <nav className="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main"></nav>
+                                        <div className="postHistory" style={{ justifyContent: "center", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
+                                            <h2>Recent Posts</h2>
 
-            </div>
-            <div className="postHistory" style={{ justifyContent: "center", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
-                <h2>Recent Posts</h2>
+                                            <CardDeck>
+                                                {
+                                                    organizations.map((value, index) => <Organization lastUpdated={value.updated} image={value.img} title={value.title} text={value.text}
+                                                        key={index} />)
+                                                }
+                                                <Card>
+                                                    <Card.Img variant="top" src={LAC9} />
+                                                    <Card.Body>
+                                                        <Card.Title>Card title</Card.Title>
+                                                        <Card.Text>
+                                                            This card has supporting text below as a natural lead-in to additional
+                                                        content.{' '}
+                                                        </Card.Text>
+                                                    </Card.Body>
+                                                    <Card.Footer>
+                                                        <small className="text-muted"></small>
+                                                    </Card.Footer>
+                                                </Card>
+                                                <Card>
+                                                    <Card.Img variant="top" src="holder.js/100px160" />
+                                                    <Card.Body>
+                                                        <Card.Title>Card title</Card.Title>
+                                                        <Card.Text>
+                                                            This is a wider card with supporting text below as a natural lead-in to
+                                                            additional content. This card has even longer content than the first to
+                                                            show that equal height action.
+                                                    </Card.Text>
+                                                    </Card.Body>
+                                                    <Card.Footer>
+                                                        <small className="text-muted"></small>
+                                                    </Card.Footer>
+                                                </Card>
+                                            </CardDeck>
+                                        </div> */}
 
-                <CardDeck>
-                    {
-                        organizations.map((value, index) => <Organization lastUpdated={value.updated} image={value.img} title={value.title} text={value.text}
-                            key={index} />)
-                    }
-                    <Card>
-                        <Card.Img variant="top" src={LAC9} />
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This card has supporting text below as a natural lead-in to additional
-                            content.{' '}
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
-                    </Card>
-                    <Card>
-                        <Card.Img variant="top" src="holder.js/100px160" />
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to
-                                show that equal height action.
-                        </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
-                    </Card>
-                </CardDeck>
-            </div>
-            <div className="orgSubscriptions" style={{ paddingTop: "30px", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
-                <h3>Organizations I'm Following</h3>
-                <CardDeck>
-                    {organizations?.map(org => (
-                        <Card>
-                            <Card.Img variant="top" src={org.img} />
-                            <Card.Body>
-                                <Card.Title>{org.title}</Card.Title>
-                                <Card.Text>
-                                    {org.text}
-                                </Card.Text>
-                            </Card.Body>
-                            <Card.Footer>
-                            <button>Subscribe</button>
-                            <button>Visit Organization</button>
-                                <small className="text-muted">{org.updated}</small>
-                            </Card.Footer>
-                        </Card>
-                    ))}
+                                        
+                                            
+
+                        <div className="orgSubscriptions" style={{ paddingTop: "30px", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
+                            <h3>Organizations I'm Following</h3>
+                            <CardDeck>
+                                {organizations?.map(org => (
+                                    <Card>
+                                        <Card.Img variant="top" src={org.img} />
+                                        <Card.Body>
+                                            <Card.Title>{org.title}</Card.Title>
+                                            <Card.Text>
+                                                {org.text}
+                                            </Card.Text>
+                                        </Card.Body>
+                                        <Card.Footer>
+                                        <button class="sub2">Subscribe</button>
+                                        <button class="sub2">Visit Organization</button>
+                                            <small className="text-muted">{org.updated}</small>
+                                        </Card.Footer>
+                                    </Card>
+                                ))}
 
 
-                </CardDeck>
+                            </CardDeck>
 
-            </div>
+                        </div>
         </div>
 
     )
