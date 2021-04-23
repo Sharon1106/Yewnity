@@ -1,13 +1,13 @@
 import React from "react";
-import CardGroup from 'react-bootstrap/CardGroup'
-import CardDeck from 'react-bootstrap/CardDeck'
+// import CardGroup from 'react-bootstrap/CardGroup'
+// import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import "../../views/profile.css"
-import UCLAv from '../ProfileViewer/images/uclav.png'
-import LAC9 from '../ProfileViewer/images/Lac9.png'
-import HM from '../ProfileViewer/images/humane.png'
-import avatar from '../ProfileViewer/images/avatar.png'
-import { Row } from "../Profile";
+// import UCLAv from '../ProfileViewer/images/uclav.png'
+// import LAC9 from '../ProfileViewer/images/Lac9.png'
+// import HM from '../ProfileViewer/images/humane.png'
+// import avatar from '../ProfileViewer/images/avatar.png'
+// import { Row } from "../Profile";
 
 
 

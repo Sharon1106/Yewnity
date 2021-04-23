@@ -1,8 +1,5 @@
 import React from 'react'
-// import MsgBoard from '../components/MsgBoard/MsgBoard';
 import MsgBoard from '../components/MsgBoard/MsgBoard';
-
-
 
 function Discussions() {
     return (

@@ -3,14 +3,12 @@ const router = express.Router();
 const db = require('../../models');
 const userRoutes = require('./users');
 const eventRoutes = require('./events')
-const postRoutes = require('./posts');
 const commentRoutes = require('./comments');
 const organizationRoutes = require('./organizations');
 const loginRoutes = require('./login');
 
 router.use("/users", userRoutes)
 router.use("/events", eventRoutes)
-router.use("/posts", postRoutes)
 router.use("/comments", commentRoutes)
 router.use("/organizations", organizationRoutes)
 router.use("/login", loginRoutes)

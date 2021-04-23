@@ -6,8 +6,6 @@ module.exports = {
 
     Comment: require('./Comments'),
 
-    Post: require('./Posts'),
-
     Organization: require('./Organizations'),
 
     Issue: require('./Issues')

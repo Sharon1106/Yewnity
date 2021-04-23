@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import profilepic from '../images/User-Example.jpeg'
-import CardGroup from 'react-bootstrap/CardGroup'
+
+// import CardGroup from 'react-bootstrap/CardGroup'
 import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import "./profile.css"
@@ -8,35 +8,16 @@ import UCLAv from '../views/images/uclav.png'
 import LAC9 from '../views/images/Lac9.png'
 import HM from '../views/images/humane.png'
 import FB from '../views/images/fb.png'
-import test4 from '../views/images/test4.png'
-import avatar from '../views/images/avatar.png'
-import { Row } from "../components/Profile";
+// import avatar from '../views/images/avatar.png'
+// import { Row } from "../components/Profile";
 import { ProfileViewer } from "../components/ProfileViewer";
 import { ProfileForm } from "../components/ProfileForm";
 import Organization from "../components/Organization";
-import API from "../utils/API";
+import Upload from '../components/Upload/Upload'
+import ImageUpload from '../components/ImageUpload/ImageUpload'
+// import API from "../utils/API";
 
 
-
-
-
-
-
-
-
-{/* <Card>
-<Card.Img variant="top" src={} />
-<Card.Body>
-<Card.Title>UCLA Veterans</Card.Title>
-<Card.Text>
-Yewnity is proud to be associated with UCLA Veterans!
-</Card.Text>
-</Card.Body>
-<Card.Footer>
-<small className="text-muted">Last updated 3 mins ago</small>
-</Card.Footer>
-</Card>
-))} */}
 // <Card>
 //     <Card.Img variant="top" src={ LAC9 } />
 //     <Card.Body>
@@ -76,15 +57,6 @@ const Profile = () => {
     const [toggleform, setoggleForm] = useState(false)
     const [user,setUser] = useState( JSON.parse(localStorage.getItem("user")))
 
-
-
-
-
-
-
-
-
-
     useEffect(() => {
     //API CALL (back-end job getUser Info(name atm))
    
@@ -96,6 +68,9 @@ const Profile = () => {
         //API .updateUsername(username)
     }
     return (
+        <><script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript">  
+    </script>
+    
         <div className="brain">
             <div className="main-content">
                 <nav className="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
@@ -140,6 +115,7 @@ const Profile = () => {
                                         <span>Support</span>
                                     </a>
                                     <div className="dropdown-divider"></div>
+                                    {/* NOTE TO MATTHEW: ASSIGN A VALUE TO THIS HREF BELOW --W */}
                                     <a href="#!" className="dropdown-item">
                                         <i className="ni ni-user-run"></i>
                                         <span>Logout</span>
@@ -267,7 +243,7 @@ const Profile = () => {
 
                         
         </div>
-
+</>
     )
 }
 
