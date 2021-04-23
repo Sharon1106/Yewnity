@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import profilepic from '../images/User-Example.jpeg'
-import CardGroup from 'react-bootstrap/CardGroup'
-
 // import CardGroup from 'react-bootstrap/CardGroup'
-import Card from 'react-bootstrap/Card'
-
 import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import "./profile.css"
@@ -19,6 +14,7 @@ import { ProfileViewer } from "../components/ProfileViewer";
 import { ProfileForm } from "../components/ProfileForm";
 import Organization from "../components/Organization";
 import Upload from '../components/Upload/Upload'
+import ImageUpload from '../components/ImageUpload/ImageUpload'
 // import API from "../utils/API";
 
 
