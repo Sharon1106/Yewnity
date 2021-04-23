@@ -1,9 +1,10 @@
 import React from "react";
 
 import "../../views/profile.css"
+import Upload from "../Upload/Upload";
 
 import avatar from './images/avatar.png'
-
+import ImageUpload from '../ImageUpload/ImageUpload'
 
 
 //------------------------anything inside of a form, create the component here!--------------------------//
@@ -14,32 +15,7 @@ export function ProfileViewer(props) {
         <div className="card-body pt-0 pt-md-4">
         <div className="row">
             <div className="col">
-                <div className="ava">
-                    <img className="avatar0" style={{ width: "300px", height: "250px", borderRadius: "80px" }}
-                        src={avatar} alt="avatar"
-                    />
-                <br></br>
-
-
-
-                    <button className="roar"> Upload Avatar Image</button>
-                    <button className="roar"> Reset</button>
-                    <div>
-                        <h5>Username: {props.user?.username}</h5>
-                        <h5>Email:{props.user?.email}</h5>
-                        <h5>Organizations:</h5>
-                        <div className="profile" style={{ display: "flex", justifyContent: "space-between", width: "108%" }}>
-                            <div value={props.username}
-                                onChange={(e) => props.setusername(e.target.value)}>
-
-                            </div>
-                            {/* <button onClick={props.updateUsername}></button> */}
-
-
-                        </div>
-                    </div>
-
-                </div>
+                <ImageUpload />
             </div>
         </div>
 
