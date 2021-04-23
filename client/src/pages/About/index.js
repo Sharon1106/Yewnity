@@ -3,12 +3,11 @@ import './about.css';
 import Will from "../../images/Wil.png";
 import Sharon from "../../images/Sharon.png";
 import Jeff from "../../images/Jeff.png";
-import Matthew from "../../images/Matthew.png";
-import Tree from "../../images/tree.png";
-import Tree2 from "../../images/tree2.png";
-import Bird from "../../images/bird.png";
+// import Tree from "../../images/tree.png";
+// import Tree2 from "../../images/tree2.png";
+// import Bird from "../../images/bird.png";
 import Matthew2 from "../../images/Matt.png";
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function About() {
@@ -60,7 +59,7 @@ function About() {
                     </section>
                     <section class="col-md-3 profile">
                         <div class="circle2">
-                            <img class="profile-img" src={Matthew2}></img>
+                            <img class="profile-img" src={Matthew2} alt='matthew'></img>
                         </div>
                         <p>Matthew A. John</p>
                         <div class="row">
@@ -90,7 +89,7 @@ function About() {
                     </section>
                     <section class="col-md-3 profile Sharon">
                         <div class="circle3">
-                            <img class="profile-img" src={Sharon}></img>
+                            <img class="profile-img" src={Sharon} alt='Sharon'></img>
                         </div>
                         <p>Sharon Martinez</p>
                         <div class="row">

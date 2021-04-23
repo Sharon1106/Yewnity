@@ -4,8 +4,8 @@ import React from "react";
 import "../../views/profile.css"
 
 import {Row} from "../Profile";
-import API from "../../utils/API";
-import State, { useState } from "react";
+// import API from "../../utils/API";
+// import State, { useState } from "react";
 
 
 
@@ -15,16 +15,7 @@ import State, { useState } from "react";
 //this is an input component that can be used on forms
 
 export function ProfileForm (props) {
-    // const [user, setUser] = useState({
-    //     email: "",
-    //     username: "",
-        
-    //   })
-    
-    // API.getUser({
-    //     username: user.username,
-        
-    // })
+  
     function updateName (){
         
     } 
