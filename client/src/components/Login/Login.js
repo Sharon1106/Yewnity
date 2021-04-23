@@ -37,7 +37,7 @@ function Login() {
 
 
   function handleInputChange(event) {
-    console.log("Im here")
+    console.log("user typing")
     const existingUser = { ...user }
     existingUser[event.target.name] = event.target.value
     setUser(existingUser)
@@ -48,12 +48,12 @@ function Login() {
     <div className="login shadow-5-strong">
       <form className="login form-outline mb-4 shadow-5-strong">
         <h3 className="signup text-center">Log In</h3>
-        <Input
+        {/* <Input
           name="email"
           type="email"
           placeholder="Enter Email"
           onChange={(event) => handleInputChange(event)}
-        />
+        /> */}
         <Input
           name="username"
           type="text"
