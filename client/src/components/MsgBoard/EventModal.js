@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import CreateEvent from "./CreateEvent";
+import DisplayEvents from "./DisplayEvents";
 
 function EventModal() {
     const [show, setShow] = useState(false);
@@ -24,6 +25,7 @@ function EventModal() {
                 </Modal.Header>
                 <Modal.Body >
                     <CreateEvent />
+                    <DisplayEvents />
                 </Modal.Body>
                 <Modal.Footer>
                     <Button

@@ -36,6 +36,7 @@ export function CreateEvent() {
       })
         .then(res =>{
           console.log(res)
+          console.log("response here")
         })
       };
     function handleInputChange(event) {
