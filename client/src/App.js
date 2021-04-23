@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,7 +11,7 @@ import Main from "./views/main";
 import MsgBoard from "./views/discussions";
 
 
-const PrivateRoute = ({ component: Compoonent, ...rest }) => (
+const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={props =>
@@ -36,10 +36,10 @@ function App() {
         <Navbar></Navbar>
         <Switch>
           <Route path='/' exact component={AppHome} /> {/*Landing Page*/}
-          <Route path='/main' exact component={Main} />
-          <Route path='/events' exact component={MsgBoard} />
-          <Route path='/forum' exact component={Discussions} />
-          <Route path='/profile' exact component={Profile} />
+          <PrivateRoute path='/main' exact component={Main} />
+          <PrivateRoute path='/events' exact component={MsgBoard} />
+          <PrivateRoute path='/forum' exact component={Discussions} />
+          <PrivateRoute path='/profile' exact component={Profile} />
         </Switch>
         <Footer></Footer>
       </Router>
