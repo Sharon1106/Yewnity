@@ -7,6 +7,7 @@ import "./profile.css"
 import UCLAv from '../views/images/uclav.png'
 import LAC9 from '../views/images/Lac9.png'
 import HM from '../views/images/humane.png'
+import FB from '../views/images/fb.png'
 import avatar from '../views/images/avatar.png'
 import { Row } from "../components/Profile";
 import { ProfileViewer } from "../components/ProfileViewer";
@@ -67,13 +68,27 @@ const Profile = () => {
     const [organizations, setorganizations] = useState([
         { img: UCLAv, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago" },
         {
-            img: HM, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago"
+            img: LAC9, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago"
         },
         { img: HM, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago" },
-        { img: HM, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago" }
+        { img: FB, title: "UCLA Veterans", text: "Test123", updated: "Last updated 3 mins ago" }
     ])
+    const [toggleform, setoggleForm] = useState(false)
+    const [user,setUser] = useState( JSON.parse(localStorage.getItem("user")))
+
+
+
+
+
+
+
+
+
+
     useEffect(() => {
-        //API CALL (back-end job getUser Info(name atm))
+    //API CALL (back-end job getUser Info(name atm))
+   
+
     }, [])
     function updateUsername() {
         console.log(username);
@@ -145,9 +160,9 @@ const Profile = () => {
                     <div className="container-fluid d-flex align-items-center">
                         <div className="row">
                             <div className="col-lg-7 col-md-10">
-                                <h1 className="display-2 text-white">Hello User</h1>
+                                <h1 className="display-2 text-white">Hello {user?.user?.username || "user"}</h1>
                                 <p className="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
-                                <a href="#!" className="btn btn-info">Edit profile</a>
+                                <a onClick={() => setoggleForm(!toggleform)} href="#!" className="btn btn-info">Edit profile </a>
                             </div>
                         </div>
                     </div>
@@ -158,7 +173,7 @@ const Profile = () => {
                         <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0">
                             <div className="card card-profile shadow">
 
-                                <ProfileViewer>
+                                <ProfileViewer user={user.user}>
 
 
 
@@ -167,12 +182,14 @@ const Profile = () => {
                             </div>
                         </div>
 
+                        {toggleform ?
 
-                        <ProfileForm>
+                            <ProfileForm user={user.user} setUser={setUser} >
 
 
 
-                        </ProfileForm>
+                            </ProfileForm>:null
+}
                     </div>
                 </div>
             </div>
@@ -191,8 +208,8 @@ const Profile = () => {
 
                 <CardDeck>
                     {
-                    organizations.map((value,index)=><Organization lastUpdated={value.updated} image={value.img} title={value.title} text={value.text}
-                    key={index}/>)
+                        organizations.map((value, index) => <Organization lastUpdated={value.updated} image={value.img} title={value.title} text={value.text}
+                            key={index} />)
                     }
                     <Card>
                         <Card.Img variant="top" src={LAC9} />
@@ -236,6 +253,8 @@ const Profile = () => {
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer>
+                            <button>Subscribe</button>
+                            <button>Visit Organization</button>
                                 <small className="text-muted">{org.updated}</small>
                             </Card.Footer>
                         </Card>
