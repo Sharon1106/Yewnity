@@ -19,24 +19,16 @@ function Login() {
 
   function handleFormSubmit(event) {
     console.log("Login user")
+    console.log(user)
     event.preventDefault()
     //login route to get user by user name and password
     API.login({
-      username: event.target.username,
+      username: user.username,
       //pass in hashed password
-      password: event.target.password,
+      password: user.password,
     })
       .then((res, req) => {
-        if (!user) {
-          return res.status(400).send({ message: "The username does not exist" });
-        }
-        if (!Bcrypt.compareSync(req.body.password, user.password)) {
-          return res.status(400).send({
 
-            message: "The password is invalid"
-          })
-        }
-        res.send({ message: "The username and password combination is correct!" });
         console.log(res)
         localStorage.setItem("user", JSON.stringify(res.data))
         history.push("/profile")

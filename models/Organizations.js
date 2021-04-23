@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 
 //------------------------this verifies the input has an @ symbol--------------------//
-require ('mongoose-type-email');
+require('mongoose-type-email');
 //displays message if no @ symbol provided in user input
 mongoose.SchemaTypes.Email.defaults.message = 'Email address is invalid';
 //-----------------------------------------------------------------------------------//
 
 
-const OrganizationSchema = new Schema ({
+const OrganizationSchema = new Schema({
     email: {
         //email verification
         type: mongoose.SchemaTypes.Email,
@@ -35,9 +35,9 @@ const OrganizationSchema = new Schema ({
 
 //causing issues with post routes-------------------------------
 //before we save UserSchema to the database we runthis function
-OrganizationSchema.pre("save", function(next) {
+OrganizationSchema.pre("save", function (next) {
     const organization = this;
-    
+
     organization.password = bcrypt.hashSync(organization.password, 10);
     console.log(organization)
     return next();

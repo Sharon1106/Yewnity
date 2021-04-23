@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import "./SignUpLogin.css";
@@ -11,29 +11,29 @@ function SignUpLogin() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const showlogin = () => setSignUp(false);
-  const showsignup= () => setSignUp(true);
+  const showsignup = () => setSignUp(true);
 
-  useEffect(()=> {
+  useEffect(() => {
     console.log(signup)
   }, [signup])
 
   return (
     <>
-      <Button className="button text-center"variant="primary" onClick={handleShow}> SignUp </Button>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header 
-            closeButton>
-          </Modal.Header>  
-            <Modal.Body >
-              {!signup ? (<Login/>):(<SignUp/>)} 
-              {signup ? (<Button onClick={showlogin}>Login</Button>): (<Button onClick={showsignup}>Signup</Button>)}
-            </Modal.Body>
-            <Modal.Footer>
-              <Button 
-                  variant="secondary" onClick={handleClose}>Close
-              </Button>
-            </Modal.Footer>
-        </Modal>
+      <Button className="button text-center" variant="primary" onClick={handleShow}> Login </Button>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header
+          closeButton>
+        </Modal.Header>
+        <Modal.Body >
+          {!signup ? (<Login />) : (<SignUp />)}
+          {signup ? (<Button onClick={showlogin}>Login</Button>) : (<Button onClick={showsignup}>Signup</Button>)}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="secondary" onClick={handleClose}>Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 }
