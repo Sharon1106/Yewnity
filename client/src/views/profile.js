@@ -138,7 +138,7 @@ const Profile = () => {
                             <div className="col-lg-7 col-md-10">
                                 <h1 className="display-2 text-white">Hello {user?.user?.username || "user"}</h1>
                                 <img src={user.user.image} alt="user"/>
-                                <p className="text-white mt-0 mb-5">This is your profile page. You can also view & the list of the organizations Yewnity recommends.</p>
+                                <p className="text-white mt-0 mb-5"></p>
                                 <a onClick={() => setoggleForm(!toggleform)} href="#!" className="btn btn-info">Edit profile </a>
                             </div>
                         </div>
@@ -171,48 +171,6 @@ const Profile = () => {
                 </div>
             </div>
 
-        
-                                        {/* <nav className="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main"></nav>
-                                        <div className="postHistory" style={{ justifyContent: "center", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
-                                            <h2>Recent Posts</h2>
-
-                                            <CardDeck>
-                                                {
-                                                    organizations.map((value, index) => <Organization lastUpdated={value.updated} image={value.img} title={value.title} text={value.text}
-                                                        key={index} />)
-                                                }
-                                                <Card>
-                                                    <Card.Img variant="top" src={LAC9} />
-                                                    <Card.Body>
-                                                        <Card.Title>Card title</Card.Title>
-                                                        <Card.Text>
-                                                            This card has supporting text below as a natural lead-in to additional
-                                                        content.{' '}
-                                                        </Card.Text>
-                                                    </Card.Body>
-                                                    <Card.Footer>
-                                                        <small className="text-muted"></small>
-                                                    </Card.Footer>
-                                                </Card>
-                                                <Card>
-                                                    <Card.Img variant="top" src="holder.js/100px160" />
-                                                    <Card.Body>
-                                                        <Card.Title>Card title</Card.Title>
-                                                        <Card.Text>
-                                                            This is a wider card with supporting text below as a natural lead-in to
-                                                            additional content. This card has even longer content than the first to
-                                                            show that equal height action.
-                                                    </Card.Text>
-                                                    </Card.Body>
-                                                    <Card.Footer>
-                                                        <small className="text-muted"></small>
-                                                    </Card.Footer>
-                                                </Card>
-                                            </CardDeck>
-                                        </div> */}
-
-                                        
-                                            
 
                         <div className="orgSubscriptions" style={{ paddingTop: "30px", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
                             <h3>Organizations I'm Following</h3>
