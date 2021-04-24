@@ -21,6 +21,9 @@ export default {
   saveUser: function(userData) {
     return axios.post("/api/users", userData);
   },
+  updateUser: function(id, userData) {
+    return axios.put("/api/users/" + id, userData);
+  },
   //grabs events
   getEvents: function() {
     return axios.get("/api/events");
