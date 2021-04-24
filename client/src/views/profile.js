@@ -137,6 +137,7 @@ const Profile = () => {
                         <div className="row">
                             <div className="col-lg-7 col-md-10">
                                 <h1 className="display-2 text-white">Hello {user?.user?.username || "user"}</h1>
+                                <img src={user.user.image} alt="user"/>
                                 <p className="text-white mt-0 mb-5">This is your profile page. You can also view & the list of the organizations Yewnity recommends.</p>
                                 <a onClick={() => setoggleForm(!toggleform)} href="#!" className="btn btn-info">Edit profile </a>
                             </div>
@@ -149,7 +150,7 @@ const Profile = () => {
                         <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0">
                             <div className="card card-profile shadow">
 
-                                <ProfileViewer user={user.user}>
+                                <ProfileViewer user={user.user} setUser={setUser} >
 
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import API from '../../utils/API'
+
 class ImageUpload extends React.Component {
   constructor(props){
      super(props);
@@ -15,6 +16,7 @@ class ImageUpload extends React.Component {
       console.log(result.info.url); 
       let id=JSON.parse(localStorage.getItem('user')).user._id;
       console.log(id)
+      
       API.updateUser(id,{
         image: result.info.url
       } )
