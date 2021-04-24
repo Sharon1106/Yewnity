@@ -33,9 +33,9 @@ export function Input(props) {
 //large input areas
 export function LargeInput(props) {
     return (
-        <div class="form-group">
+        <div className="form-group">
             <label>{props.label}</label>
-            <textarea class="form-control" rows="3" {...props}></textarea>
+            <textarea className="form-control" rows="3" {...props}></textarea>
         </div>
     )
 }
@@ -56,7 +56,7 @@ export function P(props) {
 
 export function Button(props) {
     return (
-        <button type="button" class="btn btn-outline-dark">{props.label}</button>
+        <button type="button" className="btn btn-outline-dark">{props.label}</button>
     )
 }
 

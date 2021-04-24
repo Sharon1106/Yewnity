@@ -14,7 +14,6 @@ function SignUpLogin() {
   const showsignup = () => setSignUp(true);
 
   useEffect(() => {
-    console.log(signup)
   }, [signup])
 
   return (

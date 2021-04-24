@@ -33,7 +33,6 @@ client = connect(apiKey, token, appId);
 
 client.user(tempToken.user.username).get().then(res=>{
   res.data.name = tempToken.user.username;
-  console.log(res)
   client.user(tempToken.user.username).update(res.data)
 
 })

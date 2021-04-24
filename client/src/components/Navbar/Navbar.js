@@ -41,10 +41,10 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto text-white bg-dark">
-            <NavLink href="/" linkName="Home" />
-            <NavLink href="/main" linkName="Main" />
-            <NavLink href="/events" linkName="Events" />
-            <NavLink href="/profile" linkName="Profile" />
+            <NavLink href="/" title="Home" />
+            <NavLink href="/main" title="Main" />
+            <NavLink href="/events" title="Events" />
+            <NavLink href="/profile" title="Profile" />
           </ul>
           <ul className="navbar-nav d-flex flex-row">
             {/* Add-Another button or feature */}

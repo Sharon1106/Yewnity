@@ -18,7 +18,7 @@ export function ListItem({ children }) {
 export function NavLink (props) {
   return (
     <li className="nav-item">
-      <a className="nav-link" {...props}>{props.linkName}</a>
+      <a className="nav-link" {...props}>{props.title}</a>
     </li>
   )
 }
