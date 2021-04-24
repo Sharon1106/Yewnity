@@ -15,7 +15,7 @@ export function ProfileViewer(props) {
         <div className="card-body pt-0 pt-md-4">
         <div className="row">
             <div className="col">
-                <ImageUpload />
+                <ImageUpload user={props.user} setUser={props.setUser}/>
             </div>
         </div>
 
