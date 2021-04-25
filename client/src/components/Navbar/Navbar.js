@@ -3,10 +3,6 @@ import "./Navbar.css";
 import logo from "../../images/logo.png";
 import { NavLink } from "../List";
 import { useHistory, Link } from "react-router-dom";
-<<<<<<< HEAD
-// import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-react';
-=======
->>>>>>> 8917a0f3b59f3490780ced9676651caceaeeefca
 
 const Navbar = () => {
   // const icon = "";
