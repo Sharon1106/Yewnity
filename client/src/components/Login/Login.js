@@ -30,7 +30,6 @@ function Login() {
       })
   }
 
-
   function handleInputChange(event) {
     const existingUser = { ...user }
     existingUser[event.target.name] = event.target.value
@@ -56,7 +55,7 @@ function Login() {
         <SubmitBtn
           name="login"
           type="submit"
-          className="btn btn-primary btn-block my-5 text-center "
+          className="buttonlogin btn-primary btn-block my-5 text-center "
           onClick={handleFormSubmit}
         />
         <div className="text-center">

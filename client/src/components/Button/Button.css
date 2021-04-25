@@ -2,13 +2,13 @@
     --primary: #ffffff
 }
 
-.btn {
+/* .btn {
     padding: 8px 20px;
     border-radius: 2px;
     outline: none;
     border: none;
     cursor: pointer;
-}
+} */
 
 .btn--primary {
     background-color: var(--primary);
@@ -38,4 +38,8 @@
     background: #ffffff;
     color:#224422;
     transition: all 0.3s ease-out;
+}
+
+.btn:active,.btn:focus{
+    padding: 0 !important;
 }
