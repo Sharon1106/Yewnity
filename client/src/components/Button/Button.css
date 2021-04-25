@@ -39,3 +39,7 @@
     color:#224422;
     transition: all 0.3s ease-out;
 }
+
+.btn:active,.btn:focus{
+    padding: 0 !important;
+}

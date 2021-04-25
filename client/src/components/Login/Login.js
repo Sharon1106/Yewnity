@@ -35,7 +35,6 @@ function Login() {
       })
   }
 
-
   function handleInputChange(event) {
     console.log("user typing")
     const existingUser = { ...user }
@@ -48,12 +47,6 @@ function Login() {
     <div className="login shadow-5-strong">
       <form className="login form-outline mb-4 shadow-5-strong">
         <h3 className="signup text-center">Log In</h3>
-        {/* <Input
-          name="email"
-          type="email"
-          placeholder="Enter Email"
-          onChange={(event) => handleInputChange(event)}
-        /> */}
         <Input
           name="username"
           type="text"
@@ -69,7 +62,7 @@ function Login() {
         <SubmitBtn
           name="login"
           type="submit"
-          className="btn btn-primary btn-block my-5 text-center "
+          className="buttonlogin btn-primary btn-block my-5 text-center "
           onClick={handleFormSubmit}
         />
         <div class="text-center">
