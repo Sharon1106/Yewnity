@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../images/logo.png";
+import { NavLink } from "../List";
 import { useHistory, Link } from "react-router-dom";
-import Button from "../Button/Button";
-import Logout from "../Login/SignUpLogin"
 
 const Navbar = () => {
-  const icon = "";
+  // const icon = "";
   const [user, setUser] = useState({
     email: "",
     username: "",

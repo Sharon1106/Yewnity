@@ -1,10 +1,8 @@
 import React from 'react';
-import LandingCardItem from './LandingCardItem';
 import Card from 'react-bootstrap/Card';
 import orgcard1 from '../../images/Dummy-logo-1.png';
 import orgcard2 from '../../images/Dummy-logo-2.jpeg';
 import orgcard3 from '../../images/Dummy-logo-3.jpeg';
-import orgcard4 from '../../images/Dummy-logo-4.jpeg';
 import CardDeck from 'react-bootstrap/CardDeck';
 
 function LandingCard() {

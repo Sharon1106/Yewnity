@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import API from "../../utils/API";
-import { useHistory } from "react-router-dom";
 import { List, ListItem } from "../List";
 import { Card } from "../Events";
 import './style.css';
 
 
 
-function Events() {
-  const [events, setEvents] = useState([])
 
+function Events() {
+  //[state, functionToSetState]
+  const [events, setEvents] = useState([])
 
   // load all events and store them with setEvents
   useEffect(() => {
@@ -19,9 +19,7 @@ function Events() {
   //loads all events
   function loadEvents() {
     API.getEvents()
-      .then(res =>
-        setEvents(res.data)
-      )
+      .then(res => setEvents(res.data))
       .catch(err => console.log(err));
   };
 
@@ -29,6 +27,7 @@ function Events() {
     <div>
       {events.length ? (
         <List>
+          {/* we map through our state */}
           {events.map(event => (
             <ListItem key={event._id}>
               <Card
@@ -36,6 +35,7 @@ function Events() {
                 description={event.description}
                 moment={event.moment}
                 city={event.city}
+                user={event.user[0].username}
               />
             </ListItem>
           ))}

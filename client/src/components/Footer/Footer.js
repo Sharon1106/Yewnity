@@ -55,7 +55,7 @@ function Footer() {
                         </ul>
                         <div className="col-md-6">
                             <p className="backtop">
-                                <a href="#">Back to top</a>
+                                <a href="/#">Back to top</a>
                             </p>
                         </div>
                     </div>

@@ -1,14 +1,25 @@
 import React from "react";
 //------------------------anything inside of a form, create the component here!--------------------------//
 
-export function Form() {
-    return (
-        <form className="form-outline mb-4 shadow-5-strong">
-        </form>
+// A Wrapper component for cards
+export function CardWrapper(props) {
+    return(
+        <div className="card" {...props}></div>
     )
 }
 
+export function Form(props) {
+    return (
+        <form {...props}></form>
+    )
+}
 
+//groups form elements
+export function FormGroup(props) {
+    return (
+        <div className="form-group" {...props}></div>
+    )
+}
 //this is an input component that can be used on forms
 export function Input(props) {
     return (
@@ -19,6 +30,7 @@ export function Input(props) {
     );
 }
 
+//large input areas
 export function LargeInput(props) {
     return (
         <div class="form-group">
@@ -28,9 +40,17 @@ export function LargeInput(props) {
     )
 }
 
+//simple label component for forms
 export function Label(props) {
     return (
         <label {...props}></label>
+    )
+}
+
+//simple paragraph for forms and cards
+export function P(props) {
+    return (
+        <p className="card-text" {...props}></p>
     )
 }
 

@@ -62,7 +62,7 @@ function SignUp() {
         <SubmitBtn
           name="signup"
           type="submit"
-          className="btn btn-primary btn-block my-5 text-center"
+          className="buttonsignup btn-primary btn-block my-5 text-center"
           onClick={handleFormSubmit}
         />
         <div class="text-center">

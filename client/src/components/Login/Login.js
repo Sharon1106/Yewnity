@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { Input, SubmitBtn } from "../Form";
 import "./SignUpLogin.css";
 import API from "../../utils/API";
-import Bcrypt from "bcryptjs";
+// import Bcrypt from "bcryptjs";
 
 function Login() {
   const [user, setUser] = useState({
@@ -62,7 +62,7 @@ function Login() {
         <SubmitBtn
           name="login"
           type="submit"
-          className="btn btn-primary btn-block my-5 text-center "
+          className="buttonlogin btn-primary btn-block my-5 text-center "
           onClick={handleFormSubmit}
         />
         <div class="text-center">

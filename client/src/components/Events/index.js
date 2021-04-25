@@ -1,34 +1,45 @@
 import React from "react";
+import { CardWrapper, FormGroup, Label, P } from "../Form";
+import './style.css';
 //------------------------anything inside of a form, create the component here!--------------------------//
 
 //this is an input component that can be used on forms
 export function Input(props) {
     return (
-        <div className="form-group">
-            <label>{props.label}</label>
+        <FormGroup>
+            <Label>{props.label}</Label>
             <input className="form-control" {...props} />
-        </div>
+        </FormGroup>
     );
 }
 
 export function DateTime(props) {
     return (
-        <div className="form-group">
-            <label className="col-form-label">{props.label}</label>
+        <FormGroup>
+            <Label className="col-form-label">{props.label}</Label>
             <input className="form-control" type="datetime-local" {...props}></input>
-        </div>
+        </FormGroup>
     )
 }
 
 export function Card(props) {
     return (
-        <div className="card">
+        <CardWrapper className="card">
             <div className="card-body">
-                <h5 className="card-title">{props.title}</h5>
-                <p className="card-text">{props.description}</p>
-                <p className="card-text">{props.moment}</p>
-                <p className="card-text">{props.city}</p>
+                <Label className="label text-muted">Event:</Label>
+                    <P className="label-title">{props.title}</P>
+                <Label className="label-description text-muted">Event Description:</Label>
+                    <P id="descript">{props.description}</P>
+                <div className="row-format">
+                    <Label className="label text-muted">When: </Label>
+                    <P className="moment">{props.moment}</P>
+                </div>
+                <div className="row-format">
+                    <Label className="label text-muted">Location:</Label>
+                    <P className="city">{props.city}</P>
+                </div>
+                <Label className="label-user text-muted">User: {props.user}</Label>
             </div>
-        </div>
+        </CardWrapper>
     )
 }

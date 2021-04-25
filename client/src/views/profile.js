@@ -1,29 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import profilepic from '../images/User-Example.jpeg'
-import CardGroup from 'react-bootstrap/CardGroup'
+
+// import CardGroup from 'react-bootstrap/CardGroup'
 import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import "./profile.css"
 import UCLAv from '../views/images/uclav.png'
 import LAC9 from '../views/images/Lac9.png'
 import HM from '../views/images/humane.png'
-import avatar from '../views/images/avatar.png'
-import { Row } from "../components/Profile";
-import {ProfileViewer} from "../components/ProfileViewer";
-import {ProfileForm} from "../components/ProfileForm";
-{/* <Card>
-<Card.Img variant="top" src={} />
-<Card.Body>
-<Card.Title>UCLA Veterans</Card.Title>
-<Card.Text>
-Yewnity is proud to be associated with UCLA Veterans!
-</Card.Text>
-</Card.Body>
-<Card.Footer>
-<small className="text-muted">Last updated 3 mins ago</small>
-</Card.Footer>
-</Card>
-))} */}
+import FB from '../views/images/fb.png'
+import test from '../views/images/test4.png'
+// import avatar from '../views/images/avatar.png'
+// import { Row } from "../components/Profile";
+import { ProfileViewer } from "../components/ProfileViewer";
+import { ProfileForm } from "../components/ProfileForm";
+import Organization from "../components/Organization";
+import Upload from '../components/Upload/Upload'
+import ImageUpload from '../components/ImageUpload/ImageUpload'
+// import API from "../utils/API";
+
+
 // <Card>
 //     <Card.Img variant="top" src={ LAC9 } />
 //     <Card.Body>
@@ -54,28 +49,42 @@ Yewnity is proud to be associated with UCLA Veterans!
 const Profile = () => {
     const [username, setusername] = useState("Random")
     const [organizations, setorganizations] = useState([
-        { img: UCLAv, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago" },
+        { img: UCLAv, title: "UCLA Veterans", link:"https://veterans.ucla.edu/",
+        subscribed:true, text: "Yewnity is proud to be associated with UCLA Veterans!",},
         {
-            img: HM, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago"
-        },
-        { img: HM, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago" },
-        { img: HM, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", updated: "Last updated 3 mins ago" }
+            img: LAC9, title: "LAC9",link:"https://www.laoncloud9.org/", subscribed:true,text: "LAC9 is a family-friendly organization that encourages social activism and social consciousness in our youth to prepare them to be our next generation of leaders, capable of facilitating change in our communities with compassion and kindness",},
+        { img: HM, title: "The Humane Society of the United States ", link:"https://www.humanesociety.org/", subscribed:true,text: "A humane society is a group that aims to stop cruelty to animals. In many countries, the term is used mostly for societies for the prevention of cruelty to animals SPCA", },
+        { img: FB, title: "Los Angeles Regional Food Bank.",link:"https://www.lafoodbank.org/",subscribed:true, text: "Since 1973, the Los Angeles Regional Food Bank has distributed more than 1.7 billion pounds of food. The Food Bank collects food from hundreds of resources.  With the help of 30,000 volunteers annually and an agency network of more than 700 partner agencies, we serve more than 900,000 people on a monthly basis",}
     ])
+    const [toggleform, setoggleForm] = useState(false)
+    const [user,setUser] = useState( JSON.parse(localStorage.getItem("user")))
+
     useEffect(() => {
-        //API CALL (back-end job getUser Info(name atm))
+    //API CALL (back-end job getUser Info(name atm))
+   
+
     }, [])
     function updateUsername() {
         console.log(username);
         //API CALL BACK-END /UPDATE Username
         //API .updateUsername(username)
     }
+    function handlesubscription (i){
+        const neworg = [...organizations]
+        neworg[i] = {...neworg[i],subscribed:!neworg[i].subscribed}
+        setorganizations(neworg)
+    }
     return (
+        <><script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript">  
+    </script>
+    
         <div className="brain">
             <div className="main-content">
                 <nav className="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
                     <div className="container-fluid">
 
-                        <a className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">User profile</a>
+                        <a className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block">User profile</a>
+                        
 
                         {/* <form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                             <div className="form-group mb-0">
@@ -114,6 +123,7 @@ const Profile = () => {
                                         <span>Support</span>
                                     </a>
                                     <div className="dropdown-divider"></div>
+                                    {/* NOTE TO MATTHEW: ASSIGN A VALUE TO THIS HREF BELOW --W */}
                                     <a href="#!" className="dropdown-item">
                                         <i className="ni ni-user-run"></i>
                                         <span>Logout</span>
@@ -134,9 +144,11 @@ const Profile = () => {
                     <div className="container-fluid d-flex align-items-center">
                         <div className="row">
                             <div className="col-lg-7 col-md-10">
-                                <h1 className="display-2 text-white">Hello User</h1>
-                                <p className="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
-                                <a href="#!" className="btn btn-info">Edit profile</a>
+                                <h1 className="display-2 text-white">Hello {user?.user?.username || "user"}</h1>
+                                <p className="text-white mt-0 mb-5">You are following {organizations.filter(o=>o.subscribed).length} Organizations: {organizations.filter(o=>o.subscribed).map(o=>o.title).join(", ")}</p>
+                                <img src={user.user.image} alt="user"/>
+                                <p className="text-white mt-0 mb-5"></p>
+                                <a onClick={() => setoggleForm(!toggleform)} href="#!" className="btn btn-info">Edit profile </a>
                             </div>
                         </div>
                     </div>
@@ -147,103 +159,60 @@ const Profile = () => {
                         <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0">
                             <div className="card card-profile shadow">
 
-            <ProfileViewer>
+                                <ProfileViewer user={user.user} setUser={setUser} >
 
 
 
 
-            </ProfileViewer>
+                                </ProfileViewer>
                             </div>
                         </div>
 
+                        {toggleform ?
 
-                     <ProfileForm> 
-                      
-                      
-                      
-                    </ProfileForm>  
+                            <ProfileForm user={user.user} setUser={setUser} >
+
+
+
+                            </ProfileForm>:null
+}
                     </div>
                 </div>
             </div>
 
-            <div className="controller" style={{
-                display: "flex",
-                justifyContent: "space-around",
-                margin: "18px 0px",
-                borderBottom: "1px solid grey",
-                paddingBottom: "30px"
-            }}>
 
-            </div>
-            {/* <div className="postHistory" style={{ justifyContent: "center", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
-                <h2>Recent Posts</h2>
-
-                <CardDeck>
-                    <Card>
-                        <Card.Img variant="top" src={UCLAv} />
-                        <Card.Body>
-                            <Card.Title>UCLA Veterans</Card.Title>
-                            <Card.Text>
-                                Yewnity is proud to be partner with UCLA Veterans. UCLA Veterans has been serving veterans for over 70 years! Whether it's our medical school faculty and residents providing care to 3,000 individual patients a year at the VA, our on-campus supportive services for student veterans, state-of-the-art cosmetic and reconstructive surgery for warriors wounded while serving overseas, or groundbreaking research revolutionizing the way the U.S. military does business, UCLA serves those who serve in myriad ways. If you have any questions about the information, research, resources, and support that UCLA provides to veterans, please contact 310.206.6915 or email us at veteran@saonet.ucla.edu
-                        </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
-                    </Card>
-                    <Card>
-                        <Card.Img variant="top" src={LAC9} />
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This card has supporting text below as a natural lead-in to additional
-                            content.{' '}
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
-                    </Card>
-                    <Card>
-                        <Card.Img variant="top" src="holder.js/100px160" />
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to
-                                show that equal height action.
-                        </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
-                    </Card>
-                </CardDeck>
-            </div>
-            <div className="orgSubscriptions" style={{ paddingTop: "30px", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
-                <h3>Organizations I'm Following</h3>
-                <CardDeck>
-                    {organizations?.map(org => (
-                        <Card>
-                            <Card.Img variant="top" src={org.img} />
-                            <Card.Body>
-                                <Card.Title>{org.title}</Card.Title>
-                                <Card.Text>
-                                    {org.text}
-                                </Card.Text>
-                            </Card.Body>
-                            <Card.Footer>
-                                <small className="text-muted">{org.updated}</small>
-                            </Card.Footer>
-                        </Card>
-                    ))}
+                        <div className="orgSubscriptions" style={{ paddingTop: "px", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
+                            {/* <img src={test}/> */}
+                            <h3 className="Lion3">Organizations I'm Following</h3>
+                            <CardDeck>
+                                {organizations?.map((org,i) => (
+                                    <Card>
+                                        <Card.Img variant="top" src={org.img} />
+                                        <Card.Body>
+                                            <Card.Title>{org.title}</Card.Title>
+                                            <Card.Text>
+                                                {org.text}
+                                            </Card.Text>
+                                        </Card.Body>
+                                        <Card.Footer>
+                                        <button onClick={()=>handlesubscription(i)}className="sub2">{org.subscribed?"UnSubscribe":"Subscribe"}</button>
+                                        <a target="_blank" rel="noreferrer" href={org.link}>
+                                        <button className="sub2">Visit Organization</button></a>
+                                            <small className="text-muted">{org.updated}</small>
+                                        </Card.Footer>
+                                    </Card>
+                                ))}
 
 
-                </CardDeck>
+                            </CardDeck>
 
-            </div> */}
+                        </div>
+
+
+
+                        
         </div>
-
+</>
     )
 }
 

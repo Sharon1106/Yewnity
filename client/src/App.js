@@ -6,10 +6,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import AppHome from "./views/home";
 import Profile from "./views/profile";
-import Discussions from "./views/discussions";
 import Main from "./views/main";
-import MsgBoard from "./views/discussions";
-
+import Discussions from "./views/discussions";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -37,8 +35,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={AppHome} /> {/*Landing Page*/}
           <PrivateRoute path='/main' exact component={Main} />
-          <PrivateRoute path='/events' exact component={MsgBoard} />
-          <PrivateRoute path='/forum' exact component={Discussions} />
+          <PrivateRoute path='/events' exact component={Discussions} />
           <PrivateRoute path='/profile' exact component={Profile} />
         </Switch>
         <Footer></Footer>
