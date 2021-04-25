@@ -18,18 +18,13 @@ function Login() {
   let history = useHistory()
 
   function handleFormSubmit(event) {
-    console.log("Login user")
-    console.log(user)
     event.preventDefault()
     //login route to get user by user name and password
     API.login({
       username: user.username,
-      //pass in hashed password
       password: user.password,
     })
       .then((res, req) => {
-
-        console.log(res)
         localStorage.setItem("user", JSON.stringify(res.data))
         history.push("/profile")
       })
@@ -37,23 +32,15 @@ function Login() {
 
 
   function handleInputChange(event) {
-    console.log("user typing")
     const existingUser = { ...user }
     existingUser[event.target.name] = event.target.value
     setUser(existingUser)
-    console.log(existingUser)
   };
 
   return (
     <div className="login shadow-5-strong">
       <form className="login form-outline mb-4 shadow-5-strong">
         <h3 className="signup text-center">Log In</h3>
-        {/* <Input
-          name="email"
-          type="email"
-          placeholder="Enter Email"
-          onChange={(event) => handleInputChange(event)}
-        /> */}
         <Input
           name="username"
           type="text"
@@ -72,7 +59,7 @@ function Login() {
           className="btn btn-primary btn-block my-5 text-center "
           onClick={handleFormSubmit}
         />
-        <div class="text-center">
+        <div className="text-center">
           <p>Not a member? Sign up below!</p>
           <p>or sign up with:
             <Google /></p>

@@ -16,7 +16,6 @@ function SignUp() {
 
   //upon saving user redirect to profile page
   function handleFormSubmit(event) {
-    console.log("sign up user")
     event.preventDefault()
     API.saveUser({
       email: user.email,
@@ -24,18 +23,15 @@ function SignUp() {
       password: user.password
     })
       .then(res => {
-        console.log(res)
         localStorage.setItem("user", JSON.stringify(res.data))
         history.push("/profile")
       })
   };
 
   function handleInputChange(event) {
-    console.log("Im here")
     const newuser = { ...user }
     newuser[event.target.name] = event.target.value
     setUser(newuser)
-    console.log(newuser)
   };
 
   return (
@@ -66,7 +62,7 @@ function SignUp() {
           className="btn btn-primary btn-block my-5 text-center"
           onClick={handleFormSubmit}
         />
-        <div class="text-center">
+        <div className="text-center">
           <p>Already have an account? Log in below!</p>
           <p>or log in with:
             <Google /></p>

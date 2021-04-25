@@ -1,13 +1,6 @@
 import React from "react";
-
-import "../../views/profile.css"
-import Upload from "../Upload/Upload";
-
-import avatar from './images/avatar.png'
-import ImageUpload from '../ImageUpload/ImageUpload'
-
-
-//------------------------anything inside of a form, create the component here!--------------------------//
+import "../../views/profile.css";
+import ImageUpload from '../ImageUpload/ImageUpload';
 
 //this is an input component that can be used on forms
 export function ProfileViewer(props) {
@@ -18,8 +11,6 @@ export function ProfileViewer(props) {
                 <ImageUpload user={props.user} setUser={props.setUser}/>
             </div>
         </div>
-
-
     </div>
     );
 }

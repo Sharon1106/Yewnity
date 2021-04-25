@@ -1,19 +1,13 @@
 import React from "react";
-import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-react';
 import "../../views/profile.css"
 import { Row } from "../Profile";
 import { Form } from "../Form";
 
-
-
-//------------------------anything inside of a form, create the component here!--------------------------//
-
-//this is an input component that can be used on forms
-
 export function ProfileForm(props) {
 
-    function updateName() {
-    }
+    //do we need this function?
+    // function updateName() {
+    // }
     function resetName() {
         props.setUser(JSON.parse(localStorage.getItem("user")))
     }
@@ -31,8 +25,6 @@ export function ProfileForm(props) {
                         </div>
                     </div>
                 </div>
-                {/* ------------------this is the form to update the users information---------------------------------- */}
-
                 <div className="card-body">
                     <Form>
                         <h6 className="heading-small  mb-4">User information</h6>
@@ -41,7 +33,8 @@ export function ProfileForm(props) {
                                 <div className="col-lg-6">
                                     <div className="form-group focused">
                                         <label className="form-control-label" for="input-username">Username</label>
-                                        <input type="text" id="input-username" onChange={(e) => props.setUser({ user: { ...props.user, username: e.target.value } })} value={props.user?.username} className="form-control form-control-alternative" placeholder="Username" />
+                                        <input type="text" id="input-username" 
+                                        onChange={(e) => props.setUser({ user: { ...props.user, username: e.target.value } })} value={props.user?.username} className="form-control form-control-alternative" placeholder="Username" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -58,15 +51,11 @@ export function ProfileForm(props) {
                                         <input type="text" id="input-first-name" className="form-control form-control-alternative" placeholder="First name" />
                                     </div>
                                 </div>
-
                             </Row>
                         </div>
-
                     </Form>
-                   
                 </div>
             </div>
         </div>
-
     );
 }

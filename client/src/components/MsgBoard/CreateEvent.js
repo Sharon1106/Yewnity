@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import API from "../../utils/API";
 import { LargeInput, SubmitBtn, Form  } from "../Form";
 import { DateTime } from "../Events";
@@ -12,20 +13,14 @@ export function CreateEvent() {
       description:"",
       moment: "",
       city:"",
-    })
-    //   useEffect(() => {
-    //   const loggedInUser = API.getUser()
-    //   if (loggedInUser) {
-    //     const foundUser = JSON.stringify(loggedInUser);
-    //     setUser(foundUser);
-    //   }
-    // }, [])
-    
-     // redirect
-    // let history = useHistory() 
+    });
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    let history = useHistory()
   
     function handleFormSubmit(event) {
-      console.log("Create event")
       event.preventDefault()
       API.saveEvent({
         title: events.title,
@@ -35,16 +30,12 @@ export function CreateEvent() {
       })
         .then(res => {
           console.log(res)
-          console.log("response here")
         })
       };
     function handleInputChange(event) {
-        console.log("input gathered here")
         const existingEvent = {...events}
         existingEvent[event.target.name] = event.target.value
-        //this is updating the state
         setEvents(existingEvent)
-        console.log(existingEvent)
     };
     return (
         <div className="create-event card shadow-5-strong">
@@ -80,7 +71,8 @@ export function CreateEvent() {
                         className="btn btn-primary my-5 text-center btn-floating mx-1btn-block"
                         name="create-event"
                         type="submit"
-                        onClick={ handleFormSubmit}
+                        onClick={ handleFormSubmit }
+                        href="/events"
                     />
           </Form>
         </div>
