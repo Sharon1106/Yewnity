@@ -8,6 +8,7 @@ import UCLAv from '../views/images/uclav.png'
 import LAC9 from '../views/images/Lac9.png'
 import HM from '../views/images/humane.png'
 import FB from '../views/images/fb.png'
+import test from '../views/images/test4.png'
 // import avatar from '../views/images/avatar.png'
 // import { Row } from "../components/Profile";
 import { ProfileViewer } from "../components/ProfileViewer";
@@ -48,11 +49,12 @@ import ImageUpload from '../components/ImageUpload/ImageUpload'
 const Profile = () => {
     const [username, setusername] = useState("Random")
     const [organizations, setorganizations] = useState([
-        { img: UCLAv, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!",},
+        { img: UCLAv, title: "UCLA Veterans", link:"https://veterans.ucla.edu/",
+        subscribed:true, text: "Yewnity is proud to be associated with UCLA Veterans!",},
         {
-            img: LAC9, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!",},
-        { img: HM, title: "UCLA Veterans", text: "Yewnity is proud to be associated with UCLA Veterans!", },
-        { img: FB, title: "UCLA Veterans", text: "Test123",}
+            img: LAC9, title: "LAC9",link:"https://www.laoncloud9.org/", subscribed:true,text: "LAC9 is a family-friendly organization that encourages social activism and social consciousness in our youth to prepare them to be our next generation of leaders, capable of facilitating change in our communities with compassion and kindness",},
+        { img: HM, title: "The Humane Society of the United States ", link:"https://www.humanesociety.org/", subscribed:true,text: "A humane society is a group that aims to stop cruelty to animals. In many countries, the term is used mostly for societies for the prevention of cruelty to animals SPCA", },
+        { img: FB, title: "Los Angeles Regional Food Bank.",link:"https://www.lafoodbank.org/",subscribed:true, text: "Since 1973, the Los Angeles Regional Food Bank has distributed more than 1.7 billion pounds of food. The Food Bank collects food from hundreds of resources.  With the help of 30,000 volunteers annually and an agency network of more than 700 partner agencies, we serve more than 900,000 people on a monthly basis",}
     ])
     const [toggleform, setoggleForm] = useState(false)
     const [user,setUser] = useState( JSON.parse(localStorage.getItem("user")))
@@ -67,6 +69,11 @@ const Profile = () => {
         //API CALL BACK-END /UPDATE Username
         //API .updateUsername(username)
     }
+    function handlesubscription (i){
+        const neworg = [...organizations]
+        neworg[i] = {...neworg[i],subscribed:!neworg[i].subscribed}
+        setorganizations(neworg)
+    }
     return (
         <><script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript">  
     </script>
@@ -77,6 +84,7 @@ const Profile = () => {
                     <div className="container-fluid">
 
                         <a className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block">User profile</a>
+                        
 
                         {/* <form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                             <div className="form-group mb-0">
@@ -137,6 +145,7 @@ const Profile = () => {
                         <div className="row">
                             <div className="col-lg-7 col-md-10">
                                 <h1 className="display-2 text-white">Hello {user?.user?.username || "user"}</h1>
+                                <p className="text-white mt-0 mb-5">You are following {organizations.filter(o=>o.subscribed).length} Organizations: {organizations.filter(o=>o.subscribed).map(o=>o.title).join(", ")}</p>
                                 <img src={user.user.image} alt="user"/>
                                 <p className="text-white mt-0 mb-5"></p>
                                 <a onClick={() => setoggleForm(!toggleform)} href="#!" className="btn btn-info">Edit profile </a>
@@ -172,10 +181,11 @@ const Profile = () => {
             </div>
 
 
-                        <div className="orgSubscriptions" style={{ paddingTop: "30px", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
-                            <h3>Organizations I'm Following</h3>
+                        <div className="orgSubscriptions" style={{ paddingTop: "px", borderBottom: "1px solid grey", paddingBottom: "50px" }}>
+                            {/* <img src={test}/> */}
+                            <h3 className="Lion3">Organizations I'm Following</h3>
                             <CardDeck>
-                                {organizations?.map(org => (
+                                {organizations?.map((org,i) => (
                                     <Card>
                                         <Card.Img variant="top" src={org.img} />
                                         <Card.Body>
@@ -185,8 +195,9 @@ const Profile = () => {
                                             </Card.Text>
                                         </Card.Body>
                                         <Card.Footer>
-                                        <button class="sub2">Subscribe</button>
-                                        <button class="sub2">Visit Organization</button>
+                                        <button onClick={()=>handlesubscription(i)}className="sub2">{org.subscribed?"UnSubscribe":"Subscribe"}</button>
+                                        <a target="_blank" rel="noreferrer" href={org.link}>
+                                        <button className="sub2">Visit Organization</button></a>
                                             <small className="text-muted">{org.updated}</small>
                                         </Card.Footer>
                                     </Card>
@@ -196,6 +207,10 @@ const Profile = () => {
                             </CardDeck>
 
                         </div>
+
+
+
+                        
         </div>
 </>
     )
