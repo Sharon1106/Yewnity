@@ -1,10 +1,13 @@
 import React from 'react';
-class ImageUpload extends React.Component {
-  constructor(props){
-     super(props);
-     this.state = {}
-   }
-  showWidget = () => {
+import API from '../../utils/API'
+
+// class ImageUpload extends React.Component {
+export function ImageUpload(props) {
+  // constructor(props){
+  //    super(props);
+  //    this.state = {}
+  //  }
+  function showWidget() {
     
     let widget = window.cloudinary.createUploadWidget({ 
        cloudName: `dis1xgkzs`,
@@ -12,14 +15,30 @@ class ImageUpload extends React.Component {
     (error, result) => {
       if (!error && result && result.event === "success") { 
       console.log(result.info.url); 
+      let user = JSON.parse(localStorage.getItem('user'));
+      user.user.image = result.info.url;
+      props.setUser(user);
+      localStorage.setItem('user', JSON.stringify(user))
+
+      let id=JSON.parse(localStorage.getItem('user')).user._id;
+      console.log(id)
+      
+      API.updateUser(id,{
+        image: result.info.url
+      } )
+        .then(res => {
+          console.log(res)
+          
+        })
+    
     }});
     widget.open()
   }
-  render() {
+  // render() {
     return (<div>
-           <button onClick={this.showWidget}> Upload Image </button>
+           <button onClick={showWidget}> Upload Image </button>
            </div>
     );
-  }
+  // }
 }
 export default ImageUpload;
