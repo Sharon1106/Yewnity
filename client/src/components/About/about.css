@@ -1,12 +1,10 @@
 .about {
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-top: 25px;
+  margin: 20px;
   /* background-image: url(../../images/tree.png); */
-  margin-top: 45px;
+
 }
 
-.header {
+header {
   align-items: center;
   justify-content: center;
 }
@@ -25,17 +23,19 @@
 }
 
 .circle {
-  width: 80%;
-  height: 80%;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background-color: #669db3ff;
   margin: auto;
   display: flex;
 }
 
+
+
 .circle2 {
-  width: 80%;
-  height: 80%;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -45,8 +45,8 @@
 }
   
 .circle3{
-  width: 80%;
-  height: 80%;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background-color: #FF4F58FF;
   margin: auto;
@@ -54,8 +54,8 @@
 }
 
 .circle4{
-    width: 80%;
-  height: 80%;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background-color: #A89C94FF;
   margin: auto; 
@@ -74,23 +74,15 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
-  width: 50%;
-  height: 50%;
+  width: 170px;
+  height: 170px;
   margin-bottom: auto;
 }
 
-.profile Matthew {
-  display: block;
-  width: 50%;
-  height: 50%;
-  top: 15%;
-  left: 25%;
-}
-
-.profile p {
+h3 {
+  font-family: "Dosis", sans-serif;
+  text-align: center;
   color: black;
-  font-weight: bold;
-  font-size: xx-large;
   margin-top: 50px;
   padding: 10px;
   text-align: center;
@@ -113,7 +105,7 @@
   padding-bottom: 100px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background-image: url(../../images/tree2.png);
+    /* background-image: url(../../images/tree2.png); */
   background-repeat: no-repeat;
   opacity: 1.0;
   background-color: rgba(255,255,255,0.5);
@@ -149,12 +141,12 @@
 
 .fab {
   color: white;
-  width: 80px;
+  width: 45px;
   text-align: center;
 }
 
 .fas {
-  width: 80px;
+  width: 45px;
   color: white;
   text-align: center;
 }

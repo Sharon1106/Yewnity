@@ -15,7 +15,7 @@ function LandingCard() {
         <h1 className="my-5">OUR PARTNERS</h1>
         <br></br>
         <CardDeck>
-          <Card className="card col-lg-4 col-md-12 my-5 hoverable">
+          <Card className="card my-5 hoverable">
             <Card.Img variant="top" src={orgcard1} />
             <Card.Body>
               <Card.Title>ORG 1</Card.Title>
@@ -28,7 +28,7 @@ function LandingCard() {
               <small className="text-muted">Last updated 3 mins ago</small>
             </Card.Footer>
           </Card>
-          <Card className="card col-lg-4 col-md-12 my-5 hoverable">
+          <Card className="card my-5 hoverable">
             <Card.Img variant="top" src={orgcard2} />
             <Card.Body>
               <Card.Title>Card title</Card.Title>
@@ -41,7 +41,7 @@ function LandingCard() {
               <small className="text-muted">Last updated 3 mins ago</small>
             </Card.Footer>
           </Card>
-          <Card className="card col-lg-4 col-md-12 my-5 hoverable">
+          <Card className="card my-5 hoverable">
             <Card.Img variant="top" src={orgcard3} />
             <Card.Body>
               <Card.Title>Card title</Card.Title>

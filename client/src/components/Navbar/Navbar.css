@@ -88,8 +88,6 @@ nav ul li {
 }
 .nav {
   position: fixed;
-  background: var(--clr-dark);
-  color: var(--clr-light);
   top: 0;
   bottom: 0;
   left: 0;
@@ -113,8 +111,8 @@ nav ul li {
 
 .nav__link {
   color: inherit;
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-h3);
+  font-weight: 200;
+  font-size: large;
   text-decoration: none;
 }
 
