@@ -4,6 +4,7 @@
 
 }
 
+
 header {
   align-items: center;
   justify-content: center;
@@ -19,12 +20,13 @@ header {
   text-align: center;
   background-image:url(../../images/bird.png);
   background-size: 100px;
+  background-position: cover;
   background-repeat: no-repeat;;
 }
 
 .circle {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background-color: #669db3ff;
   margin: auto;
@@ -34,8 +36,8 @@ header {
 
 
 .circle2 {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -45,8 +47,8 @@ header {
 }
   
 .circle3{
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background-color: #FF4F58FF;
   margin: auto;
@@ -54,8 +56,8 @@ header {
 }
 
 .circle4{
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background-color: #A89C94FF;
   margin: auto; 
@@ -74,8 +76,8 @@ header {
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
-  width: 170px;
-  height: 170px;
+  width: 150px;
+  height: 150px;
   margin-bottom: auto;
 }
 

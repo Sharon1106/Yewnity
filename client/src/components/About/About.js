@@ -9,6 +9,7 @@ import Tree2 from "../../images/tree2.png";
 import Bird from "../../images/bird.png";
 import Matthew2 from "../../images/Matt.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Team from "../../images/Neighborhood-home-people-social-network.jpg";
 
 function About() {
     return (
@@ -19,8 +20,6 @@ function About() {
 
             {/* <div class="about"> */}
             <div className="row">
-
-
                 <section class="col-lg-3 col-md-6 col-sm-12 profile jefferey my-5" >
                     <div className="circle">
                         <img className="profile-img rounded-circle hoverable " src={Jeff} alt="jeffrey patterson thumbmmail"></img>
@@ -152,6 +151,7 @@ function About() {
                 </section>
             </div>
 
+
             {/* TEAM */}
 
             {/* </div> */}
@@ -159,7 +159,7 @@ function About() {
             <div className="row">
                 <section className="col-lg-4 col-md-6 col-sm-12">
 
-                    <img class="" src={Tree2} alt="sharon martinez thumbnail"></img>
+                    <img className="branches" src={Tree2} alt="sharon martinez thumbnail"></img>
 
                 </section>
 

@@ -9,9 +9,8 @@ import CardDeck from 'react-bootstrap/CardDeck';
 
 function LandingCard() {
   return (
-    <div className="container my-5">
-      <br></br>
-      <section id="cards" className="cards text-center my-5" >
+    <section id="cards" className="cards text-center my-5" >
+      <div className="container my-5">
         <h1 className="my-5">OUR PARTNERS</h1>
         <br></br>
         <CardDeck>
@@ -56,8 +55,10 @@ function LandingCard() {
             </Card.Footer>
           </Card>
         </CardDeck>
-      </section >
-    </div>
+      </div>
+    </section >
+
+
   )
 }
 

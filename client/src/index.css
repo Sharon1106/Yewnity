@@ -12,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height:100%;
+  background-color: #e1ddd5;
 }
 
 code {
@@ -22,7 +23,6 @@ code {
 :root {
   --fw--reg: 300;
   --fw-bold: 900;
-
   --clr-light: #fff;
   --clr-dark: #303030;
   --clr-accent: #43658D;
@@ -34,6 +34,7 @@ code {
 
   --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
   0.125em 0.125em 0.25em rgba(0,0,0,.15);
+  background-color: #e1ddd5;
 
 }
 
@@ -41,4 +42,9 @@ code {
 #root {
   height: 100%;
   min-height: 100%;
+  background-color: #e1ddd5;
 }
+/* 
+#root body {
+  background-color: #e1ddd5;
+} */
