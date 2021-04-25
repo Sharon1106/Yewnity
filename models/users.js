@@ -8,10 +8,8 @@ require('mongoose-type-email');
 mongoose.SchemaTypes.Email.defaults.message = 'Email address is invalid';
 //-----------------------------------------------------------------------------------//
 
-
 const UserSchema = new Schema({
     email: {
-        //email verification
         type: mongoose.SchemaTypes.Email,
         unique: true
     },
@@ -20,7 +18,6 @@ const UserSchema = new Schema({
         unique: true,
         minLength: 6,
     },
-    //we will need to use bcrypt somehwere here to encrypt password
     password: {
         type: String,
         minLength: 6,
@@ -34,26 +31,12 @@ const UserSchema = new Schema({
           ref: "Event"
         },
       ],
-    // posts: [
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref: "Post"
-    //     },
-    // ],
-    // comments: [
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref: "Comment"
-    //     },
-    // ]
 });
 
-//causing issues with post routes-------------------------------
-//before we save UserSchema to the database we runthis function
+
 UserSchema.pre("save", function (next) {
     const user = this;
     user.password = bcrypt.hashSync(user.password, 10);
-    console.log(user)
     return next();
 });
 

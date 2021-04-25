@@ -4,9 +4,6 @@ import { List, ListItem } from "../List";
 import { Card } from "../Events";
 import './style.css';
 
-
-
-
 function Events() {
   //[state, functionToSetState]
   const [events, setEvents] = useState([])
@@ -29,8 +26,9 @@ function Events() {
         <List>
           {/* we map through our state */}
           {events.map(event => (
-            <ListItem key={event._id}>
+            <ListItem key={event._id} name={event.title}>
               <Card
+                name={event.title}
                 title={event.title}
                 description={event.description}
                 moment={event.moment}

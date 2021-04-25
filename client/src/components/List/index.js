@@ -11,14 +11,14 @@ export function List({ children }) {
   );
 }
 
-export function ListItem({ children }) {
-  return <li className="list-group-item">{children}</li>;
+export function ListItem({ props, children }) {
+  return <li className="list-group-item" {...props}>{children}</li>;
 }
 
 export function NavLink (props) {
   return (
     <li className="nav-item">
-      <a className="nav-link" {...props}>{props.linkName}</a>
+      <a className="nav-link" {...props}>{props.title}</a>
     </li>
   )
 }

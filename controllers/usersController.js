@@ -38,8 +38,6 @@ module.exports = {
                     console.log("fail", err);
                     res.status(400).json(err);
             });
-            
-           
     },
     update: function (req, res) {
         db.User

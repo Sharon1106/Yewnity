@@ -3,8 +3,6 @@ import { GoogleLogin } from "react-google-login";
 
 export class Google extends Component {
   responseGoogle = (response) => {
-    console.log(response);
-    console.log(response.profileObj);
   }
   render() {
     return (

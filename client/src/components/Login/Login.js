@@ -18,29 +18,22 @@ function Login() {
   let history = useHistory()
 
   function handleFormSubmit(event) {
-    console.log("Login user")
-    console.log(user)
     event.preventDefault()
     //login route to get user by user name and password
     API.login({
       username: user.username,
-      //pass in hashed password
       password: user.password,
     })
       .then((res, req) => {
-
-        console.log(res)
         localStorage.setItem("user", JSON.stringify(res.data))
         history.push("/profile")
       })
   }
 
   function handleInputChange(event) {
-    console.log("user typing")
     const existingUser = { ...user }
     existingUser[event.target.name] = event.target.value
     setUser(existingUser)
-    console.log(existingUser)
   };
 
   return (
@@ -65,7 +58,7 @@ function Login() {
           className="buttonlogin btn-primary btn-block my-5 text-center "
           onClick={handleFormSubmit}
         />
-        <div class="text-center">
+        <div className="text-center">
           <p>Not a member? Sign up below!</p>
           <p>or sign up with:
             <Google /></p>

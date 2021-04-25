@@ -33,7 +33,6 @@ client = connect(apiKey, token, appId);
 
 client.user(tempToken.user.username).get().then(res=>{
   res.data.name = tempToken.user.username;
-  console.log(res)
   client.user(tempToken.user.username).update(res.data)
 
 })
@@ -46,8 +45,6 @@ export default class App extends Component<{}> {
         ref={this.containerRef}
         style={{
           maxWidth: '600px',
-          // maxHeight: '500px',
-          // overflow: 'scroll',
           margin: '0 auto',
         }}
       >
@@ -70,9 +67,6 @@ export default class App extends Component<{}> {
             <NotificationDropdown arrow right />
           </div>
           <StatusUpdateForm
-          // submitHandler={(e) => {
-          //   alert(e);
-          // }}
           />
           <FlatFeed
             feedGroup="user" // or timeline
@@ -80,8 +74,6 @@ export default class App extends Component<{}> {
             notify
             options={{
               limit: 6,
-              // withOwnChildren: true,
-              // withRecentReactions: true
             }}
             Paginator={(props) => (
               <InfiniteScrollPaginator

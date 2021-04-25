@@ -8,11 +8,8 @@ function EventModal() {
     const [createEvent, setEvent] = useState(true);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    // const showlogin = () => setSignUp(false);
-    // const showsignup = () => setSignUp(true);
 
     useEffect(() => {
-        console.log(createEvent)
     }, [createEvent])
 
     return (
