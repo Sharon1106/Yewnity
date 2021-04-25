@@ -31,9 +31,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav id="navbar" className="navbar navbar-expand-lg sticky fixed-top shadow-5-strong bg-gradient-default" style={{
-        backgroundColor: "linear-gradient(87deg, #172b4d 0, #1a174d 100%);"
-      }}>
+      <nav id="navbar" className="navbar navbar-expand-lg sticky fixed-top shadow-1 bg-gradient-default ">
         <div className="container">
           <img className="icon" src={logo} height="50" alt="SM" loading="lazy" />
           <h1 class="title">Yewnity</h1>
@@ -58,11 +56,9 @@ const Navbar = () => {
                 <a className="nav-link" href="/profile">Profile</a>
               </li>
             </ul>
-
             <ul className="navbar-nav d-flex flex-row">
-              {/* Add-Another button or feature */}
               <li className="nav-item me-3 me-lg-0 dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <a className="nav-link dropdown-toggle" id="navbarDropdown" href="/" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                   <i className="dropdown">Logout</i>
                 </a>
                 <ul className="dropdown-content" aria-labelledby="navbarDropdown">

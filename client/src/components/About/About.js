@@ -13,14 +13,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function About() {
     return (
-        <div className="about">
+        <section id="about" className="about text-center">
             <header class="header sub_header">
                 <h1 class="header_title">Meet the Yewnity Team</h1>
             </header>
             <div class="about">
                 <main class="row">
-                    <section class="col-md-3 profile">
-                        <div class="circle">
+                    <section class="col-md-3 profile rounded-circle shadow-3-strong mb-4">
+                        <div class="circle rounded-circle shadow-3-strong mb-4">
                             <img class="profile-img" src={Jeff}></img>
 
                         </div>
@@ -158,7 +158,7 @@ function About() {
                         <p>Date 04/16/2021</p></strong>
                 </div>
             </div>
-        </div>
+        </section>
 
     )
 }

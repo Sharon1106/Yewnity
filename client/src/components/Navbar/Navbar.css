@@ -40,7 +40,7 @@ nav ul li {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   color: var(--primary-white) !important;
-  border-top: 0.1875rem solid #1a174d ;
+  border-top: 0.1875rem solid #1a174d;
 }
 .navbar-brand {
   max-width: 17.25rem;
@@ -194,5 +194,12 @@ nav ul li {
 @media (max-width: 540px) {
   .log-out {
     display: none !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+.navbar-nav .nav-link {
+    padding: .625rem 0;
+    /* color: #172b4d !important; */
   }
 }
