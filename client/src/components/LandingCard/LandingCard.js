@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import orgcard1 from '../../images/Dummy-logo-1.png';
-import orgcard2 from '../../images/Dummy-logo-2.jpeg';
-import orgcard3 from '../../images/Dummy-logo-3.jpeg';
+import orgcard1 from '../../images/VolunteerMatch_official.png';
+import orgcard2 from '../../images/International.png';
+import orgcard3 from '../../images/un_volun.png';
 import CardDeck from 'react-bootstrap/CardDeck';
 
 function LandingCard() {
@@ -13,12 +13,14 @@ function LandingCard() {
         <br></br>
         <CardDeck>
           <Card className="card my-5 hoverable">
-            <Card.Img variant="top" src={orgcard1} />
+            <Card.Img variant="top" src={orgcard1} alt="Volunteer Match Logo" />
             <Card.Body>
-              <Card.Title>ORG 1</Card.Title>
+              <Card.Title>Volunteer Match</Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to
-                additional content. This content is a little bit longer.
+              Remarkable Outcomes!
+              VolunteerMatch matches inspired people with inspiring causes. 
+              It's how volunteers and nonprofits connect to achieve remarkable outcomes. 
+              Find opportunities at <a href="https://www.volunteermatch.org/">VolunteerMatch.org!</a>
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -28,10 +30,15 @@ function LandingCard() {
           <Card className="card my-5 hoverable">
             <Card.Img variant="top" src={orgcard2} />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>International Volunteer HQ</Card.Title>
               <Card.Text>
-                This card has supporting text below as a natural lead-in to additional
-                content.{' '}
+              At International Volunteer HQ, we enable people from all walks 
+              of life to make a difference on the adventure of a lifetime. Volunteering with 
+              IVHQ is the most affordable and regenerative way to immerse yourself in new cultures 
+              and give back through travel.
+              <p>
+                <a href="https://www.volunteerhq.org/">Learn More!</a>
+              </p>
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -41,11 +48,13 @@ function LandingCard() {
           <Card className="card my-5 hoverable">
             <Card.Img variant="top" src={orgcard3} />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>UN Volunteers</Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to
-                additional content. This card has even longer content than the first to
-                show that equal height action.
+              The United Nations Volunteers (UNV) programme contributes to peace 
+              and development through volunteerism worldwide. We work with partners
+               to integrate qualified, highly motivated and well supported UN Volunteers
+                into development programming and promote the value and global 
+                recognition of volunteerism.
               </Card.Text>
             </Card.Body>
             <Card.Footer>

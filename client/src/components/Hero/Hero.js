@@ -1,8 +1,8 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import sliderone from '../../images/Yewnity.jpg';
-import slidertwo from '../../images/donate.today.jpg';
-import sliderthree from '../../images/recycle.jpg';
+import sliderone from '../../images/Yewnity.png';
+import slidertwo from '../../images/donate.today.png';
+import sliderthree from '../../images/recycle.png';
 import SignUpLogin from "../Login/SignUpLogin";
 
 function LandingHero() {
