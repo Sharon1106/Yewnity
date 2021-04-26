@@ -13,6 +13,7 @@ export function CreateEvent() {
       description:"",
       moment: "",
       city:"",
+      user: "",
     });
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -30,6 +31,7 @@ export function CreateEvent() {
       })
         .then(res => {
           console.log(res)
+
         })
       };
     function handleInputChange(event) {

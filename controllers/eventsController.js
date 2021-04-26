@@ -15,7 +15,10 @@ module.exports = {
             .catch(err => res.status(400).json(err));
     },
     create: function (req, res) {
-        console.log(req.body)
+        // console.log(req.body, "this is in the controller")
+        // date = req.body.moment.split("T").join("Date:", [0], "Time: ", [1]);
+        // console.log(date)
+
         db.Event.create( {
             ...req.body,
             user: req.session.user_id

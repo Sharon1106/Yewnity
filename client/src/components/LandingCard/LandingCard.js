@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import orgcard1 from '../../images/VolunteerMatch_official.png';
-import orgcard2 from '../../images/International.png';
-import orgcard3 from '../../images/un_volun.png';
+import orgcard2 from '../../images/international_hq.png';
+import orgcard3 from '../../images/un_volunteer.png';
 import CardDeck from 'react-bootstrap/CardDeck';
 import "./LandingCard.css";
 
@@ -21,15 +21,17 @@ function LandingCard() {
               Remarkable Outcomes!
               VolunteerMatch matches inspired people with inspiring causes. 
               It's how volunteers and nonprofits connect to achieve remarkable outcomes. 
-              Find opportunities at <a href="https://www.volunteermatch.org/">VolunteerMatch.org!</a>
+              Find opportunities at 
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
+              <small className="text-muted">
+                <a href="https://www.volunteermatch.org/">Learn More!</a>
+              </small>
             </Card.Footer>
           </Card>
           <Card className="card my-5 hoverable">
-            <Card.Img variant="top" src={orgcard2} />
+            <Card.Img variant="top" src={orgcard2} alt="International Volunteer Logo"/>
             <Card.Body>
               <Card.Title>International Volunteer HQ</Card.Title>
               <Card.Text>
@@ -37,17 +39,16 @@ function LandingCard() {
               of life to make a difference on the adventure of a lifetime. Volunteering with 
               IVHQ is the most affordable and regenerative way to immerse yourself in new cultures 
               and give back through travel.
-              <p>
-                <a href="https://www.volunteerhq.org/">Learn More!</a>
-              </p>
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
+              <small className="text-muted">
+                <a href="https://www.volunteerhq.org/">Learn More!</a>
+              </small>
             </Card.Footer>
           </Card>
           <Card className="card my-5 hoverable">
-            <Card.Img variant="top" src={orgcard3} />
+            <Card.Img variant="top" src={orgcard3} alt="UN Volunteer Logo" />
             <Card.Body>
               <Card.Title>UN Volunteers</Card.Title>
               <Card.Text>
@@ -59,7 +60,9 @@ function LandingCard() {
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
+              <small className="text-muted">
+                <a href="https://www.unv.org/">Learn More!</a>
+                </small>
             </Card.Footer>
           </Card>
         </CardDeck>
