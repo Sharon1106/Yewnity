@@ -14,7 +14,6 @@ function LandingHero() {
             <img className="d-block w-100" src={sliderone} alt="First slide" />
             <Carousel.Caption>
               <h3 className="text-white">Join Our Community</h3>
-              {/* user registration */}
               <SignUpLogin />
             </Carousel.Caption>
           </Carousel.Item>
@@ -28,7 +27,7 @@ function LandingHero() {
           <Carousel.Item>
             <img className="d-block w-100" src={sliderthree} alt="Third slide" />
             <Carousel.Caption>
-              <h3 className="text-white">Join us</h3>
+              <h3 className="text-white">YEWNITY</h3>
               <SignUpLogin />
             </Carousel.Caption>
           </Carousel.Item>

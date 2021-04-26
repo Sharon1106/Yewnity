@@ -4,6 +4,7 @@ import orgcard1 from '../../images/VolunteerMatch_official.png';
 import orgcard2 from '../../images/International.png';
 import orgcard3 from '../../images/un_volun.png';
 import CardDeck from 'react-bootstrap/CardDeck';
+import "./LandingCard.css";
 
 function LandingCard() {
   return (
