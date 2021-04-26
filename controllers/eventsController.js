@@ -15,13 +15,19 @@ module.exports = {
             .catch(err => res.status(400).json(err));
     },
     create: function (req, res) {
-        console.log(req.body)
+        //here we are formatting the date to a readable formate
+        date = req.body.moment.split("T").join(` Time: `);
+
         db.Event.create( {
             ...req.body,
-            user: req.session.user_id
+            user: req.session.user_id,
+            moment: date
         })
             .then(dbModel => {
-                res.status(200).json(dbModel);
+                if (!dbModel) {
+                    return res.status(400).send({ message: "Field cannot be empty"})
+                }
+                    return res.status(200).json(dbModel);
             })
             .catch(
                 err => {

@@ -11,33 +11,41 @@
 }
 .label {
     margin: 0;
+    color: rgba( 150, 140, 123, 1);
+    
 }
 .label-title {
+    font-size: 3em;
     margin: 0;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .label-description {
     margin: 0;
 }
 
+#title-desc {
+    font-size: 1em;
+}
+
 #descript {
+    font-size: 1.5em;
     margin: 0;
+    padding: 0;
     color: black;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .moment {
     margin: 0;
     color: black;
     font-family: "Roboto",sans-serif;
-    font-weight: 500;
+
 }
 
 .city {
     margin: 0;
     color: black;
-    font-weight: 500;
 }
 
 .row-format {

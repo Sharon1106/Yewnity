@@ -24,8 +24,9 @@ function Events() {
     <div>
       {events.length ? (
         <List>
-          {/* we map through our state */}
+          {/* we map through our state which is our events and we print the results on our created component card */}
           {events.map(event => (
+            
             <ListItem key={event._id} name={event.title}>
               <Card
                 name={event.title}

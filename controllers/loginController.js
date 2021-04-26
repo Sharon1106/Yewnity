@@ -3,7 +3,7 @@ const Bcrypt = require("bcryptjs");
 
 module.exports = {
   login: function (req, res) {
-    console.log(req.body)
+
     db.User
       .findOne({
         username: req.body.username,
@@ -11,7 +11,6 @@ module.exports = {
       })
 
       .then(dbModel => {
-        console.log(dbModel)
         if (!dbModel) {
           return res.status(400).send({ message: "The username does not exist" });
         }

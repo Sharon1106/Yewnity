@@ -22,23 +22,20 @@ export function DateTime(props) {
     )
 }
 
+//this is our events card that gets created when the call events function is called to grab all events
 export function Card(props) {
     return (
         <CardWrapper className="card">
             <div className="card-body">
-                <Label className="label text-muted">Event:</Label>
-                    <P className="label-title">{props.title}</P>
-                <Label className="label-description text-muted">Event Description:</Label>
+                <div className="row-format">
+                    <P className="label-title"><Label className="label">Event Name:</Label> {props.title}</P>
                     <P id="descript">{props.description}</P>
-                <div className="row-format">
-                    <Label className="label text-muted">When: </Label>
-                    <P className="moment">{props.moment}</P>
                 </div>
                 <div className="row-format">
-                    <Label className="label text-muted">Location:</Label>
-                    <P className="city">{props.city}</P>
+                    <P className="moment"><Label className="label">Date:</Label> {props.moment}</P>
+                    <P className="city"><Label className="label">Location:</Label> {props.city}</P>
+                    <P className="city"><Label className="label">User:</Label> {props.user}</P>
                 </div>
-                <Label className="label-user text-muted">User: {props.user}</Label>
             </div>
         </CardWrapper>
     )
