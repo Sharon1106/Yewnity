@@ -1,65 +1,102 @@
-<h1 align ="center">Yewnity 🌍</h1>
+# Yewnity
 
-<h1 align ="center">www.yewnity.org</h1>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<h3 align ="center">Mission Statement:</h3
-<center align ="center">a non-profit organization set on ending its user's growing environmental and social affairs. By enabling its users the ability to subscribe, donate , and view current issues in their local municipals from their PC or mobile devices.</center>
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
 
-![Screen Shot 2021-04-11 at 1 57 48 PM](https://user-images.githubusercontent.com/77504986/114322784-ed4f2d00-9ad6-11eb-8b50-704b96023c4e.png)
+## [Click here for a live Demo of our website!](https://youtu.be/GX5S0bVUaiU)
 
+# Table of Contents
+1. [License MIT](#license-information)
+2. [Description](#application-description)
+3. [Installation](#installation-instructions)
+4. [Usage](#application-usage)
+5. [Contribution Guidelines](#contribution-guidelines)
+6. [Testing](#testing-instrutions)
+7. [Known Issues/Errors](#known-issues/errors)
+8. [Questions](#questions)
+9. [Contributors](#contributors)
+10. [Deployed-Application](#deployed-application)
+11. [Languages & Packages Used](#languages-&-packages)
 
-<h2 align ="center">Table of Contents</h2>
+# License Information
 
-### [Description](#description)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### [Screenshots](#screenshots)
+[MIT License](https://www.mit.edu/~amini/LICENSE.md) Documentation
 
-### [Technologies](#technologies)
+Please refer to license documentation for any questions regarding reusing 
+this software or any code within this application.
 
-### [Usage](#usage)
+[Back to Top](#table-of-contents)
 
-### [Developers](#developers)
+# Application Description
 
-### [Questions](#questions)
+The idea behind yewnity is a place to go and learn about others and events that you may want to get involved with. The code design behind it involves a few more aspects. We used React, sequelize, node.js, html, css, javascript, bootstrap, cloudinary,, express-session, bcryptjs and mongoose database. The user can go on our landing page, learn about the project creators and scroll to the bottom to link onto different pages for organizatios and volunteer opportunities. Once they create a profile, they have access to a feed that is live where they can store bits of information, they have accesss to an events page where they can create events, a profile page where they can upload a profile page and update their information. 
 
-### [Deployed-Links](#Deployed-Links)
+[Back to Top](#table-of-contents)
 
-### [Github](#github)
+# Installation Instructions
 
+To install, you should make sure you have react, mongoose, robotT, node.js, and visual studio code  installed. Once those have been installed, you can git clone this repository into your computer and open it in yosur visual studio code program. Once you have git cloned, run an npm install to make sure all required packages are installed. Once this is finished, you can run an npm run start to run the program and open up the webpage. If you would like to focus only on server side and back end, run an npm run watch to open up server side server only.
 
+[Back to Top](#table-of-contents)
 
-### <a name="Description"></a>Description
----
-Yewnity founded by UCLAx Web Development Boot Camp Students
+# Application Usage
 
-## Screenshots
----
+The primary usage of this application is to create a website that offers peopel a chance to connect over similar things. One the backend, the primary purpose for building this application was to combine languages learned into a usable application.
 
+[Back to Top](#table-of-contents)
 
+# Contribution Guidelines
 
+NA
 
+[Back to Top](#table-of-contents)
 
-### <a name="Technologies"></a>Technologies
-![Roar2](https://user-images.githubusercontent.com/77504986/114322314-47022800-9ad4-11eb-9076-2ce9acb72eaf.png)
-![mern-removebg-preview](https://user-images.githubusercontent.com/77504986/114322301-3b166600-9ad4-11eb-931b-dd5cce7d9317.png)
+# Testing Instrutions
 
+NA
 
+[Back to Top](#table-of-contents)
 
+# Known Issues/Errors
 
-### <a name="Developers"></a>Developers Github Profiles
-[Jefferey Patterson](https://github.com/jpatterson933)
-<br>
-[Matthew A. John](https://github.com/MattJ900)
-<br>
-[Sharon Martinez](https://github.com/Sharon1106)
-<br>
-[William Thorne](https://github.com/IdFightGandhi)
+1. Issues for Events Page: User can submit as many events as they want - Event Modal does not close upon creating event - events do not display in most recently made order.
+2. Issues for overall site: logout button shows no matter if the user is logged in or not - some elements on pages reseizde slowing down the loading performance of the application - all images do not contain a width and height set for each
 
+[Back to Top](#table-of-contents)
 
-### <a name="Questions"></a>Questions
-Questions or related bussiness inquiries can be reached at support@yewnity.org
+# Questions
 
-## Deployed-Links
-www.yewnity.com
-<br>
-www.yewnity.org
+If you have any questions that have not been answered, please send an email: jpatterson933@ucla.edu - matthewj.dev - martinezsharonr@gmail.com - williamcthorne@gmail.com - 
+
+## Checkout My GitHub!
+
+[Back to Top](#table-of-contents)
+
+# Contributors
+
+### [jpatterson933](https://github.com/jpatterson933)
+### [MattJ900](https://github.com/MattJ900)
+### [IdFightGandhi](https://github.com/IdFightGandhi)
+### [Sharon1106](https://github.com/Sharon1106)
+
+# Deployed Application
+
+### [Live Application](https://intense-cove-54104.herokuapp.com/)
+### [GitHub Repository](https://github.com/Sharon1106/Yewnity)
+
+# Languages & Packages
+1. HTML
+2. CSS
+3. JAVASCRIPT
+4. REACT
+5. MONGODB
+6. NODE.JS
+7. SEQUELIZE and SEQUELIZE-EXPRESS
+8. CLOUDINARY
+9. MONGOOSE - MONGOOSE-EXPRESS-SESSION - MONGOOSE-TYPE-EMAIL
+10. JSONWEBTOKENS
+11. BCRYPT
+12. GETSTREAM
