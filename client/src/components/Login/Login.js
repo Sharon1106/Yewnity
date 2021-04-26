@@ -1,6 +1,6 @@
 // removed useEffect/ import if used
 import React, { useState } from "react";
-import Google from './googlelogin';
+// import Google from './googlelogin';
 import { useHistory } from "react-router-dom";
 import { Input, SubmitBtn } from "../Form";
 import "./SignUpLogin.css";
@@ -58,8 +58,9 @@ function Login() {
         />
         <div className="text-center">
           <p>Not a member? Sign up below!</p>
-          <p>or sign up with:
-            <Google /></p>
+          {/* <p>or sign up with:
+            <Google />
+            </p> */}
         </div>
       </form>
     </div>

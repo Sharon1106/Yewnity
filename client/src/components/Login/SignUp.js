@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Google from "./googlelogin";
+// import Google from "./googlelogin";
 import { useHistory } from "react-router-dom";
 import { Input, SubmitBtn } from "../Form";
 import API from "../../utils/API";
@@ -63,8 +63,9 @@ function SignUp() {
         />
         <div className="text-center">
           <p>Already have an account? Log in below!</p>
-          <p>or log in with:
-            <Google /></p>
+          {/* <p>or log in with:
+            <Google />
+          </p> */}
         </div>
       </form>
     </div>

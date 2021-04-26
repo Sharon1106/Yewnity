@@ -147,9 +147,12 @@ function About() {
                 </section>
                 <div className="col-lg-8 col-md-6 col-sm-12 " id="description">
                     <strong><h1 className="my-5"> Our Story</h1>
-                        <h4>Written by Matthew A. John</h4>
-                        <br></br>
-                        <p> Founded: April 2021, Yewnity deployed by UCLAx web developer rookies Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>Written by the Yewnity team</h4>
+                        <p> Founded: April 2021, Yewnity deployed by UCLAx web developer rookies. As we learn more about how big an impact we have on our environment and local communities, there are many events and many causes a user can choose from.
+                            Yewnity is set on giving the people an online community for their local growing environmental and social affairs. We do this by enabling our users the ability to subscribe, donate, create , and view current issues and charities in their local municipals from their PC or mobile devices.
+                            <hr></hr>
+                            “When we give cheerfully and accept gratefully, everyone is blessed.”
+                            ― Maya Angelou</p>
                         <p>Date 04/16/2021</p></strong>
                 </div>
             </div>
