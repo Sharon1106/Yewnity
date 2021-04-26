@@ -69,7 +69,7 @@ NA
 
 # Questions
 
-If you have any questions that have not been answered, please send an email: jpatterson933@ucla.edu - matthewj.dev - martinezsharonr@gmail.com - williamcthorne@gmail.com - 
+If you have any questions that have not been answered, please send an email: jpatterson933@ucla.edu - contact@matthewj.dev - martinezsharonr@gmail.com - williamcthorne@gmail.com - 
 
 ## Checkout My GitHub!
 
