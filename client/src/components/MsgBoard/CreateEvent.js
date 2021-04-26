@@ -30,7 +30,7 @@ export function CreateEvent() {
         city: events.city
       })
         .then(res => {
-          console.log(res)
+          history.push()
 
         })
       };
