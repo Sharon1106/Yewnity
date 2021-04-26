@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Google from "./googlelogin";
+// import Google from "./googlelogin";
 import { useHistory } from "react-router-dom";
 import { Input, SubmitBtn } from "../Form";
 import API from "../../utils/API";
-import Button from "./SignUpLogin"
+
 function SignUp() {
   const [user, setUser] = useState({
     email: "",
@@ -58,13 +58,14 @@ function SignUp() {
         <SubmitBtn
           name="signup"
           type="submit"
-          className="buttonsignup btn-primary btn-block my-5 text-center"
+          className="buttonsignup btn-primary btn-block my-5 text-center rounded"
           onClick={handleFormSubmit}
         />
         <div className="text-center">
           <p>Already have an account? Log in below!</p>
-          <p>or log in with:
-            <Google /></p>
+          {/* <p>or log in with:
+            <Google />
+          </p> */}
         </div>
       </form>
     </div>

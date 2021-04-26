@@ -25,7 +25,7 @@ function SignUpLogin() {
         </Modal.Header>
         <Modal.Body >
           {!signup ? (<Login />) : (<SignUp />)}
-          {signup ? (<Button className="button text-center" onClick={showlogin}>Login</Button>) : (<Button onClick={showsignup}>Signup</Button>)}
+          {signup ? (<Button className="button text-center" onClick={showlogin}>LOGIN</Button>) : (<Button onClick={showsignup}>SIGNUP</Button>)}
         </Modal.Body>
         <Modal.Footer>
           <Button

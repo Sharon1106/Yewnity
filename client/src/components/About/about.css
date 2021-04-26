@@ -4,17 +4,20 @@
 
 }
 
-
 header {
   align-items: center;
   justify-content: center;
+  
 }
 
 .header_title {
-  border: 2px solid black;
+  width: 100%;
+  font-weight: bolder;
+  box-shadow: 0 6px 6px -6px black;
+  border-radius: 5px;
   margin-bottom: 10px;
   padding: 45px;
-  background-color: black;
+  background-color:#333652;
   color: white;
   font-family: "Dosis", sans-serif;
   text-align: center;
@@ -119,10 +122,6 @@ h3 {
 
 .info {
    font-weight: bold;
-}
-
-.social-list__item {
-  background-color: black;
 }
 
 .social-list__item1 {
