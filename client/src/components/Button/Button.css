@@ -2,21 +2,21 @@
     --primary: #ffffff
 }
 
-/* .btn {
+button {
     padding: 8px 20px;
     border-radius: 2px;
     outline: none;
     border: none;
     cursor: pointer;
-} */
+}
 
-.btn--primary {
+button--primary {
     background-color: var(--primary);
     color: #224422;
     border: 1px solif var(--primary);
 }
 
-.btn--outline {
+button--outline {
     background-color: transparent;
     color: #ffffff;
     padding: 8px 20px;
@@ -24,22 +24,22 @@
     transition: all 0.3s ease-out;
 }
 
-.btn--medium {
+button--medium {
     padding: 8px 20px;
     font-size: 20px;
 }
 
-.btn--large {
+button--large {
     padding: 12px 26px;
     font-size: 20px;
 }
 
-.btn--medium:hover, .btn--large:hover {
+button--medium:hover, button--large:hover {
     background: #ffffff;
     color:#224422;
     transition: all 0.3s ease-out;
 }
 
-.btn:active,.btn:focus{
+button:active,button:focus{
     padding: 0 !important;
 }

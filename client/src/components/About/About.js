@@ -3,13 +3,9 @@ import './about.css';
 import Will from "../../images/Wil.png";
 import Sharon from "../../images/Sharon.png";
 import Jeff from "../../images/Jeff.png";
-import Matthew from "../../images/Matthew.png";
-import Tree from "../../images/tree.png";
 import Tree2 from "../../images/tree2.png";
-import Bird from "../../images/bird.png";
 import Matthew2 from "../../images/Matt.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Team from "../../images/Neighborhood-home-people-social-network.jpg";
 
 function About() {
     return (
@@ -17,8 +13,6 @@ function About() {
             <header class="header sub_header">
                 <h1 class="header_title">Meet the Yewnity Team</h1>
             </header>
-
-            {/* <div class="about"> */}
             <div className="row">
                 <section class="col-lg-3 col-md-6 col-sm-12 profile jefferey my-5" >
                     <div className="circle">
@@ -49,16 +43,13 @@ function About() {
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-12">
                             <button class="social-list__item3 rounded-pill">
-                                <a class="social-list__link" href="https://github.com/MattJ900">
+                                <a class="social-list__link" href="https://facebook.com/">
                                     <i class="fab fa-facebook"></i>
                                 </a>
                             </button>
                         </div>
                     </div>
                 </section>
-
-
-
                 <section class="col-lg-3 col-md-6 col-sm-12 profile my-5">
                     <div class="circle2">
                         <img class="profile-img rounded-circle hoverable" src={Matthew2} alt="matthew john thumbnail"></img>
@@ -113,7 +104,7 @@ function About() {
                             </a></button>
                         </div>
                         <div class="col-md-3">
-                            <button class="social-list__item3 rounded-pill"><a class="social-list__link" href="https://github.com/MattJ900">
+                            <button class="social-list__item3 rounded-pill"><a class="social-list__link" href="https://facebook.com/">
                                 <i class="fab fa-facebook"></i>
                             </a></button>
                         </div>
@@ -138,32 +129,22 @@ function About() {
                                 </a></button>
                         </div>
                         <div class="col-md-3">
-                            <button class="social-list__item1 rounded-pill"><a class="social-list__link" href="https://www.linkedin.com/in/sharon-martinez-835723205/">
+                            <button class="social-list__item1 rounded-pill"><a class="social-list__link" href="https://www.linkedin.com/">
                                 <i class="fab fa-linkedin"></i>
                             </a></button>
                         </div>
                         <div class="col-md-3">
-                            <button class="social-list__item3 rounded-pill "><a class="social-list__link" href="https://github.com/MattJ900">
+                            <button class="social-list__item3 rounded-pill "><a class="social-list__link" href="https://facebook.com/">
                                 <i class="fab fa-facebook"></i>
                             </a></button>
                         </div>
                     </div>
                 </section>
             </div>
-
-
-            {/* TEAM */}
-
-            {/* </div> */}
-
             <div className="row">
                 <section className="col-lg-4 col-md-6 col-sm-12">
-
                     <img className="branches" src={Tree2} alt="sharon martinez thumbnail"></img>
-
                 </section>
-
-
                 <div className="col-lg-8 col-md-6 col-sm-12 " id="description">
                     <strong><h1 className="my-5"> Our Story</h1>
                         <h4>Written by Matthew A. John</h4>
@@ -176,7 +157,5 @@ function About() {
 
     )
 }
-
-
 
 export default About;

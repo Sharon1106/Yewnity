@@ -60,6 +60,12 @@
     width: device-width;
   }
   
+  body {
+    font-family: sans-serif;
+    background-color: #e1ddd5;
+  }
+
+  
   figcaption,
   footer,
   header,
@@ -77,7 +83,7 @@
     margin: 0;
     text-align: left;
     color: #525f7f;
-    background-color: #f8f9fe;
+    background-color: #e1ddd5;
   }
   
   [tabindex='-1']:focus {

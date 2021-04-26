@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 import { Input, SubmitBtn } from "../Form";
 import "./SignUpLogin.css";
 import API from "../../utils/API";
-// import Bcrypt from "bcryptjs";
 
 function Login() {
   const [user, setUser] = useState({
@@ -19,7 +18,6 @@ function Login() {
 
   function handleFormSubmit(event) {
     event.preventDefault()
-    //login route to get user by user name and password
     API.login({
       username: user.username,
       password: user.password,
@@ -55,7 +53,7 @@ function Login() {
         <SubmitBtn
           name="login"
           type="submit"
-          className="buttonlogin btn-primary btn-block my-5 text-center "
+          className="buttonlogin btn-primary btn-block my-5 text-center rounded "
           onClick={handleFormSubmit}
         />
         <div className="text-center">

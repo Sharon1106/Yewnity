@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../images/logo.png";
-import { NavLink } from "../List";
 import { useHistory, Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -15,7 +14,6 @@ const Navbar = () => {
   // redirect
   let history = useHistory()
 
-  //onclick clear user info in local storage
   function handleLogout(event) {
     console.log("logout user")
     event.preventDefault()
@@ -30,9 +28,11 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav id="navbar" className="navbar navbar-expand-lg sticky fixed-top shadow-1 bg-gradient-default ">
+      <nav id="navbar" className="navbar navbar-expand-lg sticky fixed-top shadow-5-strong bg-gradient-default ">
         <div className="container">
-          <img className="icon" src={logo} height="50" alt="SM" loading="lazy" />
+          <a href="/">
+            <img className="icon" src={logo} height="50" alt="Yewnity" loading="lazy" />
+          </a>
           <h1 class="title">Yewnity</h1>
           <button className="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i className="fas fa-bars"></i>
@@ -47,9 +47,6 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/events">Events</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/forum">Forum</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/profile">Profile</a>

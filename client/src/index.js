@@ -9,7 +9,7 @@ import 'mdbreact/dist/css/mdb.css';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />,
+    <App />
   </BrowserRouter>,
   document.getElementById('root')
 );

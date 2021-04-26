@@ -21,6 +21,9 @@ body p {
   font-weight: 300;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
   color: var(--primary-blue);
+  background: linear-gradient(87deg, #172B4D 0, #1A174D 100%) !important;
+  opacity: 1.0;
+  box-shadow: 0 6px 6px -6px black;
 }
 /* ////////////////menu links////////////// */
 nav a.nav-link {
@@ -40,7 +43,7 @@ nav ul li {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   color: var(--primary-white) !important;
-  border-top: 0.1875rem solid #1a174d;
+  border-top: 0.1875rem solid #1A174D;
 }
 .navbar-brand {
   max-width: 17.25rem;
@@ -62,7 +65,7 @@ nav ul li {
   color: white;
 }
 
-/* drop down */
+/* ///////////////DROPDOWN///////// */
 
 .dropdown {
   position: relative;
@@ -72,11 +75,11 @@ nav ul li {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color:#E7D2CC;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
+  border-radius: 10px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -139,56 +142,6 @@ nav ul li {
   position: fixed;
 }
 
-.nav-open .hamburger {
-  transform: rotate(0.625turn);
-}
-
-.nav-open .hamburger::before {
-  transform: rotate(90deg) translateX(-6px);
-}
-
-.nav-open .hamburger::after {
-  opacity: 0;
-}
-
-.hamburger {
-  display: block;
-  position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  background: var(--clr-accent);
-  width: 2em;
-  height: 3px;
-  border-radius: 1em;
-  transition: transform 250ms ease-in-out;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.hamburger::before {
-  top: 6px;
-}
-
-.hamburger::after {
-  bottom: 6px;
-}
-
-.log-out {
-  float: right;
-  margin-left: -100px;
-  position: relative;
-  right: 100px;
-}
-
 @media (max-width: 540px) {
   .log-out {
     display: none !important;
@@ -198,6 +151,6 @@ nav ul li {
 @media (max-width: 767.98px) {
 .navbar-nav .nav-link {
     padding: .625rem 0;
-    /* color: #172b4d !important; */
+    
   }
 }
