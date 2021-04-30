@@ -3,7 +3,6 @@ import React, { useState } from "react";
 // import Google from './googlelogin';
 import { useHistory } from "react-router-dom";
 import { Input, SubmitBtn } from "../Form";
-import "./SignUpLogin.css";
 import API from "../../utils/API";
 
 function Login() {

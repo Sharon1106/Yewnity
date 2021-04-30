@@ -21,7 +21,7 @@ const Button = ({
     return (
         <Link className='btn-mobile'>
             <button
-                className={`buttonMain ${checkButtonStyle} ${checkButtonSize} text-center`}
+                className={`${checkButtonStyle} ${checkButtonSize} text-center`}
                 onClick={onClick}
                 type={type}
             >

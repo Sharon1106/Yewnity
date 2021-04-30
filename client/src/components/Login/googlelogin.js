@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { GoogleLogin } from "react-google-login";
 
+//for future development
 export class Google extends Component {
   responseGoogle = (response) => {
   }
